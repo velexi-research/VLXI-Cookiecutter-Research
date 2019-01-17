@@ -1,0 +1,25 @@
+# data directory
+data/*
+
+# log files
+*.log
+
+# temporary files
+.*.swp
+
+# setuptools files
+dist/*
+*.egg-info
+
+# compiled source
+*.pyc
+
+# testing files
+.cache
+.coverage
+.coverage.*
+.pytest_cache
+
+# Jupyter files
+.ipynb_checkpoints
+.jupyter/migrated
