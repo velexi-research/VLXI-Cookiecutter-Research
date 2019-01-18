@@ -19,9 +19,9 @@ TOP_DIR=`dirname "${BASH_SOURCE[0]}"`
 export DATA_DIR=$TOP_DIR/data
 
 # Set PATH
-#if [[ "$PATH" != *$TOP_DIR/bin* ]]; then
-#    export PATH=$TOP_DIR/bin:$PATH
-#fi
+if [[ "$PATH" != *$TOP_DIR/bin* ]]; then
+    export PATH=$TOP_DIR/bin:$PATH
+fi
 
 # Set PYTHONPATH
 unset PYTHONPATH
