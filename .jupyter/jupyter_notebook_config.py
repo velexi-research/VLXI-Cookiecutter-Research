@@ -1,7 +1,7 @@
 # Configuration file for jupyter-notebook.
 
 #------------------------------------------------------------------------------
-# Project customizations
+# Auto-generate HTML and Python scripts when saving.
 #------------------------------------------------------------------------------
 
 import os
