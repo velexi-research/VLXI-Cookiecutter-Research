@@ -157,7 +157,8 @@ Features include:
 3 References
 ------------
 
-* J. Whitmore. ["Jupyter Notebook Best Practices for Data Science"][#whitmore-2016]
+* J. Whitmore.
+  ["Jupyter Notebook Best Practices for Data Science"][#whitmore-2016]
   (2016/09).
 
 ------------------------------------------------------------------------------
