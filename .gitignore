@@ -7,10 +7,6 @@ data/*
 # temporary files
 .*.swp
 
-# setuptools files
-dist/*
-*.egg-info
-
 # compiled source
 *.pyc
 
