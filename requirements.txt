@@ -14,7 +14,6 @@ ipython
 jupyter
 
 # Basic utility packages
-click
 PyYAML
 
 # Data science packages
