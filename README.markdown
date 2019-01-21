@@ -81,7 +81,7 @@ Features include:
 * `data`: directory where project data should be placed. __Note__: data placed
   in this directory ___does not___ necessarily need to be committed to the git
   repository. For projects with large datasets, committing the data to the git
-  repository is ___strongly discouraged___.
+  repository is ___discouraged___.
 
 * `lab-notebook`: directory intended for Jupyter notebooks used for
   experimentation and development. Jupyter notebooks saved in this directory
