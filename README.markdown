@@ -1,5 +1,5 @@
-Velexi Scaffolding: Data Science Notebook
-=========================================
+Velexi Scaffolding: Data Science Project
+========================================
 
 ___Authors___  
 Kevin Chu `<kevin@velexi.com>`
@@ -32,8 +32,9 @@ Table of Contents
 1 Overview
 ----------
 
-This project provides scaffolding for Jupyter-based data science notebooks.
-The design of the scaffolding is based on the blog article
+This project scaffolding is intended to support data science projects that
+utilize Jupyter notebooks for experimentation and reporting. The design of
+the scaffolding is based on the blog article
 ["Jupyter Notebook Best Practices for Data Science"][#whitmore-2016] by
 Jonathan Whitmore.
 
@@ -117,10 +118,15 @@ Features include:
 
 ### 2.2 Conventions
 
+#### `lab-notebook` directory
+
 * Jupyter notebooks in the `lab-notebook` directory should be named using the
   following convention: `YYYY-MM-DD-AUTHOR_INITIALS-BRIEF_DESCRIPTION.ipynb`.
 
     * Example: `2019-01-17-KTC-information_theory_analysis.ipynb`
+
+* Depending on the nature of the project, it may be useful to organize lab
+  notebook entries into sub-directories (e.g., by team member, by sub-project).
 
 ### 2.3 Creating a New Jupyter Notebook
 
