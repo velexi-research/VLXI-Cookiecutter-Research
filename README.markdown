@@ -2,7 +2,7 @@ Velexi Scaffolding: Data Science Project
 ========================================
 
 ___Authors___  
-Kevin Chu `<kevin@velexi.com>`
+Kevin T. Chu `<kevin@velexi.com>`
 
 ------------------------------------------------------------------------------
 
