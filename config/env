@@ -28,9 +28,18 @@ unset PYTHONPATH
 if [[ "$PYTHONPATH" != *$TOP_DIR* ]]; then
     export PYTHONPATH=$TOP_DIR:$PYTHONPATH
 fi
+if [[ "$PYTHONPATH" != *$TOP_DIR/src* ]]; then
+    export PYTHONPATH=$TOP_DIR/src:$PYTHONPATH
+fi
 
 # Jupyter configuration
 export JUPYTER_CONFIG_DIR=$TOP_DIR/.jupyter
+
+if [[ "$JUPYTER_PATH" != *$TOP_DIR/src* ]]; then
+    export JUPYTER_PATH=$TOP_DIR/src:$JUPYTER_PATH
+fi
+
+# Jupyter aliases
 alias jn='jupyter notebook'
 
 # --- Clean up
