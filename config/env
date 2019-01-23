@@ -31,6 +31,7 @@ fi
 
 # Jupyter configuration
 export JUPYTER_CONFIG_DIR=$TOP_DIR/.jupyter
+alias jn='jupyter notebook'
 
 # --- Clean up
 
