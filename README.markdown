@@ -1,5 +1,5 @@
-Velexi Scaffolding: Data Science Project
-========================================
+Velexi Template: Data Science Project
+=====================================
 
 ___Authors___  
 Kevin T. Chu `<kevin@velexi.com>`
@@ -21,9 +21,9 @@ Table of Contents
 
    2.2. [Conventions][#2.2]
 
-   2.3. [Creating a New Jupyter Notebook][#2.3]
+   2.3. [TODO][#2.3]
 
-   2.4. [Opening an Existing Jupyter Notebook][#2.4]
+   2.4. [Using New Jupyter Notebook][#2.4]
 
 3. [References][#3]
 
@@ -32,9 +32,9 @@ Table of Contents
 1 Overview
 ----------
 
-This project scaffolding is intended to support data science projects that
+This project template is intended to support data science projects that
 utilize Jupyter notebooks for experimentation and reporting. The design of
-the scaffolding is based on the blog article
+the template is based on the blog article
 ["Jupyter Notebook Best Practices for Data Science"][#whitmore-2016] by
 Jonathan Whitmore.
 
@@ -131,7 +131,19 @@ Features include:
 * Depending on the nature of the project, it may be useful to organize lab
   notebook entries into sub-directories (e.g., by team member, by sub-project).
 
-### 2.3 Creating a New Jupyter Notebook
+### 2.3 Environment
+
+* TODO
+
+* autoenv
+  - `DATA_DIR`
+
+* aliases
+  - jn
+
+### 2.4 Using Jupyter Notebook
+
+#### Creating a New Jupyter Notebook
 
 1. Change to the directory where Jupyter notebook should be saved.
 
@@ -147,7 +159,7 @@ Features include:
 
 3. Use the menu under the `New` button to create a new Jupyter Notebook.
 
-### 2.4 Opening an Existing Jupyter Notebook
+#### Opening an Existing Jupyter Notebook
 
 1. Change to the directory containing the Jupyter notebook.
 
@@ -181,8 +193,8 @@ Features include:
 [#2]: #2-usage
 [#2.1]: #2-1-setting-up
 [#2.2]: #2-2-conventions
-[#2.3]: #2-3-creating-a-new-jupyter-notebook
-[#2.4]: #2-4-opening-an-existing-jupyter-notebook
+[#2.3]: #2-3-TODO
+[#2.4]: #2-4-using-jupyter-notebook
 
 [#3]: #3-references
 
