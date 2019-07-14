@@ -199,5 +199,6 @@ Features include:
 [#3]: #3-references
 
 [-----------------------------EXTERNAL LINKS-----------------------------]: #
+
 [#whitmore-2016]:
   https://www.svds.com/tbt-jupyter-notebook-best-practices-data-science/
