@@ -83,16 +83,16 @@ Features include:
   repository. For projects with large datasets, committing the data to the git
   repository is ___discouraged___.
 
-* `lab-notebook`: directory intended for Jupyter notebooks used for
+* `lab-notebook`: directory containing Jupyter notebooks used for
   experimentation and development. Jupyter notebooks saved in this directory
   should (1) have a single author and (2) be dated.
 
-* `reports`: directory intended for Jupyter notebooks that present and record
+* `lib`: directory containing source code developed to support project
+
+* `reports`: directory containing Jupyter notebooks that present and record
   final results. Jupyter notebooks saved in this directory should be polished,
   contain final analysis results, and be the work product of the entire data
   science team.
-
-* `src`: directory intended for source code developed to support project
 
 ------------------------------------------------------------------------------
 
