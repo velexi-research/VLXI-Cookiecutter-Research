@@ -1,6 +1,6 @@
 # --- Activate virtual Python environment
 
-TARGET_VIRTUALENV={{ NAME OF VIRTUALENV }}
+TARGET_VIRTUALENV={{ VIRTUALENV_NAME }}
 virtualenvwrapper_verify_active_environment 2> /dev/null
 if [ $? -ne 0 ]; then
     workon $TARGET_VIRTUALENV
