@@ -21,7 +21,7 @@ Table of Contents
 
    2.2. [Conventions][#2.2]
 
-   2.3. [TODO][#2.3]
+   2.3. [Environment][#2.3]
 
    2.4. [Using New Jupyter Notebook][#2.4]
 
@@ -193,7 +193,7 @@ Features include:
 [#2]: #2-usage
 [#2.1]: #2-1-setting-up
 [#2.2]: #2-2-conventions
-[#2.3]: #2-3-TODO
+[#2.3]: #2-3-environment
 [#2.4]: #2-4-using-jupyter-notebook
 
 [#3]: #3-references
