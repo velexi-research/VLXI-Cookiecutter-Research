@@ -15,6 +15,8 @@ Table of Contents
 
    1.2. [Directory Structure][#1.2]
 
+   1.3. [Skeleton Components][#1.3]
+
 2. [Usage][#2]
 
    2.1. [Setting Up][#2.1]
@@ -23,14 +25,13 @@ Table of Contents
 
    2.3. [Environment][#2.3]
 
-   2.4. [Using New Jupyter Notebook][#2.4]
+   2.4. [Using Jupyter Notebook][#2.4]
 
 3. [References][#3]
 
 ------------------------------------------------------------------------------
 
-1 Overview
-----------
+## 1. Overview
 
 This project template is intended to support data science projects that
 utilize Jupyter notebooks for experimentation and reporting. The design of
@@ -75,7 +76,7 @@ Features include:
 * `requirements.txt`: `pip` requirements file containing Python packages for
   data science, testing, and assessing code quality.
 
-* `config`: directory containing template configuration files (e.g., `autoenv`
+* `config`: directory containing skeleton configuration files (e.g., `autoenv`
   configuration file)
 
 * `data`: directory where project data should be placed. __Note__: data placed
@@ -94,10 +95,15 @@ Features include:
   contain final analysis results, and be the work product of the entire data
   science team.
 
+### 1.3. Skeleton Components
+
+Skeleton files and directories are indicated by the 'skeleton' suffix. These
+files and directories are intended to simplify the set up of the lab notebook.
+When appropriate, they should be renamed (with the 'skeleton' suffix removed).
+
 ------------------------------------------------------------------------------
 
-2 Usage
--------
+## 2. Usage
 
 ### 2.1 Setting Up
 
@@ -187,14 +193,15 @@ Features include:
 [-----------------------------INTERNAL LINKS-----------------------------]: #
 
 [#1]: #1-overview
-[#1.1]: #1-1-software-dependencies
-[#1.2]: #1-2-directory-structure
+[#1.1]: #11-software-dependencies
+[#1.2]: #12-directory-structure
+[#1.3]: #13-skeleton-components
 
 [#2]: #2-usage
-[#2.1]: #2-1-setting-up
-[#2.2]: #2-2-conventions
-[#2.3]: #2-3-environment
-[#2.4]: #2-4-using-jupyter-notebook
+[#2.1]: #21-setting-up
+[#2.2]: #22-conventions
+[#2.3]: #23-environment
+[#2.4]: #24-using-jupyter-notebook
 
 [#3]: #3-references
 
