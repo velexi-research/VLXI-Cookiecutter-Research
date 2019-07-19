@@ -74,7 +74,7 @@ Features include:
 * `README.markdown`: this file
 
 * `requirements.txt`: `pip` requirements file containing Python packages for
-  data science, testing, and assessing code quality.
+  data science, testing, and assessing code quality
 
 * `config`: directory containing template configuration files (e.g., `autoenv`
   configuration file)
