@@ -16,9 +16,12 @@ data/*
 .coverage.*
 .pytest_cache
 
-# autoenv
-.env
-
 # Jupyter files
 .ipynb_checkpoints
 .jupyter/migrated
+
+# autoenv files
+.env
+
+# macOS files
+.DS_Store*
