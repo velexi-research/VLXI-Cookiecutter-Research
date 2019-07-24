@@ -24,11 +24,11 @@ data/*
 
 # --- Miscellaneous
 
-# vim files
-.*.swp
-
 # autoenv files
 .env
+
+# vim files
+.*.swp
 
 # macOS files
 .DS_Store*
