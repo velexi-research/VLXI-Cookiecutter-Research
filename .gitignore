@@ -16,7 +16,7 @@ data/*
 # compiled source
 *.pyc
 
-# testing files
+# testing
 .cache
 .coverage
 .coverage.*
@@ -24,11 +24,11 @@ data/*
 
 # --- Miscellaneous
 
-# autoenv files
+# autoenv
 .env
 
-# vim files
+# vim
 .*.swp
 
-# macOS files
+# macOS
 .DS_Store*
