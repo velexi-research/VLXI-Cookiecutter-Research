@@ -121,7 +121,7 @@ When appropriate, they should be renamed (with the 'template' suffix removed).
 
 * Set up autoenv.
 
-  - Copy `config/env` to `.env` in project root directory.
+  - Copy `config/env.template` to `.env` in project root directory.
 
   - Set template variables in `.env` (indicated by `{{ }}` notation).
 
