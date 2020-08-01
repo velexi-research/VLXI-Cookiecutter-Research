@@ -18,6 +18,13 @@ PYTHONPATH_EXTRA=
 
 # --- Activate virtual Python environment
 
+# Helper functions
+function workon {
+  local venv_path="${WORKON_HOME}/$1"
+  source ${venv_path}/bin/activate
+}
+
+# Activate virtual environment
 virtualenvwrapper_verify_active_environment 2> /dev/null
 if [ $? -ne 0 ]; then
     workon $TARGET_VIRTUALENV
@@ -73,3 +80,6 @@ alias jn='jupyter notebook'
 
 unset TARGET_VIRTUALENV
 unset TOP_DIR
+
+# Eliminate direnv error caused by virtualenvwrapper resetting prompt.
+unset PS1
