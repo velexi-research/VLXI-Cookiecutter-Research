@@ -1,3 +1,18 @@
+# Data science packages
+matplotlib
+numpy
+pandas
+scikit-learn
+scipy
+seaborn
+
+# Interactive environments
+ipython
+jupyter
+
+# Basic utility packages
+PyYAML
+
 # Code quality
 coverage
 pycodestyle
@@ -8,18 +23,3 @@ pytest-pycodestyle
 pytest-pylint
 pytest-xdist
 radon
-
-# Interactive environments
-ipython
-jupyter
-
-# Basic utility packages
-PyYAML
-
-# Data science packages
-matplotlib
-numpy
-pandas
-scikit-learn
-scipy
-seaborn
