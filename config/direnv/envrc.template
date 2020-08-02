@@ -74,6 +74,7 @@ if [[ "$JUPYTER_PATH" != *$TOP_DIR/lib* ]]; then
 fi
 
 # Jupyter aliases
+# TODO: Aliases don't work with direnv. Find a work around.
 alias jn='jupyter notebook'
 
 # --- Display activation message
@@ -82,9 +83,6 @@ VIRTUAL_ENV_NAME=`basename $VIRTUAL_ENV`
 echo "Active virtual environment: $VIRTUAL_ENV_NAME"
 
 # --- Clean up
-
-unset TARGET_VIRTUALENV
-unset TOP_DIR
 
 # Eliminate direnv error caused by virtualenvwrapper resetting prompt.
 unset PS1
