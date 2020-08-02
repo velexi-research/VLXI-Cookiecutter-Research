@@ -76,6 +76,11 @@ fi
 # Jupyter aliases
 alias jn='jupyter notebook'
 
+# --- Display activation message
+
+VIRTUAL_ENV_NAME=`basename $VIRTUAL_ENV`
+echo "Active virtual environment: $VIRTUAL_ENV_NAME"
+
 # --- Clean up
 
 unset TARGET_VIRTUALENV
