@@ -28,6 +28,10 @@ data/*
 # autoenv
 .env
 
+# direnv
+.direnv
+.envrc
+
 # vim
 .*.swp
 
