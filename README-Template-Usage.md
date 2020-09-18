@@ -53,36 +53,40 @@ Features include:
 
 #### Base Requirements
 
-* Python
+* Python (>=3.5)
 
 #### Recommended Python Packages ####
 
-* `autoenv`
-* `virtualenv`
-* `virtualenvwrapper`
+* `direnv`
 
 ### 1.2 Directory Structure
 
-    README.markdown
+    README.md
+    README-Template-Usage.md
+    README.md.template
     requirements.txt
-    config/
     data/
+    extras/
     lab-notebook/
     reports/
     src/
 
-* `README.markdown`: this file
+* `README.md`: symbolic to `README-Template-Usage.md`
+
+* `README-Template-Usage.md`: this file
+
+* `README.md.template`: template README file for data science project
 
 * `requirements.txt`: `pip` requirements file containing Python packages for
   data science, testing, and assessing code quality
-
-* `config`: directory containing template configuration files (e.g., `autoenv`
-  configuration file)
 
 * `data`: directory where project data should be placed. __Note__: data placed
   in this directory ___does not___ necessarily need to be committed to the git
   repository. For projects with large datasets, committing the data to the git
   repository is ___discouraged___.
+
+* `extras`: directory containing template configuration files (e.g., `direnv`
+  configuration file)
 
 * `lab-notebook`: directory containing Jupyter notebooks used for
   experimentation and development. Jupyter notebooks saved in this directory
@@ -107,23 +111,39 @@ When appropriate, they should be renamed (with the 'template' suffix removed).
 
 ### 2.1 Setting Up
 
-* Create Python virtual environment for project.
+* Set up environment for project using only one of the following approaches.
 
-    ```bash
-    $ mkvirtualenv -p /PATH/TO/PYTHON PROJECT_NAME
-    ```
+  * `direnv`-based Setup
+
+    * Copy `extras/envrc.template` to `.envrc` in project root directory.
+
+    * Grant permission to `direnv` to execute the `.envrc` file.
+
+      ```shell
+      $ `direnv allow
+      ```
+
+    * If needed, edit "User-Specified Configuration Parameters" section of
+      `.envrc`.
+
+  * `autoenv`-based Setup
+
+    * Create Python virtual environment.
+
+      ```shell
+        $ python3 -m venv .venv
+      ```
+
+    * Copy `extras/env.template` to `.env` in project root directory.
+
+    * If needed, edit "User-Specified Configuration Parameters" section of
+      `.env`.
 
 * Install required Python packages.
 
-    ```bash
+    ```shell
     $ pip install -r requirements.txt
     ```
-
-* Set up autoenv.
-
-  - Copy `config/env.template` to `.env` in project root directory.
-
-  - Set template variables in `.env` (indicated by `{{ }}` notation).
 
 ### 2.2 Conventions
 
@@ -139,13 +159,15 @@ When appropriate, they should be renamed (with the 'template' suffix removed).
 
 ### 2.3 Environment
 
-* TODO
+If `direnv` or `autoenv` is enabled, the following environment variables are
+automatically set.
 
-* autoenv
-  - `DATA_DIR`
+* `DATA_DIR`: absolute path to data directory
 
-* aliases
-  - jn
+* When using `autoenv` to manage the shell environment, the following aliases
+  are created. Unfortunately, aliases cannot be automatically set when `direnv`   manages the shell environment.
+
+  * `jn`: start Jupyter notebook
 
 ### 2.4 Using Jupyter Notebook
 
@@ -153,13 +175,13 @@ When appropriate, they should be renamed (with the 'template' suffix removed).
 
 1. Change to the directory where Jupyter notebook should be saved.
 
-    ```bash
+    ```shell
     $ cd NOTEBOOK_DIR
     ```
 
 2. Launch the Jupyter Notebook App.
 
-    ```bash
+    ```shell
     $ jupyter notebook
     ```
 
@@ -169,13 +191,13 @@ When appropriate, they should be renamed (with the 'template' suffix removed).
 
 1. Change to the directory containing the Jupyter notebook.
 
-    ```bash
+    ```shell
     $ cd NOTEBOOK_DIR
     ```
 
 2. Launch the Jupyter Notebook App with the specified notebook file.
 
-    ```bash
+    ```shell
     $ jupyter notebook NOTEBOOK_FILE.ipynb
     ```
 
