@@ -13,7 +13,7 @@ Contents
 
   1.1. [License][#1.1]
 
-2. [Installation][#2]
+2. [Usage][#2]
 
   2.1. [Software Dependencies][#2.1]
 
@@ -33,7 +33,7 @@ See the LICENSE file for copyright and license information.
 
 ------------------------------------------------------------------------------
 
-## 2. Installation
+## 2. Usage
 
 ### 2.1. Software Dependencies
 
@@ -64,7 +64,7 @@ TODO
 [#1]: #1-overview
 [#1.1]: #11-license
 
-[#2]: #2-installation
+[#2]: #2-usage
 [#2.1]: #21-software-dependencies
 
 [#3]: #3-documentation
