@@ -25,14 +25,14 @@ data/*
 
 # --- Miscellaneous
 
-# autoenv
-.env
-
 # direnv
 .direnv
 .envrc
 
 # vim
+# autoenv
+.env
+
 .*.swp
 
 # macOS
