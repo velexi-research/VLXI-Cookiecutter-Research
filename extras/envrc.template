@@ -12,6 +12,10 @@ PATH_EXTRA=
 # NOTE: paths should be specified relative to top-level of project directory.
 PYTHONPATH_EXTRA=
 
+# Paths to add to JULIA_LOAD_PATH
+# NOTE: paths should be specified relative to root directory for the project
+JULIA_LOAD_PATH_EXTRA=
+
 # ====================== DO NOT EDIT BELOW ====================== #
 
 # --- Enable Python 3 layout
@@ -37,6 +41,15 @@ export PYTHONPATH=$TOP_DIR
 PYTHONPATH_EXTRA="lib $PYTHONPATH_EXTRA"
 for DIR in $PYTHONPATH_EXTRA; do
     path_add PYTHONPATH $TOP_DIR/$DIR
+done
+
+# Julia configuration
+export JULIA_PROJECT=@.
+export JULIA_LOAD_PATH=$TOP_DIR:  # Note the trailing ":" is necessary so that
+                                  # Julia includes the default LOAD_PATH
+JULIA_LOAD_PATH_EXTRA="lib $JULIA_LOAD_PATH_EXTRA"
+for DIR in $JULIA_LOAD_PATH_EXTRA; do
+    path_add JULIA_LOAD_PATH $TOP_DIR/$DIR
 done
 
 # Library directory
