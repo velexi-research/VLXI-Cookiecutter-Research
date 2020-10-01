@@ -213,16 +213,8 @@ automatically set.
 
 2. Launch the Jupyter Notebook App with the specified notebook file.
 
-  * Python notebook
-
     ```shell
     $ jupyter notebook NOTEBOOK_FILE.ipynb
-    ```
-
-  * Julia notebook
-
-    ```shell
-    $ jupyter notebook NOTEBOOK_FILE.jl
     ```
 
 ------------------------------------------------------------------------------
