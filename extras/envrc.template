@@ -45,12 +45,13 @@ done
 
 # Julia configuration
 export JULIA_PROJECT=@.
-export JULIA_LOAD_PATH=$TOP_DIR:  # Note the trailing ":" is necessary so that
-                                  # Julia includes the default LOAD_PATH
+export JULIA_LOAD_PATH=$TOP_DIR
 JULIA_LOAD_PATH_EXTRA="lib $JULIA_LOAD_PATH_EXTRA"
 for DIR in $JULIA_LOAD_PATH_EXTRA; do
     path_add JULIA_LOAD_PATH $TOP_DIR/$DIR
 done
+export JULIA_LOAD_PATH=$JULIA_LOAD_PATH:  # Append trailing ":" so that Julia
+                                          # includes the default LOAD_PATH
 
 # Library directory
 export LIB_DIR=$TOP_DIR/lib
