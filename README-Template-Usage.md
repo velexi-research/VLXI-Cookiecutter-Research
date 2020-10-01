@@ -55,8 +55,9 @@ Features include:
 
 * Python (>=3.5)
 
-#### Recommended Python Packages ####
+#### Recommended Packages ####
 
+* Julia (>=1.4)
 * `direnv`
 
 ### 1.2 Directory Structure
@@ -65,6 +66,8 @@ Features include:
     README-Template-Usage.md
     README.md.template
     requirements.txt
+    Project.toml
+    Manifest.toml
     data/
     extras/
     lab-notebook/
@@ -79,6 +82,13 @@ Features include:
 
 * `requirements.txt`: `pip` requirements file containing Python packages for
   data science, testing, and assessing code quality
+
+* `Project.toml`: Julia package management file containing Julia packagesi
+  dependencies
+
+* `Manifest.toml`: Julia package management file that Julia uses to maintain
+  a record of the state of the Julia environment. This file should _not_ be
+  edited.
 
 * `data`: directory where project data should be placed. __Note__: data placed
   in this directory ___does not___ necessarily need to be committed to the git
@@ -145,6 +155,12 @@ When appropriate, they should be renamed (with the 'template' suffix removed).
     $ pip install -r requirements.txt
     ```
 
+* (OPTIONAL) Install required Julia packages.
+
+    ```shell
+    $ init-julia.jl
+    ```
+
 ### 2.2 Conventions
 
 #### `lab-notebook` directory
@@ -152,7 +168,7 @@ When appropriate, they should be renamed (with the 'template' suffix removed).
 * Jupyter notebooks in the `lab-notebook` directory should be named using the
   following convention: `YYYY-MM-DD-AUTHOR_INITIALS-BRIEF_DESCRIPTION.ipynb`.
 
-    * Example: `2019-01-17-KTC-information_theory_analysis.ipynb`
+  * Example: `2019-01-17-KTC-information_theory_analysis.ipynb`
 
 * Depending on the nature of the project, it may be useful to organize lab
   notebook entries into sub-directories (e.g., by team member, by sub-project).
@@ -197,8 +213,16 @@ automatically set.
 
 2. Launch the Jupyter Notebook App with the specified notebook file.
 
+  * Python notebook
+
     ```shell
     $ jupyter notebook NOTEBOOK_FILE.ipynb
+    ```
+
+  * Julia notebook
+
+    ```shell
+    $ jupyter notebook NOTEBOOK_FILE.jl
     ```
 
 ------------------------------------------------------------------------------
