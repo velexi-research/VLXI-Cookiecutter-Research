@@ -49,7 +49,7 @@ Features include:
 
 * supports common data science workflows (for both individuals and teams).
 
-### 1.1 Software Dependencies
+### 1.1. Software Dependencies
 
 #### Base Requirements
 
@@ -60,7 +60,7 @@ Features include:
 * Julia (>=1.4)
 * `direnv`
 
-### 1.2 Directory Structure
+### 1.2. Directory Structure
 
     README.md
     README-Template-Usage.md
@@ -124,7 +124,7 @@ When appropriate, they should be renamed (with the 'template' suffix removed).
 
 ## 2. Usage
 
-### 2.1 Setting Up
+### 2.1. Setting Up
 
 * Set up environment for project using only one of the following approaches.
 
@@ -166,7 +166,7 @@ When appropriate, they should be renamed (with the 'template' suffix removed).
     $ init-julia.jl
     ```
 
-### 2.2 Conventions
+### 2.2. Conventions
 
 #### `lab-notebook` directory
 
@@ -178,7 +178,7 @@ When appropriate, they should be renamed (with the 'template' suffix removed).
 * Depending on the nature of the project, it may be useful to organize lab
   notebook entries into sub-directories (e.g., by team member, by sub-project).
 
-### 2.3 Environment
+### 2.3. Environment
 
 If `direnv` or `autoenv` is enabled, the following environment variables are
 automatically set.
@@ -190,7 +190,7 @@ automatically set.
 
   * `jn`: start Jupyter notebook
 
-### 2.4 Using Jupyter Notebook
+### 2.4. Using Jupyter Notebook
 
 #### Creating a New Jupyter Notebook
 
