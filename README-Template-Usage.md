@@ -41,13 +41,13 @@ Jonathan Whitmore.
 
 Features include:
 
-* Compatible with standard version control software.
+* compatible with standard version control software;
 
-* Automatically saves HTML and `*.py` versions of Jupyter notebooks to
+* automatically saves HTML and `*.py` versions of Jupyter notebooks to
   facilitate review of both (1) data science results and (2) implementation
-  code.
+  code; and
 
-* Supports common data science workflows (for both individuals and teams).
+* supports common data science workflows (for both individuals and teams).
 
 ### 1.1 Software Dependencies
 
