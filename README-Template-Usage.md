@@ -68,6 +68,7 @@ Features include:
     requirements.txt
     Project.toml
     Manifest.toml
+    bin/
     data/
     extras/
     lab-notebook/
@@ -89,6 +90,10 @@ Features include:
 * `Manifest.toml`: Julia package management file that Julia uses to maintain
   a record of the state of the Julia environment. This file should _not_ be
   edited.
+
+* `bin`: directory where scripts and programs should be placed. It also
+  contains the `init-julia.jl` script that can be used to initialize a
+  Julia-based project.
 
 * `data`: directory where project data should be placed. __Note__: data placed
   in this directory ___does not___ necessarily need to be committed to the git
