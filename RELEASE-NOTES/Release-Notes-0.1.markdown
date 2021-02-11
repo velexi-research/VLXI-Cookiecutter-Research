@@ -2,6 +2,12 @@ Velexi Data Science Project Template: Release Notes
 ===================================================
 
 -------------------------------------------------------------------------------
+0.1.2 (2021-02-10)
+==================
+* Fix errors and improve README files.
+* Add standard data directory (that is ignored by git).
+
+-------------------------------------------------------------------------------
 0.1.1 (2020-11-24)
 ==================
 * Add support for Julia.
