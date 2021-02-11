@@ -135,7 +135,7 @@ When appropriate, they should be renamed (with the 'template' suffix removed).
     * Grant permission to `direnv` to execute the `.envrc` file.
 
       ```shell
-      $ `direnv allow
+      $ direnv allow
       ```
 
     * If needed, edit "User-Specified Configuration Parameters" section of
