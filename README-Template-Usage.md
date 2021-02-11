@@ -146,7 +146,7 @@ When appropriate, they should be renamed (with the 'template' suffix removed).
     * Create Python virtual environment.
 
       ```shell
-        $ python3 -m venv .venv
+      $ python3 -m venv .venv
       ```
 
     * Copy `extras/env.template` to `.env` in project root directory.
