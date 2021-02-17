@@ -84,7 +84,7 @@ Features include:
 * `requirements.txt`: `pip` requirements file containing Python packages for
   data science, testing, and assessing code quality
 
-* `Project.toml`: Julia package management file containing Julia packagesi
+* `Project.toml`: Julia package management file containing Julia packages
   dependencies
 
 * `Manifest.toml`: Julia package management file that Julia uses to maintain
