@@ -1,10 +1,14 @@
-# Data science packages
+# Data science analysis packages
 matplotlib
 numpy
 pandas
 scikit-learn
 scipy
 seaborn
+
+# Data science workflow packages
+dvc[all]
+mlflow
 
 # Interactive environments
 ipython
