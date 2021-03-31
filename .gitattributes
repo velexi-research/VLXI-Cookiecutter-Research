@@ -1,0 +1,2 @@
+# Set the default behavior for line endings in case core.autocrlf is not set.
+* text=auto
