@@ -10,8 +10,8 @@
 # --- Jupyter files
 
 .ipynb_checkpoints
-.jupyter/migrated
-.jupyter/nbconfig
+.jupyter
+!.jupyter/jupyter_notebook_config.py
 
 # --- Python files
 
