@@ -7,15 +7,16 @@ scipy
 seaborn
 
 # Data science workflow packages
-dvc[all]
+dvc
 mlflow
 
 # Interactive environments
 ipython
-jupyter
+jupyterlab
 
 # Basic utility packages
 PyYAML
+python-slugify
 
 # Code quality
 coverage
