@@ -12,6 +12,7 @@
 .ipynb_checkpoints
 .jupyter
 !.jupyter/jupyter_notebook_config.py
+nbconvert
 
 # --- Python files
 
