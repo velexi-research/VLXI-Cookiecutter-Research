@@ -35,10 +35,13 @@ Manifest.toml
 .direnv
 .envrc
 
-# vim
 # autoenv
 .env
 
+# conda
+.conda
+
+# vim
 .*.swp
 
 # macOS
