@@ -79,6 +79,8 @@ Features include:
     lib/
     reports/
     research/
+    template-docs/
+    template-docs/extras/
 
 * `README.md`: this file (same as `README-Data-Science-Project-Template.md` in
   the `template-docs` directory)
@@ -120,21 +122,21 @@ Features include:
 * `lib`: directory containing source code to support the project (e.g.,
   custom code developed for the project, utility modules, etc.)
 
-* `reports`: directory containing reports (in any reasonable format) that
-  present and record final results. When a report is prepared as a Jupyter
-  notebook, the notebook should be polished, contain final analysis results,
-  and be the work product of the entire data science team.
+* `reports`: directory containing reports (in any format) that summarize
+  research results. When a report is prepared as a Jupyter notebook, the
+  notebook should be polished, contain final analysis results (not preliminary
+  results), and is usually the work product of the entire data science team.
 
-* `research`: directory containing Jupyter notebooks used for research
-  and development of ideas. Each Jupyter notebook in this directory should
-  (1) be dated and (2) have the initials of the person who last modified it.
-  When existing notebooks are modified, they should be saved to a new file
-  based on the modification date and initialed by the person who modified the
-  notebook.
+* `research`: directory containing Jupyter notebooks used for research phase
+  work (e.g., exploration and development of ideas, DS/ML experiments). Each
+  Jupyter notebook in this directory should (1) be dated and (2) have the
+  initials of the person who last modified it. When an existing notebook is
+  modified, it should be saved to a new file with a name based on the
+  modification date and initialed by the person who modified the notebook.
 
 * `template-docs`: directory containing documentation this package template
 
-* `template-docs/extras`: directory containing example and template files
+    * `template-docs/extras`: directory containing example and template files
 
 ------------------------------------------------------------------------------
 
