@@ -146,7 +146,8 @@ Features include:
 
   * `direnv`-based setup
 
-    * Copy `extras/envrc.template` to `.envrc` in project root directory.
+    * Copy `template-docs/extras/envrc.template` to `.envrc` in project root
+      directory.
 
     * Grant permission to `direnv` to execute the `.envrc` file.
 
@@ -165,7 +166,8 @@ Features include:
       $ python3 -m venv .venv
       ```
 
-    * Copy `extras/env.template` to `.env` in project root directory.
+    * Copy `template-docs/extras/env.template` to `.env` in project root
+      directory.
 
     * If needed, edit "User-Specified Configuration Parameters" section of
       `.env`.
