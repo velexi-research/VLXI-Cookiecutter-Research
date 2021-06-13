@@ -16,6 +16,9 @@ nbconvert
 
 # --- Python files
 
+# virtual environments
+.venv
+
 # compiled source
 *.pyc
 
