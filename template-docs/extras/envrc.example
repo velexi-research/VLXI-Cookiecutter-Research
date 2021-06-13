@@ -16,6 +16,9 @@ PYTHONPATH_EXTRA=
 # NOTE: paths should be specified relative to root directory for the project
 JULIA_LOAD_PATH_EXTRA=
 
+# URI of MLflow tracking server
+MLFLOW_TRACKING_URI=
+
 # ====================== DO NOT EDIT BELOW ====================== #
 
 # --- Enable Python 3 layout
@@ -30,20 +33,18 @@ layout_python3
 #       (e.g., autoenv)
 TOP_DIR=`builtin cd $(dirname "${BASH_SOURCE[0]}") && pwd`
 
-# Set PATH
-PATH_EXTRA="bin $PATH_EXTRA"
-for DIR in $PATH_EXTRA; do
-    PATH_add $TOP_DIR/$DIR
-done
-
-# Python configuration
+# Python
 export PYTHONPATH=$TOP_DIR
 PYTHONPATH_EXTRA="lib $PYTHONPATH_EXTRA"
 for DIR in $PYTHONPATH_EXTRA; do
     path_add PYTHONPATH $TOP_DIR/$DIR
 done
 
-# Julia configuration
+# Conda
+export CONDA_ENVS_PATH=$TOP_DIR/.conda/envs
+export CONDA_PKGS_DIRS=$TOP_DIR/.conda/pkgs
+
+# Julia
 export JULIA_PROJECT=@.
 export JULIA_LOAD_PATH=$TOP_DIR
 JULIA_LOAD_PATH_EXTRA="lib $JULIA_LOAD_PATH_EXTRA"
@@ -52,7 +53,27 @@ for DIR in $JULIA_LOAD_PATH_EXTRA; do
 done
 export JULIA_LOAD_PATH=$JULIA_LOAD_PATH:  # Append trailing ":" so that Julia
                                           # includes the default LOAD_PATH
-export PYTHON=`which python`
+
+# Jupyter
+export JUPYTER_CONFIG_DIR=$TOP_DIR/.jupyter
+path_add JUPYTER_PATH $LIB_DIR
+
+# MLflow
+export MLFLOW_CONDA_HOME=`dirname $(dirname $(which conda))`
+if [ -z "$MLFLOW_CONDA_HOME" ]; then
+    echo "WARNING: 'conda' installation not found. MLflow Projects and MLflow Models may not function correctly."
+fi
+
+if [ -z "$MLFLOW_TRACKING_URI" ]; then
+    MLFLOW_TRACKING_URI=$TOP_DIR/mlruns
+fi
+export MLFLOW_TRACKING_URI
+
+# Set PATH
+PATH_EXTRA="bin $PATH_EXTRA"
+for DIR in $PATH_EXTRA; do
+    PATH_add $TOP_DIR/$DIR
+done
 
 # Library directory
 export LIB_DIR=$TOP_DIR/lib
@@ -60,10 +81,5 @@ export LIB_DIR=$TOP_DIR/lib
 # Data directory
 export DATA_DIR=$TOP_DIR/data
 
-# Jupyter configuration
-export JUPYTER_CONFIG_DIR=$TOP_DIR/.jupyter
-path_add JUPYTER_PATH $LIB_DIR
-
-# Jupyter aliases
-# TODO: Aliases don't work with direnv. Find a work around.
-#alias jn='jupyter notebook'
+# Set PYTHON
+export PYTHON=`which python`
