@@ -110,12 +110,12 @@ Features include:
 * `data`: directory where project data should be placed
 
     * __Recommendation__: data placed in the `data` directory should be managed
-      using DVC (or a similar tool) rather than being included in the git
+      using DVC (or a similar tool) rather than being included in the `git`
       repository. This is especially important for projects with large datasets
       or datasets containing sensitive information. For projects with small
       datasets that do not contain sensitive information, it may be reasonable
       to have the data contained in the `data` directory be managed directly by
-      git.
+      `git`.
 
 * `lib`: directory containing source code to support the project (e.g.,
   custom code developed for the project, utility modules, etc.)
