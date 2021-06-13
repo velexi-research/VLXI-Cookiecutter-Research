@@ -1,4 +1,4 @@
-Velexi Template: Data Science Project (v0.1.4)
+Velexi Template: Data Science Project (v0.2.0)
 ==============================================
 
 ___Authors___  

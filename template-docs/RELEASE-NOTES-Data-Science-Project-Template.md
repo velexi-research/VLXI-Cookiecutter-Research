@@ -2,7 +2,7 @@ Velexi Data Science Project Template: Release Notes
 ===================================================
 
 -------------------------------------------------------------------------------
-Release Notes: v0.1.4 (2021-06-12)
+Release Notes: v0.2.0 (2021-06-13)
 ==================================
 * Reorganize template structure.
 * Update documentation.
