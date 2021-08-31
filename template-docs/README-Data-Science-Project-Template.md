@@ -1,4 +1,4 @@
-Velexi Template: Data Science Project (v0.2.0)
+Velexi Template: Data Science Project (v0.2.1)
 ==============================================
 
 ___Authors___  
@@ -77,8 +77,8 @@ Features include:
     bin/
     data/
     lib/
+    notebooks/
     reports/
-    research/
     template-docs/
     template-docs/extras/
 
@@ -122,17 +122,17 @@ Features include:
 * `lib`: directory containing source code to support the project (e.g.,
   custom code developed for the project, utility modules, etc.)
 
-* `reports`: directory containing reports (in any format) that summarize
-  research results. When a report is prepared as a Jupyter notebook, the
-  notebook should be polished, contain final analysis results (not preliminary
-  results), and is usually the work product of the entire data science team.
-
-* `research`: directory containing Jupyter notebooks used for research phase
+* `notebooks`: directory containing Jupyter notebooks used for research phase
   work (e.g., exploration and development of ideas, DS/ML experiments). Each
   Jupyter notebook in this directory should (1) be dated and (2) have the
   initials of the person who last modified it. When an existing notebook is
   modified, it should be saved to a new file with a name based on the
   modification date and initialed by the person who modified the notebook.
+
+* `reports`: directory containing reports (in any format) that summarize
+  research results. When a report is prepared as a Jupyter notebook, the
+  notebook should be polished, contain final analysis results (not preliminary
+  results), and is usually the work product of the entire data science team.
 
 * `template-docs`: directory containing documentation this package template
 
@@ -231,9 +231,9 @@ Features include:
 
 ### 2.2. Conventions
 
-#### `research` directory
+#### `notebooks` directory
 
-* Jupyter notebooks in the `research` directory should be named using the
+* Jupyter notebooks in the `notebooks` directory should be named using the
   following convention: `YYYY-MM-DD-AUTHOR_INITIALS-BRIEF_DESCRIPTION.ipynb`.
 
   * Example: `2019-01-17-KC-information_theory_analysis.ipynb`
