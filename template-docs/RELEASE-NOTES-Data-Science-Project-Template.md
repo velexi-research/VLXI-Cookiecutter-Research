@@ -1,14 +1,15 @@
-Velexi Data Science Project Template: Release Notes
+Release Notes: Velexi Data Science Project Template
 ===================================================
 
 -------------------------------------------------------------------------------
-Release Notes: 0.2.1 (2021-08-31)
-=================================
+0.2.1 (2021-08-31)
+==================
 * Rename "research" directory to "notebooks".
+* Migrate to semantic version numbers without "v" prefix.
 
 -------------------------------------------------------------------------------
-Release Notes: 0.2.0 (2021-06-13)
-=================================
+0.2.0 (2021-06-13)
+==================
 * Reorganize template structure.
 * Update documentation.
 * Improve support for common data science workflows.
@@ -17,25 +18,25 @@ Release Notes: 0.2.0 (2021-06-13)
 * Simplify Julia setup steps.
 
 -------------------------------------------------------------------------------
-Release Notes: 0.1.3 (2021-02-10)
-=================================
+0.1.3 (2021-02-10)
+==================
 * Fix minor typo in README-Template-Usage.md.
 
 -------------------------------------------------------------------------------
-Release Notes: 0.1.2 (2021-02-10)
-=================================
+0.1.2 (2021-02-10)
+==================
 * Fix errors and improve README files.
 * Add standard data directory (that is ignored by git).
 
 -------------------------------------------------------------------------------
-Release Notes: 0.1.1 (2020-11-24)
-=================================
+0.1.1 (2020-11-24)
+==================
 * Add support for Julia.
 * Update README file.
 
 -------------------------------------------------------------------------------
-Release Notes: 0.1.0 (2020-09-18)
-=================================
+0.1.0 (2020-09-18)
+==================
 * Initial version of package with core functionality implemented and tested.
 
 -------------------------------------------------------------------------------
