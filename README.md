@@ -138,6 +138,12 @@ Features include:
 
     * `template-docs/extras`: directory containing example and template files
 
+### 1.3. License
+
+The contents of this template are covered under the
+`LICENSE-Data-Science-Project-Template` file contained in the `template-docs`
+of this package.
+
 ------------------------------------------------------------------------------
 
 ## 2. Usage

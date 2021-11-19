@@ -134,9 +134,15 @@ Features include:
   notebook should be polished, contain final analysis results (not preliminary
   results), and is usually the work product of the entire data science team.
 
-* `template-docs`: directory containing documentation this package template
+* `template-docs`: directory containing documentation for this package template
 
     * `template-docs/extras`: directory containing example and template files
+
+### 1.3. License
+
+The contents of this template are covered under the
+`LICENSE-Data-Science-Project-Template` file contained in the `template-docs`
+of this package.
 
 ------------------------------------------------------------------------------
 
