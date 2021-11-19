@@ -1,4 +1,4 @@
-Velexi Template: Data Science Project (0.2.1)
+Velexi Template: Data Science Project (0.2.2)
 =============================================
 
 ___Authors___  
@@ -14,6 +14,8 @@ Table of Contents
    1.1. [Software Dependencies][#1.1]
 
    1.2. [Directory Structure][#1.2]
+
+   1.3. [License][#1.3]
 
 2. [Usage][#2]
 
@@ -280,6 +282,7 @@ automatically set.
 [#1]: #1-overview
 [#1.1]: #11-software-dependencies
 [#1.2]: #12-directory-structure
+[#1.3]: #13-license
 
 [#2]: #2-usage
 [#2.1]: #21-setting-up
