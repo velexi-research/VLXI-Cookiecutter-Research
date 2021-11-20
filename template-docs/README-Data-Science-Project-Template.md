@@ -1,7 +1,9 @@
-Velexi Template: Data Science Project (0.2.2)
-=============================================
+Velexi Template: Data Science Project
+=====================================
 
-___Authors___  
+__Version__: 0.2.2
+
+__Authors__  
 Kevin T. Chu `<kevin@velexi.com>`
 
 ------------------------------------------------------------------------------
