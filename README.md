@@ -74,7 +74,8 @@ Features include:
 
   * `create-project`: script to create an empty research project
 
-* `docs`: directory containing cookiecutter documentation
+* `docs`: directory containing cookiecutter documentation and other helpful
+  documents
 
 * `customizations`: directory containing customizations to the base
   [Cookiecutter Data Science][cookiecutter-data-science] (v1) structure. These
