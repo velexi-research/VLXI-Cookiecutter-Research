@@ -22,6 +22,9 @@ ENABLE_JULIA_OPTION = typer.Option(False, "-j", "--enable-julia",
 ENABLE_MODELS_OPTION = typer.Option(False, "-m", "--enable-models",
                                     help="Enable support for data science and "
                                          "machine learning models.")
+LICENSE_OPTION = typer.Option("Apache", "-l", "--license",
+                              help="License for project. "
+                                   "Choices: Apache, MIT, BSD, none.")
 QUIET_OPTION = typer.Option(False, "-q", "--quiet",
                             help="Display fewer status messages.")
 
@@ -52,34 +55,52 @@ def _append_content(src_filename: Path, dst_filename: Path) -> None:
 def main(project_name: str = PROJECT_NAME_ARG,
          enable_julia: bool = ENABLE_JULIA_OPTION,
          enable_models: bool = ENABLE_MODELS_OPTION,
+         license_: str = LICENSE_OPTION,
          quiet: bool = QUIET_OPTION) -> None:
     """
     Create a new, empty research project.
     """
     # --- Preparations
 
+    # Paths
     cookiecutter_root_dir = os.path.dirname(os.path.dirname(__file__))
     customizations_dir = os.path.join(cookiecutter_root_dir, "customizations")
+
+    # Convert license to lowercase
+    license_ = license_.lower()
 
     # --- Create the base directory structure using "Data Science Cookiecutter"
 
     if not quiet:
         typer.echo("Creating base project directory...")
 
+    # Prepare `cookiecutter` command
     cmd = ["cookiecutter",
            "-c", "v1",
            "https://github.com/drivendata/cookiecutter-data-science"
            ]
+
+    # Prepare input to `cookiecutter` command
     project_repository_name = slugify(project_name, separator="-")
+
+    if license_ == "mit":
+        license_option = "1"
+    elif "bsd" in license_:
+        license_option = "2"
+    else:
+        license_option = "3"
+
     input_data = "\n".join(["",
                             project_name,
                             project_repository_name,
                             "",
                             "",
-                            "3",
+                            license_option,
                             "",
                             "",
                             "1"])
+
+    # Run `cookiecutter` command
     process = subprocess.run(cmd,
                              input=input_data,
                              stdout=subprocess.PIPE,
@@ -107,20 +128,16 @@ def main(project_name: str = PROJECT_NAME_ARG,
 
     shutil.copy2(src_filename, dst_filename)
 
-    # bin/
-    shutil.copytree(os.path.join(customizations_dir, "bin"),
-                    os.path.join(project_repository_name, "bin"))
+    # LICENSE
+    if "apache" in license_:
+        os.remove(os.path.join(project_repository_name, "LICENSE"))
+        shutil.copy2(os.path.join(customizations_dir, "LICENSE-Apache"),
+                     os.path.join(project_repository_name, "LICENSE"))
 
     # requirements.txt
     dst_filename = os.path.join(project_repository_name, "requirements.txt")
     src_filename = os.path.join(customizations_dir, "requirements.txt")
     _append_content(src_filename, dst_filename)
-
-    # src/
-    src_dir = os.path.join(customizations_dir, "src")
-    for file_ in os.listdir(src_dir):
-        shutil.copy2(os.path.join(src_dir, file_),
-                     os.path.join(project_repository_name, "src"))
 
     # .envrc
     shutil.copy2(os.path.join(customizations_dir, "dot-envrc"),
@@ -138,6 +155,16 @@ def main(project_name: str = PROJECT_NAME_ARG,
     # .jupyter/
     shutil.copytree(os.path.join(customizations_dir, "dot-jupyter"),
                     os.path.join(project_repository_name, ".jupyter"))
+
+    # bin/
+    shutil.copytree(os.path.join(customizations_dir, "bin"),
+                    os.path.join(project_repository_name, "bin"))
+
+    # src/
+    src_dir = os.path.join(customizations_dir, "src")
+    for file_ in os.listdir(src_dir):
+        shutil.copy2(os.path.join(src_dir, file_),
+                     os.path.join(project_repository_name, "src"))
 
     # Data science and machine learning customizations
     if not enable_models:
