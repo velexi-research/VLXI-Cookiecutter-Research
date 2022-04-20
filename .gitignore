@@ -1,0 +1,35 @@
+# --- Jupyter files
+
+.jupyter
+!.jupyter/jupyter_notebook_config.py
+nbconvert
+
+# --- Python files
+
+# compiled source
+*.pyc
+
+# virtual environments
+.venv
+
+# testing
+.pytest_cache
+
+# --- Julia files
+
+Manifest.toml
+
+# --- Miscellaneous
+
+# direnv
+.direnv
+.envrc
+
+# conda
+.conda
+
+# vim
+.*.swp
+
+# macOS
+.DS_Store*
