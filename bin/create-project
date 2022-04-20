@@ -124,6 +124,11 @@ def main(project_name: str = PROJECT_NAME_ARG,
     shutil.copytree(os.path.join(customizations_dir, "dot-jupyter"),
                     os.path.join(project_repository_name, ".jupyter"))
 
+    # requirements.txt
+    dst_filename = os.path.join(project_repository_name, "requirements.txt")
+    src_filename = os.path.join(customizations_dir, "requirements.txt")
+    _append_content(src_filename, dst_filename)
+
     # src/
     src_dir = os.path.join(customizations_dir, "src")
     for file_ in os.listdir(src_dir):
