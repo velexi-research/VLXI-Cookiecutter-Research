@@ -107,6 +107,21 @@ def main(project_name: str = PROJECT_NAME_ARG,
 
     shutil.copy2(src_filename, dst_filename)
 
+    # bin/
+    shutil.copytree(os.path.join(customizations_dir, "bin"),
+                    os.path.join(project_repository_name, "bin"))
+
+    # requirements.txt
+    dst_filename = os.path.join(project_repository_name, "requirements.txt")
+    src_filename = os.path.join(customizations_dir, "requirements.txt")
+    _append_content(src_filename, dst_filename)
+
+    # src/
+    src_dir = os.path.join(customizations_dir, "src")
+    for file_ in os.listdir(src_dir):
+        shutil.copy2(os.path.join(src_dir, file_),
+                     os.path.join(project_repository_name, "src"))
+
     # .envrc
     shutil.copy2(os.path.join(customizations_dir, "dot-envrc"),
                  os.path.join(project_repository_name, ".envrc"))
@@ -120,20 +135,9 @@ def main(project_name: str = PROJECT_NAME_ARG,
     src_filename = os.path.join(customizations_dir, "dot-gitignore")
     _append_content(src_filename, dst_filename)
 
-    # .jupyter
+    # .jupyter/
     shutil.copytree(os.path.join(customizations_dir, "dot-jupyter"),
                     os.path.join(project_repository_name, ".jupyter"))
-
-    # requirements.txt
-    dst_filename = os.path.join(project_repository_name, "requirements.txt")
-    src_filename = os.path.join(customizations_dir, "requirements.txt")
-    _append_content(src_filename, dst_filename)
-
-    # src/
-    src_dir = os.path.join(customizations_dir, "src")
-    for file_ in os.listdir(src_dir):
-        shutil.copy2(os.path.join(src_dir, file_),
-                     os.path.join(project_repository_name, "src"))
 
     # Data science and machine learning customizations
     if not enable_models:
