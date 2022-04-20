@@ -5,15 +5,15 @@
 # --- Project-Specific Configuration Parameters
 
 # Paths to add to PATH
-# NOTE: paths should be specified relative to top-level of project directory.
+# NOTE: paths should be specified relative to the project root directory
 PATH_EXTRA=
 
 # Paths to add to PYTHONPATH
-# NOTE: paths should be specified relative to top-level of project directory.
+# NOTE: paths should be specified relative to the project root directory
 PYTHONPATH_EXTRA=
 
 # Paths to add to JULIA_LOAD_PATH
-# NOTE: paths should be specified relative to root directory for the project
+# NOTE: paths should be specified relative to the project root directory
 JULIA_LOAD_PATH_EXTRA=
 
 # URI of MLflow tracking server
@@ -31,31 +31,31 @@ layout_python3
 #
 # Note: "builtin cd" is used to avoid conflicts with other packages
 #       (e.g., autoenv)
-TOP_DIR=`builtin cd $(dirname "${BASH_SOURCE[0]}") && pwd`
+PROJECT_ROOT_DIR=`builtin cd $(dirname "${BASH_SOURCE[0]}") && pwd`
 
 # Python
-export PYTHONPATH=$TOP_DIR
-PYTHONPATH_EXTRA="lib $PYTHONPATH_EXTRA"
+export PYTHONPATH=$PROJECT_ROOT_DIR
+PYTHONPATH_EXTRA="$PYTHONPATH_EXTRA"
 for DIR in $PYTHONPATH_EXTRA; do
-    path_add PYTHONPATH $TOP_DIR/$DIR
+    path_add PYTHONPATH $PROJECT_ROOT_DIR/$DIR
 done
 
 # Conda
-export CONDA_ENVS_PATH=$TOP_DIR/.conda/envs
-export CONDA_PKGS_DIRS=$TOP_DIR/.conda/pkgs
+export CONDA_ENVS_PATH=$PROJECT_ROOT_DIR/.conda/envs
+export CONDA_PKGS_DIRS=$PROJECT_ROOT_DIR/.conda/pkgs
 
 # Julia
 export JULIA_PROJECT=@.
-export JULIA_LOAD_PATH=$TOP_DIR
-JULIA_LOAD_PATH_EXTRA="lib $JULIA_LOAD_PATH_EXTRA"
+export JULIA_LOAD_PATH=$PROJECT_ROOT_DIR
+JULIA_LOAD_PATH_EXTRA="src $JULIA_LOAD_PATH_EXTRA"
 for DIR in $JULIA_LOAD_PATH_EXTRA; do
-    path_add JULIA_LOAD_PATH $TOP_DIR/$DIR
+    path_add JULIA_LOAD_PATH $PROJECT_ROOT_DIR/$DIR
 done
 export JULIA_LOAD_PATH=$JULIA_LOAD_PATH:  # Append trailing ":" so that Julia
                                           # includes the default LOAD_PATH
 
 # Jupyter
-export JUPYTER_CONFIG_DIR=$TOP_DIR/.jupyter
+export JUPYTER_CONFIG_DIR=$PROJECT_ROOT_DIR/.jupyter
 path_add JUPYTER_PATH $LIB_DIR
 
 # MLflow
@@ -65,21 +65,21 @@ if [ -z "$MLFLOW_CONDA_HOME" ]; then
 fi
 
 if [ -z "$MLFLOW_TRACKING_URI" ]; then
-    MLFLOW_TRACKING_URI=$TOP_DIR/mlruns
+    MLFLOW_TRACKING_URI=$PROJECT_ROOT_DIR/mlruns
 fi
 export MLFLOW_TRACKING_URI
 
 # Set PATH
 PATH_EXTRA="bin $PATH_EXTRA"
 for DIR in $PATH_EXTRA; do
-    PATH_add $TOP_DIR/$DIR
+    PATH_add $PROJECT_ROOT_DIR/$DIR
 done
 
-# Library directory
-export LIB_DIR=$TOP_DIR/lib
+# Source code directory
+export SRC_DIR=$PROJECT_ROOT_DIR/src
 
 # Data directory
-export DATA_DIR=$TOP_DIR/data
+export DATA_DIR=$PROJECT_ROOT_DIR/data
 
 # Set PYTHON
 export PYTHON=`which python`
