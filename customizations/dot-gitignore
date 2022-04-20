@@ -1,16 +1,17 @@
+
+#==============================================================================
+# BEGIN: VLXI Research Project Cookiecutter Customizations
+#==============================================================================
+
+# --- DVC files
+
+!*.dvc
+
 # --- Jupyter files
 
 .jupyter
 !.jupyter/jupyter_notebook_config.py
 nbconvert
-
-# --- Python files
-
-# virtual environments
-.venv
-
-# testing
-.pytest_cache
 
 # --- Julia files
 
@@ -24,3 +25,7 @@ Manifest.toml
 
 # conda
 .conda
+
+#==============================================================================
+# END: VLXI Research Project Cookiecutter Customizations
+#==============================================================================
