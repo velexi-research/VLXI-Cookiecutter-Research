@@ -1,6 +1,14 @@
 # Local package
 -e .
 
+# Research and data analysis packages
+matplotlib
+numpy
+pandas
+scikit-learn
+scipy
+seaborn
+
 # Data management
 dvc
 fastds
@@ -10,14 +18,6 @@ mlflow
 
 # Documentation
 Sphinx
-
-# Data science analysis packages
-matplotlib
-numpy
-pandas
-scikit-learn
-scipy
-seaborn
 
 # Interactive environments
 ipython

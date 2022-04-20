@@ -64,7 +64,7 @@ def main(project_name: str = PROJECT_NAME_ARG,
 
     # Paths
     cookiecutter_root_dir = os.path.dirname(os.path.dirname(__file__))
-    customizations_dir = os.path.join(cookiecutter_root_dir, "customizations")
+    template_dir = os.path.join(cookiecutter_root_dir, "template")
 
     # Convert license to lowercase
     license_ = license_.lower()
@@ -122,46 +122,46 @@ def main(project_name: str = PROJECT_NAME_ARG,
     # README.md
     dst_filename = os.path.join(project_repository_name, "README.md")
     if not enable_models:
-        src_filename = os.path.join(customizations_dir, "README.md")
+        src_filename = os.path.join(template_dir, "README.md")
     else:
-        src_filename = os.path.join(customizations_dir, "README-DS.md")
+        src_filename = os.path.join(template_dir, "README-DS.md")
 
     shutil.copy2(src_filename, dst_filename)
 
     # LICENSE
     if "apache" in license_:
         os.remove(os.path.join(project_repository_name, "LICENSE"))
-        shutil.copy2(os.path.join(customizations_dir, "LICENSE-Apache"),
+        shutil.copy2(os.path.join(template_dir, "LICENSE-Apache"),
                      os.path.join(project_repository_name, "LICENSE"))
 
     # requirements.txt
     dst_filename = os.path.join(project_repository_name, "requirements.txt")
-    src_filename = os.path.join(customizations_dir, "requirements.txt")
+    src_filename = os.path.join(template_dir, "requirements-additions.txt")
     _append_content(src_filename, dst_filename)
 
     # .envrc
-    shutil.copy2(os.path.join(customizations_dir, "dot-envrc"),
+    shutil.copy2(os.path.join(template_dir, "dot-envrc"),
                  os.path.join(project_repository_name, ".envrc"))
 
     # .gitattributes
-    shutil.copy2(os.path.join(customizations_dir, "dot-gitattributes"),
+    shutil.copy2(os.path.join(template_dir, "dot-gitattributes"),
                  os.path.join(project_repository_name, ".gitattributes"))
 
     # .gitignore
     dst_filename = os.path.join(project_repository_name, ".gitignore")
-    src_filename = os.path.join(customizations_dir, "dot-gitignore")
+    src_filename = os.path.join(template_dir, "dot-gitignore-additions")
     _append_content(src_filename, dst_filename)
 
     # .jupyter/
-    shutil.copytree(os.path.join(customizations_dir, "dot-jupyter"),
+    shutil.copytree(os.path.join(template_dir, "dot-jupyter"),
                     os.path.join(project_repository_name, ".jupyter"))
 
     # bin/
-    shutil.copytree(os.path.join(customizations_dir, "bin"),
+    shutil.copytree(os.path.join(template_dir, "bin"),
                     os.path.join(project_repository_name, "bin"))
 
     # src/
-    src_dir = os.path.join(customizations_dir, "src")
+    src_dir = os.path.join(template_dir, "src")
     for file_ in os.listdir(src_dir):
         shutil.copy2(os.path.join(src_dir, file_),
                      os.path.join(project_repository_name, "src"))
@@ -184,7 +184,7 @@ def main(project_name: str = PROJECT_NAME_ARG,
 
     # Julia customizations
     if enable_julia:
-        shutil.copy2(os.path.join(customizations_dir, "Project.toml"),
+        shutil.copy2(os.path.join(template_dir, "Project.toml"),
                      project_repository_name)
 
 
