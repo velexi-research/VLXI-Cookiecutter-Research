@@ -1,5 +1,14 @@
-Release Notes: Velexi Data Science Project Template
-===================================================
+Velexi Research Project Cookiecutter Release Notes
+==================================================
+
+-------------------------------------------------------------------------------
+0.3.0 (2022-04-??)
+==================
+* Restructured project to be a cookiecutter instead of a template.
+* Changed repository name from "Velexi Template: Data Science Project" to
+  "Velexi Research Project Cookiecutter".
+* Reorganized template and example files.
+* Added and updated documentation.
 
 -------------------------------------------------------------------------------
 0.2.1 (2021-08-31)
