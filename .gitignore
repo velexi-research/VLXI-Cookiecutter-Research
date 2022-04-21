@@ -14,8 +14,8 @@ htmlcov/
 
 # --- Environments
 
-# common Python virtual environments
-.venv
+# poetry
+poetry.lock
 
 # direnv
 .direnv
@@ -23,6 +23,9 @@ htmlcov/
 
 # conda
 .conda
+
+# common manually-created Python virtual environments
+.venv
 
 # --- Code editors
 
