@@ -1,25 +1,21 @@
-# --- Jupyter files
-
-.jupyter
-!.jupyter/jupyter_notebook_config.py
-nbconvert
-
 # --- Python files
 
-# compiled source
-*.pyc
-
-# virtual environments
-.venv
+# compiled code
+__pycache__/
+*.py[cod]
 
 # testing
+htmlcov/
+.cache
+.coverage
+.coverage.*
 .pytest_cache
+.tox/
 
-# --- Julia files
+# --- Environments
 
-Manifest.toml
-
-# --- Miscellaneous
+# common Python virtual environments
+.venv
 
 # direnv
 .direnv
@@ -28,8 +24,21 @@ Manifest.toml
 # conda
 .conda
 
+# --- Code editors
+
+# VS Code
+.vscode/
+
+# Pycharm
+.idea
+
+# Spyder
+.spyproject/
+
 # vim
-.*.swp
+*.sw[po]
+
+# --- Miscellaneous
 
 # macOS
 .DS_Store*
