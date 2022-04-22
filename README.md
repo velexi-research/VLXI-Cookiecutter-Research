@@ -25,7 +25,9 @@ Table of Contents
 
    3.2. [Setting Up to Develop the Cookiecutter][#3.2]
 
-4. [References][#4]
+4. [Known Issues][#4]
+
+5. [References][#5]
 
 ### Appendices
 
@@ -208,7 +210,20 @@ See [`pyproject.toml`](pyproject.toml).
 
 ------------------------------------------------------------------------------
 
-## 4. References
+## 4. Known Issues
+
+* When including numba as a project dependency, the Python version constraint
+  `pyproject.toml` may need to be more restrictive than default `^3.9`. For
+  numba 0.55, the Python version constraint in `pyproject.toml` should be set
+  to:
+
+  ```
+  python = ">=3.9,<3.11"
+  ```
+
+------------------------------------------------------------------------------
+
+## 5. References
 
 * [Cookiecutter Data Science][cookiecutter-data-science]
 
@@ -298,7 +313,9 @@ See [`pyproject.toml`](pyproject.toml).
 [#3.1]: #31-software-requirements
 [#3.2]: #32-setting-up-to-develop-the-cookiecutter
 
-[#4]: #4-references
+[#4]: #4-known-issues
+
+[#5]: #5-references
 
 [#Appendix.A]: #appendix-a-poetry-quick-reference
 
