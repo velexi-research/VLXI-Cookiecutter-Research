@@ -246,8 +246,15 @@ project environment.
 
 ## Appendix C. Running Automated Tests
 
-This project is configured to support (1) automated testing of code in the `src`
-directory and (2) analysis of the coverage of the source code by the tests.
+This project is configured to support
+
+* automated testing of code located in the `src` directory and
+
+* analysis of how well the tests cover of the source code (i.e., coverage
+  analysis).
+
+For an example of how to write basic automated tests, see the
+[`test_utils.py`](tests/test_utils.py) file.
 
 * Run all of the tests.
 
