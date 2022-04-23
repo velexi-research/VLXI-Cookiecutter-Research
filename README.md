@@ -35,7 +35,7 @@ A. [`poetry` Quick Reference][#Appendix.A]
 
 B. [Julia Package Manager Quick Reference][#Appendix.B]
 
-C. [Creating an Importable Julia Package][#Appendix.C]
+C. [Making a Julia Package Importable][#Appendix.C]
 
 ------------------------------------------------------------------------------
 
@@ -316,7 +316,7 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 ------------------------------------------------------------------------------
 
-## Appendix C. Creating an Importable Julia Package
+## Appendix C. Making a Julia Package Importable
 
 To make Julia code in the `src` directory importable using the `import X`
 syntax in Julia, the following conditions must be satisified.
@@ -368,7 +368,7 @@ syntax in Julia, the following conditions must be satisified.
 
 [#Appendix.B]: #appendix-b-julia-package-manager-quick-reference
 
-[#Appendix.C]: #appendix-c-creating-an-importable-julia-package
+[#Appendix.C]: #appendix-c-making-a-julia-package-importable
 
 [-----------------------------EXTERNAL LINKS-----------------------------]: #
 
