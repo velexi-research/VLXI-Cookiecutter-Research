@@ -6,6 +6,13 @@ Kevin T. Chu `<kevin@velexi.com>`
 
 -------------------------------------------------------------------------------
 
+[FastDS][fastds] is a CLI tool that provides simple commands for several
+common Git+DVC workflows. Using `fds` commands (instead of the equivalent Git
+and DVC commands) reduces the likelihood of errors when managing code and data
+versions (and saves typing).
+
+-------------------------------------------------------------------------------
+
 ## FastDS Commands
 
 * Display status of the Git and DVC repositories.
@@ -79,3 +86,7 @@ Kevin T. Chu `<kevin@velexi.com>`
   ```
 
 -------------------------------------------------------------------------------
+
+[-----------------------------EXTERNAL LINKS-----------------------------]: #
+
+[fastds]: https://github.com/DAGsHub/fds/

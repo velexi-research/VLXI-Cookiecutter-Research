@@ -6,6 +6,12 @@ Kevin T. Chu `<kevin@velexi.com>`
 
 -------------------------------------------------------------------------------
 
+[Poetry][poetry] is a useful Python package and dependency management tool.
+It also provides support for managing Python environments, building and
+packaging Python projects, and publishing Python packages.
+
+-------------------------------------------------------------------------------
+
 ## Dependency Management Commands
 
 * Display the list of Python package dependencies.
@@ -27,3 +33,7 @@ Kevin T. Chu `<kevin@velexi.com>`
   ```
 
 -------------------------------------------------------------------------------
+
+[-----------------------------EXTERNAL LINKS-----------------------------]: #
+
+[poetry]: https://python-poetry.org/
