@@ -309,7 +309,6 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 [mlflow-quick-reference]: {{cookiecutter.project_directory}}/docs/references/MLflow-Quick-Reference.md
 
-[vlxi-cookiecutter-research]: https://github.com/velexi-corporation/VLXI-Cookiecutter-Research
 [poetry-quick-reference]: {{cookiecutter.project_directory}}/docs/references/Poetry-Quick-Reference.md
 
 [vlxi-cookiecutter-research]: https://github.com/velexi-corporation/VLXI-Cookiecutter-Research
