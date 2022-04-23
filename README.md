@@ -277,8 +277,6 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 * [FastDS Quick Reference][fastds-quick-reference]
 
-* [MLflow Quick Reference][mlflow-quick-reference]
-
 * [Poetry Quick Reference][poetry-quick-reference]
 
 * [Julia Quick Reference][julia-quick-reference]
