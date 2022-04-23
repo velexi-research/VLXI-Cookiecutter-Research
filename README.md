@@ -62,9 +62,10 @@ Features include:
 * automatic generation of HTML and pure code versions of Jupyter notebooks to
   facilitate review of both (1) research results and (2) implementation;
 
-* inclusion of [FastDS][fastds] (a wrapper CLI tool that combines Git and DVC
-  commands) to simplify code and data version control and reduce errors that
-  arise when Git and DVC are used separately;
+* Git and DVC integration to encourage code and data version control;
+
+* inclusion of [FastDS][fastds] to reduce common errors that arise when Git
+  and DVC are used separately;
 
 * Python package and dependency management using [Poetry][python-poetry];
 
