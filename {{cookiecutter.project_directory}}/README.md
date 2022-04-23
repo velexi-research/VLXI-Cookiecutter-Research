@@ -16,13 +16,7 @@ Table of Contents
 
 3. [Project Conventions][#3]
 
-### Appendices
-
-A. [Project Environment][#Appendix.A]
-
-B. [Jupyter Quick Reference][#Appendix.B]
-
-C. [Running Automated Tests][#Appendix.C]
+4. [Documentation][#4]
 
 ------------------------------------------------------------------------------
 
@@ -36,8 +30,8 @@ A description of the project.
 ├── README.md        <- README for the project
 ├── LICENSE          <- license for contents of project
 ├── Makefile         <- Makefile with useful commands (e.g., `make test`)
-├{% if cookiecutter.enable_julia == 'yes' %}── Project.toml     <- Julia project configuration file
-├{% endif %}── pyproject.toml   <- Python project configuration file
+├{% if cookiecutter.enable_julia == 'yes' %}── Project.toml     <- Julia project configuration file; contains Julia package dependencies
+├{% endif %}── pyproject.toml   <- Python project configuration file; contains Python package dependencies
 │
 ├── bin              <- project scripts and programs
 │
@@ -51,7 +45,7 @@ A description of the project.
 │
 ├── docs             <- project documentation
 │   │
-│   ├── references   <- reference materials (e.g., research articles, data manuals)
+│   ├── references   <- reference materials (e.g., research articles, software guides)
 │   └── reports      <- research reports
 │
 ├── extras           <- optional environment configuration files, etc.
@@ -63,7 +57,7 @@ A description of the project.
 │
 ├── tests            <- test code for the project
 │
-└── tox.ini          <- tox file with settings for running tox
+└── tox.ini          <- configuration file for tox testing framework
 ```
 
 ## 1.2. References
@@ -164,116 +158,30 @@ A description of the project.
 
   * Example: `2019-01-17-KC-information_theory_analysis.ipynb`
 
+* When an existing notebook is modified in a "significant" manner, it should be
+  saved to a new file with a name constructed from the modification date and
+  initials of the person who created the new notebook.
+
 * Depending on the nature of the project, it may be useful to organize
   notebooks into sub-directories (e.g., by team member, by sub-project).
 
 ------------------------------------------------------------------------------
 
-## Appendix A. Project Environment
+## 4. Documentation
 
-__Note__. This section only applies if you are using `direnv` to manage your
-project environment.
+* [Automated Testing][automated-testing]
 
-### Environment Variables
+* [FastDS Quick Reference][fastds-quick-reference]
 
-If `direnv` is enabled, the following environment variables are automatically
-set whenever you change into the project directory.
+* [Julia Quick Reference][julia-quick-reference]
 
-* `DATA_DIR`: path to `data` directory
+* [Jupyter Quick Reference][jupyter-quick-reference]
 
-* `SRC_DIR`: path to `src` directory
+* [MLflow Quick Reference][mlflow-quick-reference]
 
-* `PYTHONPATH`: search paths for Python packages and modules
-{% if cookiecutter.enable_julia == 'yes' %}
-* `JULIA_LOAD_PATH`: search paths for Julia packages and modules
-{% endif %}
-* `MLFLOW_TRACKING_URI`: path to directory where MLflow stores run data
+* [Poetry Quick Reference][poetry-quick-reference]
 
-### Customizing the Project Environment
-
-The following variables can be set in the `.envrc` file to customize the
-project environment.
-
-* `PATH_EXTRA`: space-delimited list of paths to add to the `PATH` environment
-  variable
-
-* `PYTHONPATH_EXTRA`: space-delimited list of paths to add to the `PYTHONPATH`
-  environment variable
-
-* `JULIA_LOAD_PATH_EXTRA`: space-delimited list of paths to add to the
-  `JULIA_LOAD_PATH` environment variable
-
-* `MLFLOW_TRACKING_URI`: URI of MLflow tracking server. By default,
-  `MLFLOW_TRACKING_URI` is set to `/PROJECT/ROOT/mlruns`.
-
-------------------------------------------------------------------------------
-
-## Appendix B. Jupyter Quick Reference
-
-### Using JupyterLab
-
-* Launch a JupyterLab session.
-
-  ```shell
-  $ jupyter-lab
-  ```
-
-* Use the GUI to create Jupyter notebooks, edit and run Jupyter notebooks,
-  manage files in the file system, etc.
-
-### Using a Jupyter Notebooks Session
-
-* Launch a Jupyter Notebook session.
-
-  ```shell
-  $ jupyter notebook
-  ```
-
-* Use the GUI to create Jupyter notebooks, edit and run Jupyter notebooks,
-  manage files in the file system, etc.
-
-### Opening a Single Jupyter Notebook
-
-* Launch a Jupyter Notebook session for a specific Jupyter notebook.
-
-  ```shell
-  $ jupyter notebook NOTEBOOK.ipynb
-  ```
-
-  where `NOTEBOOK.ipynb` is the name of the Jupyter notebook to open.
-
-------------------------------------------------------------------------------
-
-## Appendix C. Running Automated Tests
-
-This project is configured to support
-
-* automated testing of code located in the `src` directory and
-
-* analysis of how well the tests cover of the source code (i.e., coverage
-  analysis).
-
-For an example of how to write basic automated tests, see the
-[`test_utils.py`](tests/test_utils.py) file.
-
-* Run all of the tests.
-
-  ```shell
-  $ make test
-  ```
-
-* Run all of the tests in fail-fast mode (i.e., stop after the first failing
-  test).
-
-  ```shell
-  $ make fast-test
-  ```
-
-* After running all tests, run `pylint` on all source code files.
-
-  ```shell
-  $ make full-test
-  ```
+* [Project Environment][project-environment]
 
 ------------------------------------------------------------------------------
 
@@ -289,6 +197,20 @@ For an example of how to write basic automated tests, see the
 [#3.1]: #31-jupyter-notebook-conventions
 [#3.2]: #32-guidelines-for-organizing-data
 
-[#Appendix.A]: #appendix-a-project-environment
-[#Appendix.B]: #appendix-b-jupyter-quick-reference
-[#Appendix.C]: #appendix-c-running-automated-tests
+[#4]: #4-documentation
+
+[-----------------------------REPOSITORY LINKS-----------------------------]: #
+
+[automated-testing]: docs/references/Automated-Testing.md
+
+[fastds-quick-reference]: docs/references/FastDS-Quick-Reference.md
+
+[julia-quick-reference]: docs/references/Julia-Quick-Reference.md
+
+[jupyter-quick-reference]: docs/references/Jupyter-Quick-Reference.md
+
+[mlflow-quick-reference]: docs/references/MLflow-Quick-Reference.md
+
+[poetry-quick-reference]: docs/references/Poetry-Quick-Reference.md
+
+[project-environment]: docs/references/Project-Environment.md
