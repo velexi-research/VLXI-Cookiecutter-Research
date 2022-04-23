@@ -8,9 +8,12 @@ license = "Apache"
 [tool.poetry.dependencies]
 python = "^3.9"
 cookiecutter = "^1.7.3"
+coverage = "^6.3.2"
 flake8 = "^4.0.1"
 pylint = "^2.13.7"
 pytest = "^7.1.1"
+pytest-cov = "^3.0.0"
+pytest-xdist = "^2.5.0"
 
 [tool.poetry.dev-dependencies]
 
