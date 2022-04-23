@@ -6,7 +6,7 @@ __Version__: 0.3.0
 __Authors__  
 Kevin T. Chu `<kevin@velexi.com>`
 
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Table of Contents
 -----------------
@@ -39,7 +39,7 @@ C. [Julia Package Manager Quick Reference][#Appendix.C]
 
 D. [Making a Julia Package Importable][#Appendix.D]
 
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 ## 1. Overview
 
@@ -98,7 +98,7 @@ Features include:
 The contents of this cookiecutter are covered under the Apache License
 contained in the `LICENSE` file.
 
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 ## 2. Setting Up a New Research Project
 
@@ -219,7 +219,7 @@ contained in the `LICENSE` file.
    * Verify the correctness of the `LICENSE` file. In particular, check the
      year and name of the copyright owner.
 
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 ## 3. Notes for Developers
 
@@ -261,7 +261,7 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 3. Work on improving the cookiecutter.
 
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 ## 4. Known Issues
 
@@ -274,7 +274,7 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
   python = ">=3.9,<3.11"
   ```
 
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 ## 5. Documentation
 
@@ -284,7 +284,7 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 * [Julia Quick Reference][julia-quick-reference]
 
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 [-----------------------------INTERNAL LINKS-----------------------------]: #
 
