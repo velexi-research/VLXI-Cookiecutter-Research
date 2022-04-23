@@ -1,7 +1,7 @@
 # --- Data
 
 # data directory
-/data/
+/data
 
 # DVC files
 !*.dvc
