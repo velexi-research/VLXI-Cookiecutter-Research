@@ -278,11 +278,11 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 ## 5. Documentation
 
-* [FastDS Quick Reference](docs/FastDS-Quick-Reference.md)
+* [FastDS Quick Reference][fastds-quick-reference]
 
-* [Poetry Quick Reference](docs/Poetry-Quick-Reference.md)
+* [Poetry Quick Reference][poetry-quick-reference]
 
-* [Julia Quick Reference](docs/Julia-Quick-Reference.md)
+* [Julia Quick Reference][julia-quick-reference]
 
 ------------------------------------------------------------------------------
 
@@ -301,6 +301,14 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 [#4]: #4-known-issues
 
 [#5]: #5-documentation
+
+[-----------------------------REPOSITORY LINKS-----------------------------]: #
+
+[fastds-quick-reference]: {{cookiecutter.project_directory}}/docs/references/FastDS-Quick-Reference.md
+
+[julia-quick-reference]: {{cookiecutter.project_directory}}/docs/references/Julia-Quick-Reference.md
+
+[poetry-quick-reference]: {{cookiecutter.project_directory}}/docs/references/Poetry-Quick-Reference.md
 
 [vlxi-cookiecutter-research]: https://github.com/velexi-corporation/VLXI-Cookiecutter-Research
 
