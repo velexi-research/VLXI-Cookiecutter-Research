@@ -28,7 +28,7 @@ PROJECT_ROOT_DIR=`builtin cd $(dirname "${BASH_SOURCE[0]}") && pwd`
 
 # Python
 export PYTHONPATH=$PROJECT_ROOT_DIR
-PYTHONPATH_EXTRA="$PYTHONPATH_EXTRA"
+PYTHONPATH_EXTRA="$PYTHONPATH_EXTRA {{cookiecutter.project_directory}}/src"
 for DIR in $PYTHONPATH_EXTRA; do
     path_add PYTHONPATH $PROJECT_ROOT_DIR/$DIR
 done
