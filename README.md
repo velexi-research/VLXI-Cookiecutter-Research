@@ -54,9 +54,12 @@ by Jonathan Whitmore.
 * Automatic generation of HTML and pure code versions of Jupyter notebooks to
   facilitate review of both (1) research results and (2) implementation
 
+* Quick references for commonly software components (e.g., [FastDS][fastds],
+  [MLflow][mlflow], [Poetry][poetry], etc.)
+
 * Git and DVC integration to encourage code and data version control
 
-* Python package and dependency management using [Poetry][python-poetry]
+* Python package and dependency management using [Poetry][poetry]
 
 * Default Python packages for data and experiment management, interactive work
   environments, and code quality
@@ -223,7 +226,7 @@ contained in the `LICENSE` file.
 
 * Git
 * Python (>=3.7)
-* [Poetry][python-poetry]
+* [Poetry][poetry]
 
 #### Optional Packages
 
@@ -321,9 +324,11 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 [khuyentran-data-science-template]: https://github.com/khuyentran1401/data-science-template
 
+[mlflow]: https://www.mlflow.org
+
 [mlflow-tracking]: https://www.mlflow.org/docs/latest/tracking.html
 
-[python-poetry]: https://python-poetry.org/
+[poetry]: https://python-poetry.org/
 
 [whitmore-2016]:
   https://www.svds.com/tbt-jupyter-notebook-best-practices-data-science/
