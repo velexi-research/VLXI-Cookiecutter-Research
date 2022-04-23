@@ -5,8 +5,16 @@ __Authors__
 Kevin T. Chu `<kevin@velexi.com>`
 
 -------------------------------------------------------------------------------
+Table of Contents
+-----------------
 
-## Julia Package Manager Commands
+1. [Julia Package Manager Commands][#1]
+
+2. [Making a Julia Package Importable][#2]
+
+-------------------------------------------------------------------------------
+
+## 1. Julia Package Manager Commands
 
 * Activate Julia package manager REPL.
 
@@ -48,7 +56,7 @@ Kevin T. Chu `<kevin@velexi.com>`
 
 -------------------------------------------------------------------------------
 
-## Making a Julia Package Importable
+## 2. Making a Julia Package Importable
 
 To make Julia code in the `src` directory importable using the `import X`
 syntax in Julia, the following conditions must be satisified.
@@ -79,3 +87,9 @@ syntax in Julia, the following conditions must be satisified.
     ```
 
 -------------------------------------------------------------------------------
+
+[-----------------------------INTERNAL LINKS-----------------------------]: #
+
+[#1]: #1-julia-package-manager-commands
+
+[#2]: #2-making-a-julia-package-importable
