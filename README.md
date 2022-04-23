@@ -365,9 +365,7 @@ syntax in Julia, the following conditions must be satisified.
 [#5]: #5-references
 
 [#Appendix.A]: #appendix-a-poetry-quick-reference
-
 [#Appendix.B]: #appendix-b-julia-package-manager-quick-reference
-
 [#Appendix.C]: #appendix-c-making-a-julia-package-importable
 
 [-----------------------------EXTERNAL LINKS-----------------------------]: #
