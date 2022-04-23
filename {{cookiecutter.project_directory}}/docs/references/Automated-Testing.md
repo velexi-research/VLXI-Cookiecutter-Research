@@ -14,7 +14,7 @@ This project is configured to support
   analysis).
 
 For an example of how to write basic automated tests, see the
-[`test_utils.py`][test_utils.py] file.
+`tests/test_utils.py`file.
 
 ------------------------------------------------------------------------------
 
@@ -40,7 +40,3 @@ For an example of how to write basic automated tests, see the
   ```
 
 ------------------------------------------------------------------------------
-
-[-----------------------------REPOSITORY LINKS-----------------------------]: #
-
-[test_utils.py]: ../../tests/test_utils.py
