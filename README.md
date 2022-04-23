@@ -29,16 +29,6 @@ Table of Contents
 
 5. [Documentation][#5]
 
-### Appendices
-
-A. [DVC Quick Reference][#Appendix.A]
-
-B. [`poetry` Quick Reference][#Appendix.B]
-
-C. [Julia Package Manager Quick Reference][#Appendix.C]
-
-D. [Making a Julia Package Importable][#Appendix.D]
-
 -------------------------------------------------------------------------------
 
 ## 1. Overview
@@ -52,32 +42,35 @@ Kuygen Tran's [Data Science Template][khuyentran-data-science-template], the
 blog article ["Jupyter Notebook Best Practices for Data Science"][whitmore-2016]
 by Jonathan Whitmore.
 
-Features include:
+### Features
 
-* support for common research workflows (for both individuals and teams);
+* Support for common research workflows (for both individuals and teams)
 
-* a directory structure that organizes and separates different components of
+* A directory structure that organizes and separates different components of
   research data, exploration/experimentation (e.g., Jupyter notebooks),
   documentation (e.g., reports, references), and software (e.g., custom
-  functions and test code);
+  functions and test code)
 
-* automatic generation of HTML and pure code versions of Jupyter notebooks to
-  facilitate review of both (1) research results and (2) implementation;
+* Automatic generation of HTML and pure code versions of Jupyter notebooks to
+  facilitate review of both (1) research results and (2) implementation
 
-* Git and DVC integration to encourage code and data version control;
+* Git and DVC integration to encourage code and data version control
 
-* inclusion of [FastDS][fastds] to reduce common errors that arise when Git
-  and DVC are used separately;
+* Python package and dependency management using [Poetry][python-poetry]
 
-* Python package and dependency management using [Poetry][python-poetry];
+* Default Python packages for data and experiment management, interactive work
+  environments, and code quality
 
-* default Python packages for data and experiment management, interactive work
-  environments, and code quality;
+  * [MLflow Tracking][mlflow-tracking] to encourage good scientific record
+    keeping habits
 
-* support for Julia; and
+  * [FastDS][fastds] to reduce common errors that arise when Git and DVC are
+    used separately
 
-* directory-based shell (and Python) environment isolation for systems with
-  `direnv` installed.
+* Support for Julia
+
+* Directory-based shell (and Python) environment isolation for systems with
+  `direnv` installed
 
 ### 1.1. Repository Contents
 
@@ -131,8 +124,8 @@ contained in the `LICENSE` file.
      ```
 
      * Review the Python package dependencies for the project, and update them
-       as needed using the `poetry` CLI tool. See [Appendix B][#Appendix.B] for
-       a quick reference of `poetry` commands.
+       as needed using the `poetry` CLI tool. For a quick reference of `poetry`
+       commands, see the [Poetry Quick Reference][poetry-quick-reference].
 
        Packages that may be useful (but are not included by default):
 
@@ -154,8 +147,9 @@ contained in the `LICENSE` file.
      ```
 
      * Review the Julia package dependencies for the project, and update them
-       as needed using the Julia package manager. See [Appendix C][#Appendix.C]
-       for a quick reference of Julia package manager REPL commands.
+       as needed using the Julia package manager. For a quick reference of
+       Julia package manager REPL commands, see the
+       [Julia Quick Reference][julia-quick-reference].
 
 4. Configure Git.
 
@@ -280,6 +274,8 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 * [FastDS Quick Reference][fastds-quick-reference]
 
+* [MLflow Quick Reference][mlflow-quick-reference]
+
 * [Poetry Quick Reference][poetry-quick-reference]
 
 * [Julia Quick Reference][julia-quick-reference]
@@ -308,6 +304,9 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 [julia-quick-reference]: {{cookiecutter.project_directory}}/docs/references/Julia-Quick-Reference.md
 
+[mlflow-quick-reference]: {{cookiecutter.project_directory}}/docs/references/MLflow-Quick-Reference.md
+
+[vlxi-cookiecutter-research]: https://github.com/velexi-corporation/VLXI-Cookiecutter-Research
 [poetry-quick-reference]: {{cookiecutter.project_directory}}/docs/references/Poetry-Quick-Reference.md
 
 [vlxi-cookiecutter-research]: https://github.com/velexi-corporation/VLXI-Cookiecutter-Research
@@ -321,6 +320,8 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 [fastds]: https://github.com/DAGsHub/fds/
 
 [khuyentran-data-science-template]: https://github.com/khuyentran1401/data-science-template
+
+[mlflow-tracking]: https://www.mlflow.org/docs/latest/tracking.html
 
 [python-poetry]: https://python-poetry.org/
 
