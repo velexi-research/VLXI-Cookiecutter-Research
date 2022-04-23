@@ -27,15 +27,17 @@ Table of Contents
 
 4. [Known Issues][#4]
 
-5. [References][#5]
+5. [Documentation][#5]
 
 ### Appendices
 
-A. [`poetry` Quick Reference][#Appendix.A]
+A. [DVC Quick Reference][#Appendix.A]
 
-B. [Julia Package Manager Quick Reference][#Appendix.B]
+B. [`poetry` Quick Reference][#Appendix.B]
 
-C. [Making a Julia Package Importable][#Appendix.C]
+C. [Julia Package Manager Quick Reference][#Appendix.C]
+
+D. [Making a Julia Package Importable][#Appendix.D]
 
 ------------------------------------------------------------------------------
 
@@ -85,11 +87,9 @@ Features include:
 ├── LICENSE            <- license for the cookiecutter
 ├── cookiecutter.json  <- cookiecutter configuration file
 ├── pyproject.toml     <- project configuration file cookiecutter development
-│
+├── docs/              <- cookiecutter documentation
 ├── extras/            <- additional files that may be useful for cookiecutter development
-│
 ├── hooks/             <- cookiecutter scripts that run before or after project generation
-│
 └── {{cookiecutter.project_directory}}/  <- cookiecutter template files
 ```
 
@@ -131,7 +131,7 @@ contained in the `LICENSE` file.
      ```
 
      * Review the Python package dependencies for the project, and update them
-       as needed using the `poetry` CLI tool. See [Appendix A][#Appendix.A] for
+       as needed using the `poetry` CLI tool. See [Appendix B][#Appendix.B] for
        a quick reference of `poetry` commands.
 
        Packages that may be useful (but are not included by default):
@@ -154,8 +154,22 @@ contained in the `LICENSE` file.
      ```
 
      * Review the Julia package dependencies for the project, and update them
-       as needed using the Julia package manager. See [Appendix B][#Appendix.B]
+       as needed using the Julia package manager. See [Appendix C][#Appendix.C]
        for a quick reference of Julia package manager REPL commands.
+
+4. Configure Git.
+
+   * Set up a remote Git repository (e.g., GitHub repository).
+
+   * Configure the remote Git repository.
+
+     ```shell
+     $ git remote add origin GIT_REMOTE
+     ```
+
+     where `GIT_REMOTE` is the URL to the remote Git repository.
+
+5. Configure DVC.
 
    * Initialize DVC (data version control). In the following command
      `PROJECT_DIR` should be replaced by the path to the newly created research
@@ -177,7 +191,28 @@ contained in the `LICENSE` file.
        $ git commit -m "Initialize DVC"
        ```
 
-4. Update the project documentation.
+   * Add a remote DVC repository.
+
+     * Set up a remote DVC repository (e.g., S3 bucket).
+
+     * Configure the remote DVC repository.
+
+       ```shell
+       $ dvc remote add -d storage DVC_REMOTE
+       ```
+
+       where `storage` is the name for the remote repository and `DVC_REMOTE`
+       is the URL to the remote DVC repository. __Note__: the `-d` option
+       indicates that `storage` should be used as the default remote DVC
+       repository.
+
+   * Configure DVC to automatically stage changes to `*.dvc` files with Git.
+
+     ```shell
+     $dvc config core.autostage true
+     ```
+
+6. Update the project documentation.
 
    * Customize the `README.md` file to reflect the specifics of the project.
 
@@ -231,7 +266,7 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 ## 4. Known Issues
 
 * When including numba as a project dependency, the Python version constraint
-  `pyproject.toml` may need to be more restrictive than default `^3.9`. For
+  `pyproject.toml` needs to be more restrictive than default `^3.9`. For
   numba 0.55, the Python version constraint in `pyproject.toml` should be set
   to:
 
@@ -241,111 +276,13 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 ------------------------------------------------------------------------------
 
-## 5. References
+## 5. Documentation
 
-* [Cookiecutter Data Science][cookiecutter-data-science]
+* [FastDS Quick Reference][fastds-quick-reference]
 
-* [Data Science Template][khuyentran-data-science-template]
+* [Poetry Quick Reference][poetry-quick-reference]
 
-* J. Whitmore.
-  ["Jupyter Notebook Best Practices for Data Science"][whitmore-2016]
-  (2016/09).
-
-------------------------------------------------------------------------------
-
-## Appendix A. `poetry` Quick Reference
-
-* Display the list of Python package dependencies.
-
-  ```shell
-  $ poetry show
-  ```
-
-* Add a Python package dependency.
-
-  ```shell
-  $ poetry add PKG_NAME
-  ```
-
-* Remove a Python package dependency.
-
-  ```shell
-  $ poetry remove PKG_NAME
-  ```
-
-------------------------------------------------------------------------------
-
-## Appendix B. Julia Package Manager Quick Reference
-
-* Activate Julia package manager REPL.
-
-  ```julia
-  julia> ]
-
-  (...) pkg>
-  ```
-
-* Display the list of Julia package dependencies.
-
-  ```julia
-  (...) pkg> status
-  ```
-
-  or
-
-  ```julia
-  (...) pkg> st
-  ```
-
-* Add a Julia package dependency.
-
-  ```julia
-  (...) pkg> add PKG_NAME
-  ```
-
-* Remove a Julia package dependency.
-
-  ```julia
-  (...) pkg> remove PKG_NAME
-  ```
-
-  or
-
-  ```julia
-  (...) pkg> rm PKG_NAME
-  ```
-
-------------------------------------------------------------------------------
-
-## Appendix C. Making a Julia Package Importable
-
-To make Julia code in the `src` directory importable using the `import X`
-syntax in Julia, the following conditions must be satisified.
-
-* `Project.toml` must contain the name of the Julia package/module.
-
-  ```toml
-  name = "X"
-  ```
-
-* A file named `X.jl` must exist in the `src` directory.
-
-* If `/PATH/TO/PROJECT_DIR` is the parent directory of the `src` directory, it
-  must be included in
-
-  * the `JULIA_LOAD_PATH` environment variable
-
-    ```shell
-    $ export JULIA_LOAD_PATH=/PATH/TO/PROJECT_DIR:$JULIA_LOAD_PATH
-    ```
-
-    or
-
-  * the `LOAD_PATH` Julia variable
-
-    ```julia
-    julia> push!(LOAD_PATH, "/PATH/TO/PROJECT_DIR")
-    ```
+* [Julia Quick Reference][julia-quick-reference]
 
 ------------------------------------------------------------------------------
 
@@ -363,15 +300,19 @@ syntax in Julia, the following conditions must be satisified.
 
 [#4]: #4-known-issues
 
-[#5]: #5-references
+[#5]: #5-documentation
 
-[#Appendix.A]: #appendix-a-poetry-quick-reference
-[#Appendix.B]: #appendix-b-julia-package-manager-quick-reference
-[#Appendix.C]: #appendix-c-making-a-julia-package-importable
+[-----------------------------REPOSITORY LINKS-----------------------------]: #
 
-[-----------------------------EXTERNAL LINKS-----------------------------]: #
+[fastds-quick-reference]: {{cookiecutter.project_directory}}/docs/references/FastDS-Quick-Reference.md
+
+[julia-quick-reference]: {{cookiecutter.project_directory}}/docs/references/Julia-Quick-Reference.md
+
+[poetry-quick-reference]: {{cookiecutter.project_directory}}/docs/references/Poetry-Quick-Reference.md
 
 [vlxi-cookiecutter-research]: https://github.com/velexi-corporation/VLXI-Cookiecutter-Research
+
+[-----------------------------EXTERNAL LINKS-----------------------------]: #
 
 [cookiecutter]: https://cookiecutter.readthedocs.io/en/latest/
 

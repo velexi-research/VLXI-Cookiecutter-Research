@@ -1,0 +1,1 @@
+../{{cookiecutter.project_directory}}/docs/references/Poetry-Quick-Reference.md
