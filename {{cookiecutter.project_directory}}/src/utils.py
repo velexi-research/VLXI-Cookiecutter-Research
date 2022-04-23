@@ -1,5 +1,5 @@
 """
-Utility functions for DS/ML workflow management.
+Utility functions.
 """
 # --- Imports
 

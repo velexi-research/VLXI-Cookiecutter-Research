@@ -40,10 +40,6 @@ for DIR in $PYTHONPATH_EXTRA; do
     path_add PYTHONPATH $PROJECT_ROOT_DIR/$DIR
 done
 
-# Conda
-export CONDA_ENVS_PATH=$PROJECT_ROOT_DIR/.conda/envs
-export CONDA_PKGS_DIRS=$PROJECT_ROOT_DIR/.conda/pkgs
-
 # Julia
 export JULIA_PROJECT=@.
 export JULIA_LOAD_PATH=$PROJECT_ROOT_DIR
@@ -59,11 +55,6 @@ export JUPYTER_CONFIG_DIR=$PROJECT_ROOT_DIR/.jupyter
 path_add JUPYTER_PATH $LIB_DIR
 
 # MLflow
-export MLFLOW_CONDA_HOME=`dirname $(dirname $(which conda))`
-if [ -z "$MLFLOW_CONDA_HOME" ]; then
-    echo "WARNING: 'conda' installation not found. MLflow Projects and MLflow Models may not function correctly."
-fi
-
 if [ -z "$MLFLOW_TRACKING_URI" ]; then
     MLFLOW_TRACKING_URI=$PROJECT_ROOT_DIR/mlruns
 fi
