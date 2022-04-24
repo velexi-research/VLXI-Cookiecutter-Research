@@ -88,7 +88,7 @@ by Jonathan Whitmore.
 ├── docs/              <- cookiecutter documentation
 ├── extras/            <- additional files that may be useful for cookiecutter development
 ├── hooks/             <- cookiecutter scripts that run before or after project generation
-└── {{cookiecutter.project_directory}}/  <- cookiecutter template files
+└── {{cookiecutter.project_directory}}/  <- cookiecutter template
 ```
 
 ### 1.2. License
@@ -102,7 +102,14 @@ contained in the `LICENSE` file.
 
 ## 2.1. Instructions
 
-1. ___Prerequisite___. Install the [Cookiecutter][cookiecutter] Python package.
+1. ___Prerequisites___.
+
+   * Install the [Cookiecutter][cookiecutter] Python package.
+
+   * Install [Poetry](https://python-poetry.org/).
+
+     * __Note__. The project template uses `poetry` instead of `pip` for
+       management of Python package dependencies.
 
 2. Use `cookiecutter` to create a new research project.
 
@@ -124,13 +131,17 @@ contained in the `LICENSE` file.
        $ direnv allow
        ```
 
-   * Install the Python package dependencies.
+   * Configure the Python package dependencies for the project.
 
-     ```shell
-     $ poetry install
-     ```
+     * Install the base Python package dependencies, and update them to the
+       latest available versions.
 
-     * Review the Python package dependencies for the project, and update them
+       ```shell
+       $ poetry install
+       $ poetry update
+       ```
+
+     * Review the Python package dependencies for the project, and modify them
        as needed using the `poetry` CLI tool. For a quick reference of `poetry`
        commands, see the [Poetry Quick Reference][poetry-quick-reference].
 
@@ -144,13 +155,11 @@ contained in the `LICENSE` file.
        * matplotlib
        * seaborn
 
-     * Commit the changes to the `pyproject.toml` file to the project Git
-       repository.
+     * Commit the updated `pyproject.toml` and `poetry.lock` files to the
+       project Git repository.
 
-     * Add and commit `poetry.lock` to the project Git repository.
-
-   * If the project was created with Julia support enabled, install the Julia
-     package dependencies.
+   * Configure the Julia package dependencies for the project (if the project
+     was created with Julia support enabled).
 
      ```julia
      julia> ]
@@ -158,12 +167,12 @@ contained in the `LICENSE` file.
      (...) pkg> instantiate
      ```
 
-     * Review the Julia package dependencies for the project, and update them
+     * Review the Julia package dependencies for the project, and modify them
        as needed using the Julia package manager. For a quick reference of
        Julia package manager REPL commands, see the
        [Julia Quick Reference][julia-quick-reference].
 
-     * Commit the changes to `Project.toml` to the project Git repository.
+     * Commit the updated `Project.toml` file to the project Git repository.
 
 4. Configure Git.
 
@@ -278,16 +287,16 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
    $ poetry install
    ```
 
-3. Work on improving the cookiecutter.
+3. Make the cookiecutter better!
 
 ### 3.3. Additional Notes
 
 #### Updating the Cookiecutter Project Dependencies
 
-When using `poetry` to update the cookiecutter Python dependencies in the
-`{{cookiecutter.project_directory}}/pyproject.toml` file, special care is
-needed to work around the error caused by the templated `version` number in
-the cookiecutter `pyproject.toml` file.
+When using `poetry` to update the Python dependencies for the project template
+(contained in the `{{cookiecutter.project_directory}}/pyproject.toml` file),
+special care is needed to work around the error caused by the templated
+`version` number in the template `pyproject.toml` file.
 
 * Temporarily set the `version` parameter in `pyproject.toml` to a valid
   version number (e.g., `"0.1.0"`).
