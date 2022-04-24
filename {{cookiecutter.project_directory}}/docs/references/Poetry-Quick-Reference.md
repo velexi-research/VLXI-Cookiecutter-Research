@@ -34,6 +34,25 @@ packaging Python projects, and publishing Python packages.
 
 -------------------------------------------------------------------------------
 
+## Package Management Commands
+
+* Install the package dependencies included in `pyproject.toml`.
+
+  ```shell
+  $ poetry install
+  ```
+
+* Update the package dependencies to the latest available versions.
+
+  ```shell
+  $ poetry update
+  ```
+
+  __Note__. This to equivalent to deleting the `poetry.lock` file and
+  running `poetry install`.
+
+-------------------------------------------------------------------------------
+
 [-----------------------------EXTERNAL LINKS-----------------------------]: #
 
 [poetry]: https://python-poetry.org/
