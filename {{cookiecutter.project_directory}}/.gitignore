@@ -1,0 +1,79 @@
+# --- Data
+
+# data directory
+/data
+
+# DVC files
+!*.dvc
+
+# --- Python
+
+# compiled code
+__pycache__/
+*.py[cod]
+
+# setuptools
+/dist/
+*.egg-info/
+*.egg*
+
+# testing
+htmlcov/
+.cache
+.coverage
+.coverage.*
+.pytest_cache
+.tox/
+
+# Sphinx documentation
+docs/_build/
+
+# DotEnv configuration
+.env
+
+# --- Julia
+
+Manifest.toml
+
+# --- Compiled code
+
+# shared objects
+*.so
+
+# --- Jupyter
+
+.ipynb_checkpoints/
+.jupyter
+!.jupyter/jupyter_notebook_config.py
+nbconvert
+
+# --- Code editors
+
+# VS Code
+.vscode/
+
+# Pycharm
+.idea
+
+# Spyder
+.spyproject/
+
+# vim
+*.sw[po]
+
+# --- Environments
+
+# direnv
+.direnv
+.envrc
+
+# conda
+.conda
+
+# --- Miscellaneous
+
+# Log files
+*.log
+
+# macOS
+.DS_Store

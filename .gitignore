@@ -1,51 +1,47 @@
-# --- Project files
-
-# data directory
-/data
-!*.dvc
-
-# log files
-*.log
-
-# --- Jupyter files
-
-.ipynb_checkpoints
-.jupyter
-!.jupyter/jupyter_notebook_config.py
-nbconvert
-
 # --- Python files
 
-# virtual environments
-.venv
-
-# compiled source
-*.pyc
+# compiled code
+__pycache__/
+*.py[cod]
 
 # testing
+htmlcov/
 .cache
 .coverage
 .coverage.*
 .pytest_cache
+.tox/
 
-# --- Julia files
+# --- Environments
 
-Manifest.toml
-
-# --- Miscellaneous
+# poetry
+poetry.lock
 
 # direnv
 .direnv
 .envrc
 
-# autoenv
-.env
-
 # conda
 .conda
 
+# common manually-created Python virtual environments
+.venv
+
+# --- Code editors
+
+# VS Code
+.vscode/
+
+# Pycharm
+.idea
+
+# Spyder
+.spyproject/
+
 # vim
-.*.swp
+*.sw[po]
+
+# --- Miscellaneous
 
 # macOS
 .DS_Store*

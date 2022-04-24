@@ -1,0 +1,14 @@
+{
+    "project_name": "Project Name",
+    "project_directory":
+    "{{cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_')}}",
+    "author": "Your Name",
+    "email": "{{ cookiecutter.author.lower().replace(' ', '.') }}@example.com",
+    "version": "0.1.0",
+    "license": ["Apache Software License 2.0",
+                "BSD-3-Clause License",
+                "MIT License",
+                "Empty license file"],
+    "python_version_requirements": "^3.9",
+    "enable_julia": ["yes", "no"]
+}

@@ -1,165 +1,248 @@
-Velexi Template: Data Science Project
-=====================================
+Velexi Research Project Cookiecutter
+====================================
 
-__Version__: 0.2.2
+__Version__: 0.3.0
 
 __Authors__  
 Kevin T. Chu `<kevin@velexi.com>`
 
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 Table of Contents
 -----------------
 
 1. [Overview][#1]
 
-   1.1. [Software Dependencies][#1.1]
+   1.1. [Repository Contents][#1.1]
 
-   1.2. [Directory Structure][#1.2]
+   1.2. [License][#1.2]
 
-   1.3. [License][#1.3]
+2. [Setting Up a New Research Project][#2]
 
-2. [Usage][#2]
+3. [Notes for Developers][#3]
 
-   2.1. [Setting Up][#2.1]
+   3.1. [Software Requirements][#3.1]
 
-   2.2. [Conventions][#2.2]
+   3.2. [Setting Up to Develop the Cookiecutter][#3.2]
 
-   2.3. [Environment][#2.3]
+4. [Known Issues][#4]
 
-   2.4. [Using JupyterLab][#2.4]
+5. [Documentation][#5]
 
-3. [References][#3]
-
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 ## 1. Overview
 
-This project template is intended to support data science projects that
-utilize Jupyter notebooks for experimentation and reporting. The design of
-the template is based on the blog article
-["Jupyter Notebook Best Practices for Data Science"][#whitmore-2016] by
-Jonathan Whitmore.
+The [Velexi Research Project Cookiecutter][vlxi-cookiecutter-research] is
+intended to streamline the process of setting up a general Jupyter-based
+research project involving computational work that is not centered around data
+science and machine learning models. The structure of this research project
+template is inspired by [Cookiecutter Data Science][cookiecutter-data-science],
+Kuygen Tran's [Data Science Template][khuyentran-data-science-template], the
+blog article ["Jupyter Notebook Best Practices for Data Science"][whitmore-2016]
+by Jonathan Whitmore.
 
-Features include:
+### Features
 
-* compatible with standard version control software;
+* Support for common research workflows (for both individuals and teams)
 
-* automatically saves HTML and `*.py` versions of Jupyter notebooks to
-  facilitate review of both (1) data science results and (2) implementation
-  code;
+* A directory structure that organizes and separates different components of
+  research data, exploration/experimentation (e.g., Jupyter notebooks),
+  documentation (e.g., reports, references), and software (e.g., custom
+  functions and test code)
 
-* supports common data science workflows (for both individuals and teams); and
+* Automatic generation of HTML and pure code versions of Jupyter notebooks to
+  facilitate review of both (1) research results and (2) implementation
 
-* encourages separation and decoupling of datasets, R&D work (i.e.,
-  Jupyter notebooks), deliverables (i.e., reports), and Python functions and
-  modules refactored from R&D code.
+* Quick references for commonly software components (e.g., [FastDS][fastds],
+  [MLflow][mlflow], [Poetry][poetry], etc.)
 
-### 1.1. Software Dependencies
+* Git and DVC integration to encourage code and data version control
+
+* Python package and dependency management using [Poetry][poetry]
+
+* Default Python packages for data and experiment management, interactive work
+  environments, and code quality
+
+  * [MLflow Tracking][mlflow-tracking] to encourage good scientific record
+    keeping habits
+
+  * [FastDS][fastds] to reduce common errors that arise when Git and DVC are
+    used separately
+
+* Support for Julia
+
+* Directory-based shell (and Python) environment isolation for systems with
+  `direnv` installed
+
+### 1.1. Repository Contents
+
+```
+├── README.md          <- this file
+├── RELEASE-NOTES.md   <- release notes for the cookiecutter
+├── LICENSE            <- license for the cookiecutter
+├── cookiecutter.json  <- cookiecutter configuration file
+├── pyproject.toml     <- project configuration file cookiecutter development
+├── docs/              <- cookiecutter documentation
+├── extras/            <- additional files that may be useful for cookiecutter development
+├── hooks/             <- cookiecutter scripts that run before or after project generation
+└── {{cookiecutter.project_directory}}/  <- cookiecutter template files
+```
+
+### 1.2. License
+
+The contents of this cookiecutter are covered under the Apache License
+contained in the `LICENSE` file.
+
+-------------------------------------------------------------------------------
+
+## 2. Setting Up a New Research Project
+
+1. ___Prerequisite___. Install the [Cookiecutter][cookiecutter] Python package.
+
+2. Use `cookiecutter` to create a new research project.
+
+   ```shell
+   $ cookiecutter https://github.com/velexi-corporation/VLXI-Cookiecutter-Research.git
+   ```
+
+3. Finish setting up the new research project.
+
+   * ___Optional___. Set up the project to use `direnv` to manage the
+     environment (for both Python and the shell).
+
+     * Copy `extras/dot-envrc` to the project root directory, and rename it to
+       `.envrc`.
+
+     * Grant permission to `direnv` to execute the `.envrc` file.
+
+       ```shell
+       $ direnv allow
+       ```
+
+   * Install the Python package dependencies.
+
+     ```shell
+     $ poetry install
+     ```
+
+     * Review the Python package dependencies for the project, and update them
+       as needed using the `poetry` CLI tool. For a quick reference of `poetry`
+       commands, see the [Poetry Quick Reference][poetry-quick-reference].
+
+       Packages that may be useful (but are not included by default):
+
+       * numpy
+       * numba
+       * scipy
+       * pandas
+       * scikit-learn
+       * matplotlib
+       * seaborn
+
+   * If the project was created with Julia support enabled, install the Julia
+     package dependencies.
+
+     ```julia
+     julia> ]
+
+     (...) pkg> instantiate
+     ```
+
+     * Review the Julia package dependencies for the project, and update them
+       as needed using the Julia package manager. For a quick reference of
+       Julia package manager REPL commands, see the
+       [Julia Quick Reference][julia-quick-reference].
+
+4. Configure Git.
+
+   * Set up a remote Git repository (e.g., GitHub repository).
+
+   * Configure the remote Git repository.
+
+     ```shell
+     $ git remote add origin GIT_REMOTE
+     ```
+
+     where `GIT_REMOTE` is the URL to the remote Git repository.
+
+5. Configure DVC.
+
+   * Initialize DVC (data version control). In the following command
+     `PROJECT_DIR` should be replaced by the path to the newly created research
+     project.
+
+     * Using `fds`.
+
+       ```shell
+       $ cd PROJECT_DIR
+       $ fds init
+       $ fds commit -m "Initialize DVC"
+       ```
+
+     * Using `dvc` + `git`.
+
+       ```shell
+       $ cd PROJECT_DIR
+       $ dvc init
+       $ git commit -m "Initialize DVC"
+       ```
+
+   * Add a remote DVC repository.
+
+     * Set up a remote DVC repository (e.g., S3 bucket).
+
+     * Configure the remote DVC repository.
+
+       ```shell
+       $ dvc remote add -d storage DVC_REMOTE
+       ```
+
+       where `storage` is the name for the remote repository and `DVC_REMOTE`
+       is the URL to the remote DVC repository. __Note__: the `-d` option
+       indicates that `storage` should be used as the default remote DVC
+       repository.
+
+   * Configure DVC to automatically stage changes to `*.dvc` files with Git.
+
+     ```shell
+     $dvc config core.autostage true
+     ```
+
+6. Update the project documentation.
+
+   * Customize the `README.md` file to reflect the specifics of the project.
+
+   * Verify the correctness of the `LICENSE` file. In particular, check the
+     year and name of the copyright owner.
+
+-------------------------------------------------------------------------------
+
+## 3. Notes for Developers
+
+### 3.1. Software Requirements
 
 #### Base Requirements
 
+* Git
 * Python (>=3.7)
+* [Poetry][poetry]
 
 #### Optional Packages
 
-* Miniconda
-  * Required for MLflow Projects and MLflow Models
-* Julia (>=1.6)
 * `direnv`
 
-### 1.2. Directory Structure
+#### Python Packages
 
-    README.md
-    LICENSE
-    README.md.template
-    RELEASE-NOTES.md.template
-    LICENSE.template
-    requirements.txt
-    Project.toml
-    Manifest.toml
-    bin/
-    data/
-    lib/
-    notebooks/
-    reports/
-    template-docs/
-    template-docs/extras/
+See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
-* `README.md`: this file (same as `README-Data-Science-Project-Template.md` in
-  the `template-docs` directory)
+### 3.2. Setting Up to Develop the Cookiecutter
 
-* `LICENSE`: license for Data Science Project Template (same as
-  `LICENSE-Data-Science-Project-Template.md` in the `template-docs` directory)
+1. ___Optional___. Set up the project to use `direnv` to manage the environment
+  (for both Python and the shell).
 
-* `*.template`: template files for the package
-
-    * Template files are indicated by the `template` suffix and contain
-      template parameters denoted by double braces (e.g. `{{ PKG_NAME }}`).
-      Template files are intended to simplify the set up of the package. When
-      used, they should be renamed to remove the `template` suffix.
-
-* `requirements.txt`: `pip` requirements file containing Python packages for
-  project (e.g., data science, testing, and assessing code quality packages)
-
-* `Project.toml`: Julia package management file containing Julia package
-  dependencies. It is updated whenever new Julia packages are added via the
-  REPL. This file may be safely removed if Julia is not required for the
-  project.
-
-* `Manifest.toml` (generated by Julia): Julia package management file that
-  Julia uses to maintain a record of the state of the Julia environment. This
-  file should _not_ be edited.
-
-* `bin`: directory where scripts and programs should be placed
-
-* `data`: directory where project data should be placed
-
-    * __Recommendation__: data placed in the `data` directory should be managed
-      using DVC (or a similar tool) rather than being included in the `git`
-      repository. This is especially important for projects with large datasets
-      or datasets containing sensitive information. For projects with small
-      datasets that do not contain sensitive information, it may be reasonable
-      to have the data contained in the `data` directory be managed directly by
-      `git`.
-
-* `lib`: directory containing source code to support the project (e.g.,
-  custom code developed for the project, utility modules, etc.)
-
-* `notebooks`: directory containing Jupyter notebooks used for research phase
-  work (e.g., exploration and development of ideas, DS/ML experiments). Each
-  Jupyter notebook in this directory should (1) be dated and (2) have the
-  initials of the person who last modified it. When an existing notebook is
-  modified, it should be saved to a new file with a name based on the
-  modification date and initialed by the person who modified the notebook.
-
-* `reports`: directory containing reports (in any format) that summarize
-  research results. When a report is prepared as a Jupyter notebook, the
-  notebook should be polished, contain final analysis results (not preliminary
-  results), and is usually the work product of the entire data science team.
-
-* `template-docs`: directory containing documentation for this package template
-
-    * `template-docs/extras`: directory containing example and template files
-
-### 1.3. License
-
-The contents of this template are covered under the
-`LICENSE-Data-Science-Project-Template` file contained in the `template-docs`
-of this package.
-
-------------------------------------------------------------------------------
-
-## 2. Usage
-
-### 2.1. Setting Up
-
-1. Set up environment for project using only one of the following approaches.
-
-  * `direnv`-based setup
-
-    * Copy `template-docs/extras/envrc.template` to `.envrc` in project root
-      directory.
+    * Copy `extras/dot-envrc` to the Git repository's root directory, and
+      rename it to `.envrc`.
 
     * Grant permission to `direnv` to execute the `.envrc` file.
 
@@ -167,134 +250,82 @@ of this package.
       $ direnv allow
       ```
 
-    * If needed, edit "User-Specified Configuration Parameters" section of
-      `.envrc`.
+2. Install the Python packages required for development.
 
-  * `autoenv`-based setup
+   ```shell
+   $ poetry install
+   ```
 
-    * Create Python virtual environment.
+3. Work on improving the cookiecutter.
 
-      ```shell
-      $ python3 -m venv .venv
-      ```
+-------------------------------------------------------------------------------
 
-    * Copy `template-docs/extras/env.template` to `.env` in project root
-      directory.
+## 4. Known Issues
 
-    * If needed, edit "User-Specified Configuration Parameters" section of
-      `.env`.
+* When including numba as a project dependency, the Python version constraint
+  `pyproject.toml` needs to be more restrictive than default `^3.9`. For
+  numba 0.55, the Python version constraint in `pyproject.toml` should be set
+  to:
 
-2. Install required Python packages.
+  ```
+  python = ">=3.9,<3.11"
+  ```
 
-    * If using cloud-based storage for DVC, modify the `dvc` line in
-      `requirements.txt` to include the extra packages required to support
-      the cloud-based storage.
+-------------------------------------------------------------------------------
 
-      ```
-      # DVC with S3 for remote storage
-      dvc[s3]
+## 5. Documentation
 
-      # DVC with Azure for remote storage
-      dvc[azure]
-      ```
+* [FastDS Quick Reference][fastds-quick-reference]
 
-    * Use `pip` to install Python packages.
+* [Poetry Quick Reference][poetry-quick-reference]
 
-      ```shell
-      $ pip install -r requirements.txt
-      ```
+* [Julia Quick Reference][julia-quick-reference]
 
-* (OPTIONAL) Set up Julia environment.
-
-      ```shell
-      $ julia
-
-      julia> ]
-
-      (...) pkg> instantiate
-      ```
-
-* (OPTIONAL) Set up DVC.
-
-    * Initialize DVC.
-
-      ```shell
-      $ dvc init
-      ```
-
-    * Stop tracking `data` directory with `git`.
-
-      ```shell
-      $ git rm -r --cached 'data'
-      $ git commit -m "Stop tracking 'data' directory"
-      $ rm data/.git-keep-dir
-      ```
-
-3. Rename all of the template files with the `template` suffix removed
-   (overwrite the original `README.md` and `LICENSE` files) and replace all
-   template parameters with package-appropriate values.
-
-4. Clean up project.
-
-    * If Julia is not required for the project, remove `Project.toml` from the
-      project.
-
-### 2.2. Conventions
-
-#### `notebooks` directory
-
-* Jupyter notebooks in the `notebooks` directory should be named using the
-  following convention: `YYYY-MM-DD-AUTHOR_INITIALS-BRIEF_DESCRIPTION.ipynb`.
-
-  * Example: `2019-01-17-KC-information_theory_analysis.ipynb`
-
-* Depending on the nature of the project, it may be useful to organize
-  notebooks into sub-directories (e.g., by team member, by sub-project).
-
-### 2.3. Environment
-
-If `direnv` or `autoenv` is enabled, the following environment variables are
-automatically set.
-
-* `DATA_DIR`: absolute path to `data` directory
-
-### 2.4. Using JupyterLab
-
-* Launching a JupyterLab.
-
-    ```shell
-    $ jupyter-lab
-    ```
-
-* Use the GUI to create Jupyter notebooks, edit and run Jupyter notebooks,
-  manage files in the file system, etc.
-
-------------------------------------------------------------------------------
-
-## 3. References
-
-* J. Whitmore.
-  ["Jupyter Notebook Best Practices for Data Science"][#whitmore-2016]
-  (2016/09).
-
-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 [-----------------------------INTERNAL LINKS-----------------------------]: #
 
 [#1]: #1-overview
-[#1.1]: #11-software-dependencies
-[#1.2]: #12-directory-structure
-[#1.3]: #13-license
+[#1.1]: #11-repository-contents
+[#1.2]: #12-license
 
-[#2]: #2-usage
-[#2.1]: #21-setting-up
-[#2.2]: #22-conventions
-[#2.3]: #23-environment
-[#2.4]: #24-using-jupyterlab
+[#2]: #2-setting-up-a-new-research-project
 
-[#3]: #3-references
+[#3]: #3-notes-for-developers
+[#3.1]: #31-software-requirements
+[#3.2]: #32-setting-up-to-develop-the-cookiecutter
+
+[#4]: #4-known-issues
+
+[#5]: #5-documentation
+
+[-----------------------------REPOSITORY LINKS-----------------------------]: #
+
+[fastds-quick-reference]: {{cookiecutter.project_directory}}/docs/references/FastDS-Quick-Reference.md
+
+[julia-quick-reference]: {{cookiecutter.project_directory}}/docs/references/Julia-Quick-Reference.md
+
+[mlflow-quick-reference]: {{cookiecutter.project_directory}}/docs/references/MLflow-Quick-Reference.md
+
+[poetry-quick-reference]: {{cookiecutter.project_directory}}/docs/references/Poetry-Quick-Reference.md
+
+[vlxi-cookiecutter-research]: https://github.com/velexi-corporation/VLXI-Cookiecutter-Research
 
 [-----------------------------EXTERNAL LINKS-----------------------------]: #
 
-[#whitmore-2016]:
+[cookiecutter]: https://cookiecutter.readthedocs.io/en/latest/
+
+[cookiecutter-data-science]: https://github.com/drivendata/cookiecutter-data-science
+
+[fastds]: https://github.com/DAGsHub/fds/
+
+[khuyentran-data-science-template]: https://github.com/khuyentran1401/data-science-template
+
+[mlflow]: https://www.mlflow.org
+
+[mlflow-tracking]: https://www.mlflow.org/docs/latest/tracking.html
+
+[poetry]: https://python-poetry.org/
+
+[whitmore-2016]:
   https://www.svds.com/tbt-jupyter-notebook-best-practices-data-science/

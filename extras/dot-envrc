@@ -1,0 +1,40 @@
+# direnv configuration file for cookiecutter development
+
+# =========== User-Specified Configuration Parameters =========== #
+
+# --- Project-Specific Configuration Parameters
+
+# Paths to add to PATH
+# NOTE: paths should be specified relative to top-level of project directory.
+PATH_EXTRA=
+
+# Paths to add to PYTHONPATH
+# NOTE: paths should be specified relative to top-level of project directory.
+PYTHONPATH_EXTRA=
+
+# ====================== DO NOT EDIT BELOW ====================== #
+
+# --- Enable Python 3 layout
+
+layout_python3
+
+# --- Configure environment
+
+# Find top-level directory
+#
+# Note: "builtin cd" is used to avoid conflicts with other packages
+#       (e.g., autoenv)
+PROJECT_ROOT_DIR=`builtin cd $(dirname "${BASH_SOURCE[0]}") && pwd`
+
+# Python
+export PYTHONPATH=$PROJECT_ROOT_DIR
+PYTHONPATH_EXTRA="$PYTHONPATH_EXTRA {{cookiecutter.project_directory}}/src"
+for DIR in $PYTHONPATH_EXTRA; do
+    path_add PYTHONPATH $PROJECT_ROOT_DIR/$DIR
+done
+
+# Set PATH
+PATH_EXTRA="bin $PATH_EXTRA"
+for DIR in $PATH_EXTRA; do
+    PATH_add $PROJECT_ROOT_DIR/$DIR
+done
