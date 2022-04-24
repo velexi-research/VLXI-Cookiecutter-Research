@@ -140,6 +140,11 @@ contained in the `LICENSE` file.
        * matplotlib
        * seaborn
 
+     * Commit the changes to the `pyproject.toml` file to the project Git
+       repository.
+
+     * Add and commit `poetry.lock` to the project Git repository.
+
    * If the project was created with Julia support enabled, install the Julia
      package dependencies.
 
@@ -153,6 +158,8 @@ contained in the `LICENSE` file.
        as needed using the Julia package manager. For a quick reference of
        Julia package manager REPL commands, see the
        [Julia Quick Reference][julia-quick-reference].
+
+     * Commit the changes to `Project.toml` to the project Git repository.
 
 4. Configure Git.
 
