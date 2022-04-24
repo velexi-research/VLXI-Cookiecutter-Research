@@ -14,9 +14,6 @@ htmlcov/
 
 # --- Environments
 
-# poetry
-poetry.lock
-
 # direnv
 .direnv
 .envrc
