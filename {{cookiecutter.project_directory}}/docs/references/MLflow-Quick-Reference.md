@@ -39,10 +39,7 @@ MLflow experiment tracking within a Jupyter notebook.
    # Set experiment
    mlflow.set_experiment(experiment_name)
 
-   # Force run to restart
-   #
-   # Note: this is needed in case an earlier run fails before mlflow.end_run()
-   #       is called.
+   # Ensure that previous run (possibly failed) has been terminated by MLflow.
    if mlflow.active_run():
        mlflow.end_run()
 
@@ -69,11 +66,16 @@ MLflow experiment tracking within a Jupyter notebook.
    of an experiment to facilitate comparison of different runs of an experiment
    using the same set of configuration parameters.
 
-3. Throughout Jupyter notebook, add results to `mlflow_results`.
+3. Throughout the Jupyter notebook, add results to `mlflow_results` and/or record
+   individual results (saved as MLflow "metrics").
 
    ```python
+   # Add a result to `mlflow_results`. This result will be saved at the end of the
+   # Jupyter notebook
    mlflow_results["some-result"] = some_result
-   mlflow_results["another-result"] = another_result
+
+   # Record an individual result (as an MLflow "metric")
+   mlflow.log_metric("another-result") = another_result
    ```
 
 4. After the experiment is completed, include a cell to record the results.
