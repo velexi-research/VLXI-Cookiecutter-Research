@@ -305,11 +305,11 @@ the cookiecutter `pyproject.toml` file.
 
 * [FastDS Quick Reference][fastds-quick-reference]
 
+* [Julia Quick Reference][julia-quick-reference]
+
 * [MLflow Quick Reference][mlflow-quick-reference]
 
 * [Poetry Quick Reference][poetry-quick-reference]
-
-* [Julia Quick Reference][julia-quick-reference]
 
 -------------------------------------------------------------------------------
 
