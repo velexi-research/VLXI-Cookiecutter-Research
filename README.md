@@ -282,7 +282,7 @@ the cookiecutter `pyproject.toml` file.
 * Use `poetry` to (1) make changes to the package dependency list and/or
   (2) update the package dependency versions.
 
-* Restore the `version` parameter in `pyproject.toml` to
+* Restore the `version` parameter in `pyproject.toml` to its original value:
   `"{{ cookiecutter.version }}"`.
 
 * Commit the updated `pyproject.toml` and `poetry.lock` files to the Git
