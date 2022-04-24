@@ -1,8 +1,6 @@
 Velexi Research Project Cookiecutter
 ====================================
 
-__Version__: 0.3.2
-
 __Authors__  
 Kevin T. Chu `<kevin@velexi.com>`
 
