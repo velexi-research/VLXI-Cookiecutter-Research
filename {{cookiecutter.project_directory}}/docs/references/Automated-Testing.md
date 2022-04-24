@@ -14,7 +14,7 @@ This project is configured to support
   analysis).
 
 For an example of how to write basic automated tests, see the
-`tests/test_utils.py`file.
+`tests/test_utils.py` file.
 
 ------------------------------------------------------------------------------
 
