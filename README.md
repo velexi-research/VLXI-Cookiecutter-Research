@@ -17,6 +17,10 @@ Table of Contents
 
 2. [Setting Up a New Research Project][#2]
 
+   2.1. [Instructions][#2.1]
+
+   2.2. [Known Issues][#2.2]
+
 3. [Contributor Notes][#3]
 
    3.1. [Software Requirements][#3.1]
@@ -25,9 +29,7 @@ Table of Contents
 
    3.3. [Additional Notes][#3.3]
 
-4. [Known Issues][#4]
-
-5. [Documentation][#5]
+4. [Documentation][#4]
 
 -------------------------------------------------------------------------------
 
@@ -97,6 +99,8 @@ contained in the `LICENSE` file.
 -------------------------------------------------------------------------------
 
 ## 2. Setting Up a New Research Project
+
+## 2.1. Instructions
 
 1. ___Prerequisite___. Install the [Cookiecutter][cookiecutter] Python package.
 
@@ -223,6 +227,17 @@ contained in the `LICENSE` file.
    * Verify the correctness of the `LICENSE` file. In particular, check the
      year and name of the copyright owner.
 
+## 2.2. Known Issues
+
+* When including numba as a project dependency, the Python version constraint
+  `pyproject.toml` needs to be more restrictive than default `^3.9`. For
+  numba 0.55, the Python version constraint in `pyproject.toml` should be set
+  to:
+
+  ```
+  python = ">=3.9,<3.11"
+  ```
+
 -------------------------------------------------------------------------------
 
 ## 3. Contributor Notes
@@ -288,20 +303,7 @@ the cookiecutter `pyproject.toml` file.
 
 -------------------------------------------------------------------------------
 
-## 4. Known Issues
-
-* When including numba as a project dependency, the Python version constraint
-  `pyproject.toml` needs to be more restrictive than default `^3.9`. For
-  numba 0.55, the Python version constraint in `pyproject.toml` should be set
-  to:
-
-  ```
-  python = ">=3.9,<3.11"
-  ```
-
--------------------------------------------------------------------------------
-
-## 5. Documentation
+## 4. Documentation
 
 * [FastDS Quick Reference][fastds-quick-reference]
 
@@ -320,15 +322,15 @@ the cookiecutter `pyproject.toml` file.
 [#1.2]: #12-license
 
 [#2]: #2-setting-up-a-new-research-project
+[#2.1]: #21-instructions
+[#2.2]: #22-known-issues
 
 [#3]: #3-contributor-notes
 [#3.1]: #31-software-requirements
 [#3.2]: #32-setting-up-to-develop-the-cookiecutter
 [#3.3]: #33-additional-notes
 
-[#4]: #4-known-issues
-
-[#5]: #5-documentation
+[#4]: #4-documentation
 
 [-----------------------------REPOSITORY LINKS-----------------------------]: #
 
