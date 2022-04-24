@@ -360,5 +360,4 @@ the cookiecutter `pyproject.toml` file.
 
 [poetry]: https://python-poetry.org/
 
-[whitmore-2016]:
-  https://www.svds.com/tbt-jupyter-notebook-best-practices-data-science/
+[whitmore-2016]: https://www.svds.com/tbt-jupyter-notebook-best-practices-data-science/
