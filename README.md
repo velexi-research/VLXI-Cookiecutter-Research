@@ -19,11 +19,13 @@ Table of Contents
 
 2. [Setting Up a New Research Project][#2]
 
-3. [Notes for Developers][#3]
+3. [Contributor Notes][#3]
 
    3.1. [Software Requirements][#3.1]
 
    3.2. [Setting Up to Develop the Cookiecutter][#3.2]
+
+   3.3. [Additional Notes][#3.3]
 
 4. [Known Issues][#4]
 
@@ -225,7 +227,7 @@ contained in the `LICENSE` file.
 
 -------------------------------------------------------------------------------
 
-## 3. Notes for Developers
+## 3. Contributor Notes
 
 ### 3.1. Software Requirements
 
@@ -265,6 +267,27 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 3. Work on improving the cookiecutter.
 
+### 3.3. Additional Notes
+
+#### Updating the Cookiecutter Project Dependencies
+
+When using `poetry` to update the cookiecutter Python dependencies in the
+`{{cookiecutter.project_directory}}/pyproject.toml` file, special care is
+needed to work around the error caused by the templated `version` number in
+the cookiecutter `pyproject.toml` file.
+
+* Temporarily set the `version` parameter in `pyproject.toml` to a valid
+  version number (e.g., `"0.1.0"`).
+
+* Use `poetry` to (1) make changes to the package dependency list and/or
+  (2) update the package dependency versions.
+
+* Restore the `version` parameter in `pyproject.toml` to
+  `"{{ cookiecutter.version }}"`.
+
+* Commit the updated `pyproject.toml` and `poetry.lock` files to the Git
+  repository.
+
 -------------------------------------------------------------------------------
 
 ## 4. Known Issues
@@ -298,9 +321,10 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 [#2]: #2-setting-up-a-new-research-project
 
-[#3]: #3-notes-for-developers
+[#3]: #3-contributor-notes
 [#3.1]: #31-software-requirements
 [#3.2]: #32-setting-up-to-develop-the-cookiecutter
+[#3.3]: #33-additional-notes
 
 [#4]: #4-known-issues
 
