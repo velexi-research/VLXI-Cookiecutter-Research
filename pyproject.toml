@@ -3,7 +3,7 @@ name = "Velexi Research Project Cookiecutter"
 version = "0.3.0"
 description = "Template for research projects that utilize Jupyter notebooks for exploration, experimentation, analysis, and reporting"
 authors = ["Kevin Chu <kevin@velexi.com>"]
-license = "Apache"
+license = "Apache License"
 
 [tool.poetry.dependencies]
 python = "^3.9"
