@@ -27,7 +27,7 @@ layout_python3
 
 # --- Configure environment
 
-# Find top-level directory
+# Find project root directory
 #
 # Note: "builtin cd" is used to avoid conflicts with other packages
 #       (e.g., autoenv)
