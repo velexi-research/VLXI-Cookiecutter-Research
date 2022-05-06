@@ -2,6 +2,14 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.3.1 (2022-05-06)
+==================
+* Added `pdoc3` as default package for supporting auto-generation of
+  documentation.
+* Updated documentation.
+* Improved license format.
+
+-------------------------------------------------------------------------------
 0.3.0 (2022-04-23)
 ==================
 * Restructured project to be a cookiecutter instead of a template.
