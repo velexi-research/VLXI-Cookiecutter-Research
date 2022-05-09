@@ -120,7 +120,7 @@ clean:
 
 .PHONY: help
 
-## Display this list available rules
+## Display this list of available rules
 help:
 	@echo "$$(tput bold)Default rule:$$(tput sgr0) ${.DEFAULT_GOAL}"
 	@echo
