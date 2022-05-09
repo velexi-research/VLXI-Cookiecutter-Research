@@ -1,4 +1,4 @@
-# --- Make Parameters
+# --- Makefile parameters
 
 # Default command
 .DEFAULT_GOAL := help
@@ -14,7 +14,7 @@ PYTEST_SEARCH_PATHS=${CODE_DIRS}
 PYTEST_OPTIONS=-n ${NPROCS} --cov=${SRC_DIR}
 PYTEST_PYLINT_OPTIONS=
 
-# --- Testing Commands
+# --- Testing commands
 
 .PHONY: test fast-test full-test \
         coverage-report coverage-html
@@ -119,7 +119,9 @@ clean:
 # 	* print line
 # Separate expressions are necessary because labels cannot be delimited by
 # semicolon; see <http://stackoverflow.com/a/11799865/1968>
+
 .PHONY: help
+
 help:
 	@echo "$$(tput bold)Available rules:$$(tput sgr0)"
 	@echo
