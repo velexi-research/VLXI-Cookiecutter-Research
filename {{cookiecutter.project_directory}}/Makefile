@@ -49,7 +49,7 @@ coverage-html: .coverage
 
 ## Lint code using flake8
 lint:
-	flake8 src
+	flake8 ${CODE_DIRS}
 
 ## Compute the Maintainability Index for source code files.
 radon-mi:
@@ -77,15 +77,13 @@ radon-raw:
 
 .PHONY: docs docs-pdf
 
-## Generate source code documentation in HTML format.
+## Generate API documentation in HTML format.
 docs:
-	sphinx-apidoc -o docs/api .
-	cd docs; make html
+	pdoc --html -o docs/api/html ${SRC_DIR}
 
-## Generate source code documentation in PDF format.
-docs-pdf:
-	sphinx-apidoc -o docs/api .
-	cd docs; make latexpdf
+## Generate API documentation in Markdown.
+docs-md:
+	pdoc --pdf ${SRC_DIR} > docs/api/api.md
 
 # --- Utility commands
 
