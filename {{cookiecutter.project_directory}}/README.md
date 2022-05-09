@@ -29,8 +29,8 @@ A description of the project.
 ```
 ├── README.md       <- README for the project
 ├── LICENSE         <- license for contents of project
-├── Makefile        <- Makefile with useful commands. Use `make help` to show a list of
-│                      available commands.
+├── Makefile        <- Makefile containing useful shortcuts (`make` rules). Use `make help`
+│                      to show the list of available rules.
 ├{% if cookiecutter.enable_julia == 'yes' %}── Project.toml    <- Julia project configuration file (e.g., Julia package dependencies)
 ├{% endif %}── pyproject.toml  <- Python project configuration file (e.g., Python package dependencies)
 │
