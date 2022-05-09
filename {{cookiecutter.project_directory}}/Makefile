@@ -77,11 +77,11 @@ radon-raw:
 
 .PHONY: docs docs-pdf
 
-## Generate API documentation in HTML format.
+## Generate API documentation in HTML format.{% if cookiecutter.enable_julia == 'yes' %} Note: only generates docs for Python modules.{% endif %}
 docs:
 	pdoc --html -o docs/api/html ${SRC_DIR}
 
-## Generate API documentation in Markdown format.
+## Generate API documentation in Markdown format.{% if cookiecutter.enable_julia == 'yes' %} Note: only generates docs for Python modules.{% endif %}
 docs-md:
 	pdoc --pdf ${SRC_DIR} > docs/api/api.md
 
