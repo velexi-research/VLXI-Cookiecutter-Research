@@ -81,7 +81,7 @@ radon-raw:
 docs:
 	pdoc --html -o docs/api/html ${SRC_DIR}
 
-## Generate API documentation in Markdown.
+## Generate API documentation in Markdown format.
 docs-md:
 	pdoc --pdf ${SRC_DIR} > docs/api/api.md
 
