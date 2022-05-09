@@ -122,6 +122,8 @@ clean:
 
 ## Display this list available rules
 help:
+	@echo "$$(tput bold)Default rule:$$(tput sgr0) ${.DEFAULT_GOAL}"
+	@echo
 	@echo "$$(tput bold)Available rules:$$(tput sgr0)"
 	@echo
 	@sed -n -e "/^## / { \
