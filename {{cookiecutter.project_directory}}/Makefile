@@ -1,6 +1,6 @@
 # --- Makefile parameters
 
-# Default command
+# Default rule
 .DEFAULT_GOAL := help
 
 # Source directories
@@ -14,7 +14,7 @@ PYTEST_SEARCH_PATHS=${CODE_DIRS}
 PYTEST_OPTIONS=-n ${NPROCS} --cov=${SRC_DIR}
 PYTEST_PYLINT_OPTIONS=
 
-# --- Testing commands
+# --- Testing rules
 
 .PHONY: test fast-test full-test \
         coverage-report coverage-html
@@ -42,7 +42,7 @@ coverage-report: .coverage
 coverage-html: .coverage
 	coverage html -d coverage
 
-# --- Code quality commands
+# --- Code quality rules
 
 .PHONY: lint \
 		radon-mi radon-mi-fail radon-cc radon-cc-fail radon-raw
@@ -73,7 +73,7 @@ radon-cc-fail:
 radon-raw:
 	radon raw ${CODE_DIRS} -s
 
-# --- Documentation commands
+# --- Documentation rules
 
 .PHONY: docs docs-pdf
 
@@ -85,7 +85,7 @@ docs:
 docs-md:
 	pdoc --pdf ${SRC_DIR} > docs/api/api.md
 
-# --- Utility commands
+# --- Utility rules
 
 .PHONY: clean
 
@@ -120,6 +120,7 @@ clean:
 
 .PHONY: help
 
+## Display this list available rules
 help:
 	@echo "$$(tput bold)Available rules:$$(tput sgr0)"
 	@echo
