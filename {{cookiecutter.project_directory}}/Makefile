@@ -1,6 +1,6 @@
-# --- Make Parameters
+# --- Makefile parameters
 
-# Default command
+# Default rule
 .DEFAULT_GOAL := help
 
 # Source directories
@@ -14,7 +14,7 @@ PYTEST_SEARCH_PATHS=${CODE_DIRS}
 PYTEST_OPTIONS=-n ${NPROCS} --cov=${SRC_DIR}
 PYTEST_PYLINT_OPTIONS=
 
-# --- Testing Commands
+# --- Testing rules
 
 .PHONY: test fast-test full-test \
         coverage-report coverage-html
@@ -42,14 +42,14 @@ coverage-report: .coverage
 coverage-html: .coverage
 	coverage html -d coverage
 
-# --- Code quality commands
+# --- Code quality rules
 
 .PHONY: lint \
 		radon-mi radon-mi-fail radon-cc radon-cc-fail radon-raw
 
 ## Lint code using flake8
 lint:
-	flake8 src
+	flake8 ${CODE_DIRS}
 
 ## Compute the Maintainability Index for source code files.
 radon-mi:
@@ -73,21 +73,15 @@ radon-cc-fail:
 radon-raw:
 	radon raw ${CODE_DIRS} -s
 
-# --- Documentation commands
+# --- Documentation rules
 
-.PHONY: docs docs-pdf
+.PHONY: docs
 
-## Generate source code documentation in HTML format.
+## Generate API documentation in HTML format.{% if cookiecutter.enable_julia == 'yes' %} Note: only generates docs for Python modules.{% endif %}
 docs:
-	sphinx-apidoc -o docs/api .
-	cd docs; make html
+	pdoc --html -o docs/api ${SRC_DIR}
 
-## Generate source code documentation in PDF format.
-docs-pdf:
-	sphinx-apidoc -o docs/api .
-	cd docs; make latexpdf
-
-# --- Utility commands
+# --- Utility rules
 
 .PHONY: clean
 
@@ -98,7 +92,8 @@ clean:
 	find . -type f -name "*.py[co]" -delete  # compiled python
 	rm -rf .cache  # pytest
 	rm -rf .coverage .coverage.* coverage htmlcov  # coverage
-	find . -name "*.log" -exec rm -f {} \;  # demos
+	find . -name "*.log" -exec rm -f {} \;  # log files
+	rm -rf docs/api # generated API documentation
 
 # --- Makefile Self-Documentation
 
@@ -119,8 +114,13 @@ clean:
 # 	* print line
 # Separate expressions are necessary because labels cannot be delimited by
 # semicolon; see <http://stackoverflow.com/a/11799865/1968>
+
 .PHONY: help
+
+## Display this list of available rules
 help:
+	@echo "$$(tput bold)Default rule:$$(tput sgr0) ${.DEFAULT_GOAL}"
+	@echo
 	@echo "$$(tput bold)Available rules:$$(tput sgr0)"
 	@echo
 	@sed -n -e "/^## / { \

@@ -2,6 +2,16 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.4.0 (2022-05-10)
+==================
+* Added quick reference for using `pdoc` to auto-generate API documentation
+  from source code.
+* Removed `version` cookiecutter variable (version numbers are not needed
+  for research projects).
+* Updated and reoganized documentation.
+* Improved Makefile `help` documentation.
+
+-------------------------------------------------------------------------------
 0.3.1 (2022-05-06)
 ==================
 * Added `pdoc3` as default package for supporting auto-generation of

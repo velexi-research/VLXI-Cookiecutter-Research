@@ -33,7 +33,7 @@ For an example of how to write basic automated tests, see the
   $ make fast-test
   ```
 
-* After running all tests, run `pylint` on all source code files.
+* Run all of the tests and run `pylint` on all source code files.
 
   ```shell
   $ make full-test
