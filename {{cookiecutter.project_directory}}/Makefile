@@ -75,15 +75,11 @@ radon-raw:
 
 # --- Documentation rules
 
-.PHONY: docs docs-pdf
+.PHONY: docs
 
 ## Generate API documentation in HTML format.{% if cookiecutter.enable_julia == 'yes' %} Note: only generates docs for Python modules.{% endif %}
 docs:
-	pdoc --html -o docs/api/html ${SRC_DIR}
-
-## Generate API documentation in Markdown format.{% if cookiecutter.enable_julia == 'yes' %} Note: only generates docs for Python modules.{% endif %}
-docs-md:
-	pdoc --pdf ${SRC_DIR} > docs/api/api.md
+	pdoc --html -o docs/api ${SRC_DIR}
 
 # --- Utility rules
 
@@ -96,7 +92,8 @@ clean:
 	find . -type f -name "*.py[co]" -delete  # compiled python
 	rm -rf .cache  # pytest
 	rm -rf .coverage .coverage.* coverage htmlcov  # coverage
-	find . -name "*.log" -exec rm -f {} \;  # demos
+	find . -name "*.log" -exec rm -f {} \;  # log files
+	rm -rf docs/api # generated API documentation
 
 # --- Makefile Self-Documentation
 
