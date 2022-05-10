@@ -1,1 +1,1 @@
-../{{cookiecutter.project_directory}}/docs/references/Julia-Quick-Reference.md
+../{{cookiecutter.project_directory}}/docs/references/Quick-References/Julia-Quick-Reference.md
