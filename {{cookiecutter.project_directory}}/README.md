@@ -183,6 +183,8 @@ A description of the project.
 
 * [MLflow Quick Reference][mlflow-quick-reference]
 
+* [pdoc Quick Reference][pdoc-quick-reference]
+
 * [Poetry Quick Reference][poetry-quick-reference]
 
 * [Project Environment][project-environment]
@@ -205,16 +207,18 @@ A description of the project.
 
 [-----------------------------REPOSITORY LINKS-----------------------------]: #
 
-[automated-testing]: docs/references/Automated-Testing.md
+[automated-testing]: docs/references/Quick-References/Automated-Testing.md
 
-[fastds-quick-reference]: docs/references/FastDS-Quick-Reference.md
+[fastds-quick-reference]: docs/references/Quick-References/FastDS-Quick-Reference.md
 
-[julia-quick-reference]: docs/references/Julia-Quick-Reference.md
+[julia-quick-reference]: docs/references/Quick-References/Julia-Quick-Reference.md
 
-[jupyter-quick-reference]: docs/references/Jupyter-Quick-Reference.md
+[jupyter-quick-reference]: docs/references/Quick-References/Jupyter-Quick-Reference.md
 
-[mlflow-quick-reference]: docs/references/MLflow-Quick-Reference.md
+[mlflow-quick-reference]: docs/references/Quick-References/MLflow-Quick-Reference.md
 
-[poetry-quick-reference]: docs/references/Poetry-Quick-Reference.md
+[pdoc-quick-reference]: docs/references/Quick-References/pdoc-Quick-Reference.md
 
-[project-environment]: docs/references/Project-Environment.md
+[poetry-quick-reference]: docs/references/Quick-References/Poetry-Quick-Reference.md
+
+[project-environment]: docs/references/Quick-References/Project-Environment.md

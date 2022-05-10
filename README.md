@@ -343,13 +343,13 @@ special care is needed to work around the error caused by the templated
 
 [-----------------------------REPOSITORY LINKS-----------------------------]: #
 
-[fastds-quick-reference]: {{cookiecutter.project_directory}}/docs/references/FastDS-Quick-Reference.md
+[fastds-quick-reference]: {{cookiecutter.project_directory}}/docs/references/Quick-References/FastDS-Quick-Reference.md
 
-[julia-quick-reference]: {{cookiecutter.project_directory}}/docs/references/Julia-Quick-Reference.md
+[julia-quick-reference]: {{cookiecutter.project_directory}}/docs/references/Quick-References/Julia-Quick-Reference.md
 
-[mlflow-quick-reference]: {{cookiecutter.project_directory}}/docs/references/MLflow-Quick-Reference.md
+[mlflow-quick-reference]: {{cookiecutter.project_directory}}/docs/references/Quick-References/MLflow-Quick-Reference.md
 
-[poetry-quick-reference]: {{cookiecutter.project_directory}}/docs/references/Poetry-Quick-Reference.md
+[poetry-quick-reference]: {{cookiecutter.project_directory}}/docs/references/Quick-References/Poetry-Quick-Reference.md
 
 [vlxi-cookiecutter-research]: https://github.com/velexi-corporation/VLXI-Cookiecutter-Research
 
