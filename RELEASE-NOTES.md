@@ -2,6 +2,14 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.3.2 (2022-05-09)
+==================
+* Removed `version` cookiecutter variable (version numbers are not needed
+  for research projects).
+* Updated documentation.
+* Improved Makefile `help` documentation.
+
+-------------------------------------------------------------------------------
 0.3.1 (2022-05-06)
 ==================
 * Added `pdoc3` as default package for supporting auto-generation of
