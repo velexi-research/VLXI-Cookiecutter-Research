@@ -25,8 +25,8 @@ htmlcov/
 .pytest_cache
 .tox/
 
-# Sphinx documentation
-docs/_build/
+# pdoc auto-generated documentation
+docs/api
 
 # DotEnv configuration
 .env
