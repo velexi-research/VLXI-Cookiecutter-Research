@@ -2,6 +2,13 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.4.1 (2022-05-16)
+==================
+* Update package dependencies for cookiecutter template.
+* Clean up `.gitignore`.
+* Update `version` number in `pyproject.toml`.
+
+-------------------------------------------------------------------------------
 0.4.0 (2022-05-10)
 ==================
 * Added quick reference for using `pdoc` to auto-generate API documentation
