@@ -18,6 +18,7 @@ pywin32 = [  # required to fix security vulnerability
     { version = '>=301', platform = 'win32' },
 ]
 pdoc3 = "^0.10.0"
+tqdm = "^4.64.0"
 
 [tool.poetry.dev-dependencies]
 # TODO: change section name to [tool.poetry.group.dev.dependencies]
