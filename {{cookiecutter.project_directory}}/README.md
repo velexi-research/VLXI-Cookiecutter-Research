@@ -199,8 +199,7 @@ A description of the project.
     ### History
 
     #### 2022-05-31
-    - Replaced `seaborn.distplot()` with `seaborn.histplot()`
-      because `distplot()` has been deprecated.
+    - Replaced `seaborn.distplot()` with `seaborn.histplot()` because `distplot()` has been deprecated.
     ```
 
   * When signification changes are made to a notebook (e.g., major
