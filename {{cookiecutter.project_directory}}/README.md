@@ -54,8 +54,8 @@ A description of the project.
 │
 ├── extras          <- optional environment configuration files, etc.
 │
-├── notebooks       <- Jupyter notebooks. See "Project Conventions" section for
-│                      notebook naming conventions.
+├── notebooks       <- research notes and Jupyter notebooks. See "Project
+│                      Conventions" section for notebook conventions.
 │
 ├── src             <- source code for the project
 │
@@ -150,7 +150,33 @@ A description of the project.
     deterministic, automateable process (possibly multi-step) that uses
     processed and/or raw data as input.
 
-### Jupyter Notebook Conventions
+### Guidelines for Organizing `notebooks` Directory
+
+* Depending on the nature of the project, it may be useful to organize the
+  `notebooks` directory into sub-directories (e.g., by team member, by
+  sub-project).
+
+#### Research Notes
+
+* Research notes should be placed in the `notebooks` directory and should
+  be named using the following conventions:
+
+  `YYYY-MM-AUTHOR_INITIALS-Notes.md`
+
+  where the year and month indicate the month that the notes were written.
+
+  * The time period covered by each set of research notes should be adjusted to
+    match the pace of the project (which may change over time). For instance,
+    if updates are made only a few times a year, it is reasonable to omit the
+    month from the file name: `YYYY-AUTHOR_INITIALS-Notes.md`.
+
+* When a non-trivial modification is made to an existing entry, the modification
+  date should be indicated in a "last updated" line that immediately follows
+  the entry header. For instance:
+
+  `_Last Updated_: 2022-05-31`
+
+#### Jupyter Notebooks
 
 * Jupyter notebooks should be placed in the `notebooks` directory and should
   be named using the following convention:
@@ -162,12 +188,26 @@ A description of the project.
 
   * Example: `2019-01-17-KC-information_theory_analysis.ipynb`
 
-* When an existing notebook is modified in a "significant" manner, it should be
-  saved to a new file with a name constructed from the modification date and
-  initials of the person who created the new notebook.
+* _Notebook Modifications_
 
-* Depending on the nature of the project, it may be useful to organize
-  notebooks into sub-directories (e.g., by team member, by sub-project).
+  * When minor modifications are made to a notebook (e.g., code updates that
+    do not materially change the results, addition of a few of related
+    experiments), use a "History" block (in Markdown format) to document the
+    changes. Example:
+
+    ```markdown
+    ### History
+
+    #### 2022-05-31
+    - Replaced `seaborn.distplot()` with `seaborn.histplot()`
+      because `distplot()` has been deprecated.
+    ```
+
+  * When signification changes are made to a notebook (e.g., major
+    modifications to algorithms, addition of experiments to explore a new
+    direction), the modified notebook should saved to a new file with a name
+    constructed from the modification date and the initials of the person who
+    made the modifications.
 
 ------------------------------------------------------------------------------
 
