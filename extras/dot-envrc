@@ -20,7 +20,7 @@ layout_python3
 
 # --- Configure environment
 
-# Find top-level directory
+# Find project root directory
 #
 # Note: "builtin cd" is used to avoid conflicts with other packages
 #       (e.g., autoenv)
@@ -28,7 +28,7 @@ PROJECT_ROOT_DIR=`builtin cd $(dirname "${BASH_SOURCE[0]}") && pwd`
 
 # Python
 export PYTHONPATH=$PROJECT_ROOT_DIR
-PYTHONPATH_EXTRA="$PYTHONPATH_EXTRA {{cookiecutter.project_directory}}/src"
+PYTHONPATH_EXTRA="$PYTHONPATH_EXTRA"
 for DIR in $PYTHONPATH_EXTRA; do
     path_add PYTHONPATH $PROJECT_ROOT_DIR/$DIR
 done
