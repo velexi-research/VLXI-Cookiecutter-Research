@@ -84,7 +84,7 @@ by Jonathan Whitmore.
 ├── RELEASE-NOTES.md   <- release notes for the cookiecutter
 ├── LICENSE            <- license for the cookiecutter
 ├── cookiecutter.json  <- cookiecutter configuration file
-├── pyproject.toml     <- project configuration file cookiecutter development
+├── pyproject.toml     <- project configuration file for cookiecutter development
 ├── docs/              <- cookiecutter documentation
 ├── extras/            <- additional files that may be useful for cookiecutter development
 ├── hooks/             <- cookiecutter scripts that run before or after project generation
@@ -114,7 +114,7 @@ contained in the `LICENSE` file.
 2. Use `cookiecutter` to create a new research project.
 
    ```shell
-   $ cookiecutter https://github.com/velexi-corporation/VLXI-Cookiecutter-Research.git
+   $ cookiecutter https://github.com/velexi-research/VLXI-Cookiecutter-Research.git
    ```
 
 3. Finish setting up the new research project.
@@ -269,8 +269,8 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 ### 3.2. Setting Up to Develop the Cookiecutter
 
-1. ___Optional___. Set up the project to use `direnv` to manage the environment
-  (for both Python and the shell).
+1. ___Optional___. Set up the cookiecutter project to use `direnv` to manage
+  the environment (for both Python and the shell).
 
     * Copy `extras/dot-envrc` to the Git repository's root directory, and
       rename it to `.envrc`.
@@ -293,22 +293,27 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 #### Updating the Cookiecutter Project Dependencies
 
-When using `poetry` to update the Python dependencies for the project template
-(contained in the `{{cookiecutter.project_directory}}/pyproject.toml` file),
-special care is needed to work around the error caused by the templated
-`version` number in the template `pyproject.toml` file.
+To update the Python dependencies for the project template (contained in the
+`{{cookiecutter.project_directory}}/pyproject.toml` file), use the following
+procedure to ensure that package dependencies for cookiecutter development
+do not interfere with package dependencies for the research project template.
 
-* Temporarily set the `version` parameter in `pyproject.toml` to a valid
-  version number (e.g., `"0.1.0"`).
+* Create a local clone of the cookiecutter Git repository to use for
+  cookiecutter development.
 
-* Use `poetry` to (1) make changes to the package dependency list and/or
-  (2) update the package dependency versions.
+* Use `cookiecutter` from the local cookiecutter Git repository to create a
+  clean project for package dependency updates.
 
-* Restore the `version` parameter in `pyproject.toml` to its original value:
-  `"{{ cookiecutter.version }}"`.
+   ```shell
+   $ cookiecutter PATH/TO/LOCAL/REPO
+   ```
 
-* Commit the updated `pyproject.toml` and `poetry.lock` files to the Git
-  repository.
+* In the pristine research project, use `poetry` to (1) make changes to the
+  package dependency list in `pyproject.toml` and/or (2) update the package
+  dependency versions.
+
+* Commit the updated `pyproject.toml` and `poetry.lock` files to the
+  cookiecutter Git repository.
 
 -------------------------------------------------------------------------------
 
