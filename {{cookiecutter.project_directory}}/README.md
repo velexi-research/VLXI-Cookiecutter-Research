@@ -188,9 +188,26 @@ A description of the project.
 
   * Example: `2019-01-17-KC-information_theory_analysis.ipynb`
 
-* When an existing notebook is modified in a significant manner, it should be
-  saved to a new file with a name constructed from the modification date and
-  initials of the person who created the new notebook.
+* _Notebook Modifications_
+
+  * When minor modifications are made to a notebook (e.g., code updates that
+    do not materially change the results, addition of a few of related
+    experiments), use a "History" block (in Markdown format) to document the
+    changes. Example:
+
+    ```markdown
+    ### History
+
+    #### 2022-05-31
+    - Replaced `seaborn.distplot()` with `seaborn.histplot()`
+      because `distplot()` has been deprecated.
+    ```
+
+  * When signification changes are made to a notebook (e.g., major
+    modifications to algorithms, addition of experiments to explore a new
+    direction), the modified notebook should saved to a new file with a name
+    constructed from the modification date and the initials of the person who
+    made the modifications.
 
 ------------------------------------------------------------------------------
 
