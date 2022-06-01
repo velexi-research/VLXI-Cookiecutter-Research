@@ -2,6 +2,14 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.4.3 (2022-05-31)
+==================
+* Add guidelines for organizing research notes.
+* Update cookiecutter project and template documentation.
+* Update Python package dependencies.
+* Fix typos in LICENSE.
+
+-------------------------------------------------------------------------------
 0.4.2 (2022-05-25)
 ==================
 * Update package dependencies for cookiecutter template to fix security
