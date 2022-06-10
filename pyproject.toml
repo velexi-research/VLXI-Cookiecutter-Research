@@ -7,7 +7,7 @@ license = "Apache License"
 
 [tool.poetry.dependencies]
 python = "^3.9"
-cookiecutter = "^1.7.3"
+cookiecutter = "^2.1.1"
 coverage = "^6.3.2"
 flake8 = "^4.0.1"
 pylint = "^2.13.7"
