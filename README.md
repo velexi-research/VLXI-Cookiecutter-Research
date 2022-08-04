@@ -122,7 +122,7 @@ contained in the `LICENSE` file.
    * ___Optional___. Set up the project to use `direnv` to manage the
      environment (for both Python and the shell).
 
-     * Copy `extras/dot-envrc` to the project root directory, and rename it to
+     * Copy `extras/dot-envrc` to the project root directory and rename it to
        `.envrc`.
 
      * Grant permission to `direnv` to execute the `.envrc` file.
@@ -308,9 +308,17 @@ do not interfere with package dependencies for the research project template.
    $ cookiecutter PATH/TO/LOCAL/REPO
    ```
 
-* In the pristine research project, use `poetry` to (1) make changes to the
-  package dependency list in `pyproject.toml` and/or (2) update the package
-  dependency versions.
+* In the pristine research project, perform the following steps
+
+  * Set up a virtual environment for the research project.
+
+    * Copy `extras/dot-envrc` to the project root directory and rename
+      it to `.envrc`.
+
+    * Grant permission to `direnv` to execute the `.envrc` file.
+
+  * Use `poetry` to (1) make changes to the package dependency list in
+    `pyproject.toml` and/or (2) update the package dependency versions.
 
 * Commit the updated `pyproject.toml` and `poetry.lock` files to the
   cookiecutter Git repository.
