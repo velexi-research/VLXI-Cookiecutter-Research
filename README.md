@@ -299,20 +299,50 @@ to ensure that package dependencies for developing the non-template components
 of the cookiecutter (e.g., `cookiecutter.json`) do not interfere with package
 dependencies for the template.
 
-* Update dependencies in a virtual environment that is set up specifically for
-  the developing the template (e.g., a dedicated `direnv` environment). In
-  particular, the virtual environment used to update template dependencies
-  should be _distinct_ from the virtual environment used to update dependencies
-  for the non-template components of the cookiecutter.
+* Create a local clone of the cookiecutter Git repository to use for cookiecutter
+  development.
 
-* Edit `pyproject.toml` to (1) make changes to the package dependency list and
-  (2) update the package dependency versions.
+* Use `cookiecutter` from the local cookiecutter Git repository to create a
+  clean project for template dependency updates.
 
-* Use `poetry` to update the implicit package dependencies and versions
-  recorded in the `poetry.lock` file.
+  ```shell
+  $ cookiecutter PATH/TO/LOCAL/REPO
+  ```
 
-* Commit the updated `pyproject.toml` and `poetry.lock` files to the
-  Git repository.
+* In the pristine project, perform the following steps to update the template's
+  package dependencies.
+
+  * Set up a virtual environment for developing the template (e.g., a `direnv`
+    environment).
+
+  * Edit `pyproject.toml` to (1) make changes to the package dependency list
+    and (2) update the package dependency versions.
+
+  * Use `poetry` to update the implicit package dependencies and versions
+    recorded in the `poetry.lock` file.
+
+* Update `{{cookiecutter.project_directory}}/pyproject.toml`.
+
+  * Copy `pyproject.toml` from the pristine project to
+    `{{cookiecutter.project_directory}}/pyproject.toml`.
+
+  * Restore the templated values in the `[tool.poetry]` section to the following:
+
+    ```toml
+    [tool.poetry]
+    name = "{{ cookiecutter.project_name }}"
+    version = "0.0.0"
+    description = ""
+    authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}>"]
+    ```
+
+* Update `{{cookiecutter.project_directory}}/poetry.lock`.
+
+  * Copy `poetry.lock` from the pristine project to
+    `{{cookiecutter.project_directory}}/poetry.lock`.
+
+* Commit the updated `pyproject.toml` and `poetry.lock` files to the Git
+  repository.
 
 -------------------------------------------------------------------------------
 
