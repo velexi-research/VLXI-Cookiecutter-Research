@@ -2,6 +2,12 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.4.5 (2022-08-04)
+==================
+* Update Python dependencies to fix security vulnerabilities.
+* Update README file.
+
+-------------------------------------------------------------------------------
 0.4.4 (2022-06-09)
 ==================
 * Bump 'cookiecutter' dependency from 1.7.3 to 2.1.1 to fix security
