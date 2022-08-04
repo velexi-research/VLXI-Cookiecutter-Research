@@ -291,37 +291,28 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 ### 3.3. Additional Notes
 
-#### Updating the Cookiecutter Project Dependencies
+#### Updating Cookiecutter Template Dependencies
 
-To update the Python dependencies for the project template (contained in the
-`{{cookiecutter.project_directory}}/pyproject.toml` file), use the following
-procedure to ensure that package dependencies for cookiecutter development
-do not interfere with package dependencies for the research project template.
+To update the Python dependencies for the template (contained in the
+`{{cookiecutter.project_directory}}` directory), use the following procedure
+to ensure that package dependencies for developing the non-template components
+of the cookiecutter (e.g., `cookiecutter.json`) do not interfere with package
+dependencies for the template.
 
-* Create a local clone of the cookiecutter Git repository to use for
-  cookiecutter development.
+* Update dependencies in a virtual environment that is set up specifically for
+  the developing the template (e.g., a dedicated `direnv` environment). In
+  particular, the virtual environment used to update template dependencies
+  should be _distinct_ from the virtual environment used to update dependencies
+  for the non-template components of the cookiecutter.
 
-* Use `cookiecutter` from the local cookiecutter Git repository to create a
-  clean project for package dependency updates.
+* Edit `pyproject.toml` to (1) make changes to the package dependency list and
+  (2) update the package dependency versions.
 
-   ```shell
-   $ cookiecutter PATH/TO/LOCAL/REPO
-   ```
-
-* In the pristine research project, perform the following steps
-
-  * Set up a virtual environment for the research project.
-
-    * Copy `extras/dot-envrc` to the project root directory and rename
-      it to `.envrc`.
-
-    * Grant permission to `direnv` to execute the `.envrc` file.
-
-  * Use `poetry` to (1) make changes to the package dependency list in
-    `pyproject.toml` and/or (2) update the package dependency versions.
+* Use `poetry` to update the implicit package dependencies and versions
+  recorded in the `poetry.lock` file.
 
 * Commit the updated `pyproject.toml` and `poetry.lock` files to the
-  cookiecutter Git repository.
+  Git repository.
 
 -------------------------------------------------------------------------------
 
