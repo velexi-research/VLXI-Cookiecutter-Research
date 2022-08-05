@@ -16,10 +16,13 @@ PyYAML = "^6.0"
 typer = "^0.4.1"
 pdoc3 = "^0.10.0"
 tqdm = "^4.64.0"
-pywin32 = [  # required to fix security vulnerability
+
+# security vulnerability fixes
+jupyter-server = "^1.17.0"
+#mistune = "^2.0.3"
+pywin32 = [
     { version = '>=301', platform = 'win32' },
 ]
-mistune = "^2.0.3"  # required to fix security vulnerability
 
 [tool.poetry.dev-dependencies]
 # TODO: change section name to [tool.poetry.group.dev.dependencies]
