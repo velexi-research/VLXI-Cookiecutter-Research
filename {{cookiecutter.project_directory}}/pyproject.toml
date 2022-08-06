@@ -11,11 +11,11 @@ fastds = "^0,>=0.6"
 ipython = "^8,>=8.4"
 jupyterlab = "^3,>=3.4"
 mlflow = "^1,>=1.27"
+pdoc3 = "^0,>=0.10"
 python-slugify = "^6,>=6.1"
 PyYAML = ">=5.4"
-typer = "^0,>=0.6"
-pdoc3 = "^0,>=0.10"
 tqdm = "^4,>=4.64"
+typer = "^0,>=0.6"
 
 # security vulnerability fixes
 jupyter-server = "^1,>=1.18"
