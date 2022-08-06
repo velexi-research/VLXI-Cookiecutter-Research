@@ -19,7 +19,6 @@ tqdm = "^4.64"
 typer = "^0,>=0.6"
 
 # security vulnerability fixes
-jupyter-server = "^1.18"
 #mistune = "^2.0.3"
 pywin32 = [
     { version = '>=301', platform = 'win32' },
