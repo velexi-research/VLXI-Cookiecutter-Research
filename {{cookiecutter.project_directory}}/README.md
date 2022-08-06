@@ -107,6 +107,10 @@ __Note__: this project uses `poetry` to manage Python package dependencies.
 
 * Upgrade `pip` to the latest released version.
 
+  ```shell
+  $ pip install --upgrade pip
+  ```
+
 * Install the Python packages required for the project.
 
   ```shell
