@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "Velexi Research Project Cookiecutter"
-version = "0.4.4"
+version = "0.4.5"
 description = "Template for research projects that utilize Jupyter notebooks for exploration, experimentation, analysis, and reporting"
+license = "Apache-2.0"
 authors = ["Kevin Chu <kevin@velexi.com>"]
-license = "Apache License"
 
 [tool.poetry.dependencies]
 python = "^3.9"
