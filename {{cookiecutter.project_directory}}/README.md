@@ -72,35 +72,45 @@ A description of the project.
 
 ## 2. Getting Started
 
+__Note__: this project uses `poetry` to manage Python package dependencies.
+
 * ___Prerequisites___
 
-  * Install Python 3.9 (or a later version).
+  * Install Python 3.8 (or a later version). __Recommendation__: use `pyenv`
+    to configure the project to use a specific version of Python.
   {% if cookiecutter.enable_julia == 'yes' %}
   * Install Julia 1.6 (or a later version).
   {% endif %}
   * Install [Poetry](https://python-poetry.org/).
 
-    * __Note__. This project uses `poetry` instead of `pip` for management of
-      Python package dependencies.
+* Set up a dedicated virtual environment for the project. Any of the common
+  virtual environment options (e.g., `venv`, `direnv`, `conda`) should work.
+  Below are instructions for setting up a `direnv` environment.
 
-* ___Optional___. Set up the project to use `direnv` to manage the environment
-  (for both Python and the shell).
+  * __`direnv` Environment__. Set up the project to use `direnv` to manage the
+    environment (for both Python and the shell).
 
-  * ___Prerequisite___. Install `direnv`.
+    * ___Prerequisite___. Install `direnv`.
 
-  * Copy `extras/dot-envrc` to the project root directory, and rename it to
-    `.envrc`.
+    * Copy `extras/dot-envrc` to the project root directory, and rename it to
+      `.envrc`.
 
-    ```shell
-    $ cd $PROJECT_ROOT_DIR
-    $ cp extras/dot-envrc .envrc
-    ```
+      ```shell
+      $ cd $PROJECT_ROOT_DIR
+      $ cp extras/dot-envrc .envrc
+      ```
 
-  * Grant permission to direnv to execute the .envrc file.
+    * Grant permission to direnv to execute the .envrc file.
 
-    ```shell
-    $ direnv allow
-    ```
+      ```shell
+      $ direnv allow
+      ```
+
+* Upgrade `pip` to the latest released version.
+
+  ```shell
+  $ pip install --upgrade pip
+  ```
 
 * Install the Python packages required for the project.
 
@@ -224,6 +234,8 @@ A description of the project.
 
 * [pdoc Quick Reference][pdoc-quick-reference]
 
+* [pyenv Quick Reference][pyenv-quick-reference]
+
 * [Poetry Quick Reference][poetry-quick-reference]
 
 * [Project Environment][project-environment]
@@ -257,6 +269,8 @@ A description of the project.
 [mlflow-quick-reference]: docs/references/Quick-References/MLflow-Quick-Reference.md
 
 [pdoc-quick-reference]: docs/references/Quick-References/pdoc-Quick-Reference.md
+
+[pyenv-quick-reference]: docs/references/Quick-References/pyenv-Quick-Reference.md
 
 [poetry-quick-reference]: docs/references/Quick-References/Poetry-Quick-Reference.md
 

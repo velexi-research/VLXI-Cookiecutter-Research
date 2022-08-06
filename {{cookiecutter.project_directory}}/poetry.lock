@@ -14,11 +14,11 @@ requests = ">=2.0.0,<3"
 
 [[package]]
 name = "adlfs"
-version = "2022.7.0"
+version = "2022.2.0"
 description = "Access Azure Datalake Gen1 with fsspec and dask"
 category = "main"
 optional = false
-python-versions = ">3.8"
+python-versions = ">3.6"
 
 [package.dependencies]
 aiohttp = "*"
@@ -27,9 +27,6 @@ azure-datalake-store = ">=0.0.46,<0.1"
 azure-identity = "*"
 azure-storage-blob = ">=12.5.0"
 fsspec = ">=2021.10.1"
-
-[package.extras]
-docs = ["sphinx", "myst-parser", "furo", "numpydoc"]
 
 [[package]]
 name = "aiobotocore"
@@ -72,7 +69,7 @@ speedups = ["aiodns", "brotli", "cchardet"]
 
 [[package]]
 name = "aiohttp-retry"
-version = "2.6.1"
+version = "2.7.0"
 description = "Simple retry client for aiohttp"
 category = "main"
 optional = false
@@ -112,6 +109,8 @@ optional = false
 python-versions = ">=3.7"
 
 [package.dependencies]
+importlib-metadata = {version = "*", markers = "python_version < \"3.9\""}
+importlib-resources = {version = "*", markers = "python_version < \"3.9\""}
 Mako = "*"
 SQLAlchemy = ">=1.3.0"
 
@@ -846,6 +845,7 @@ fsspec = [
 funcy = ">=1.14"
 gcsfs = {version = ">=2021.11.1", optional = true, markers = "extra == \"all\""}
 grandalf = "0.6"
+importlib-resources = {version = ">=5.2.2", markers = "python_version < \"3.9\""}
 knack = {version = "*", optional = true, markers = "extra == \"all\""}
 networkx = ">=2.5"
 ossfs = {version = ">=2021.8.0", optional = true, markers = "extra == \"all\""}
@@ -1516,6 +1516,21 @@ perf = ["ipython"]
 testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.3)", "packaging", "pyfakefs", "flufl.flake8", "pytest-perf (>=0.9.2)", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)", "importlib-resources (>=1.3)"]
 
 [[package]]
+name = "importlib-resources"
+version = "5.9.0"
+description = "Read resources from Python packages"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+zipp = {version = ">=3.1.0", markers = "python_version < \"3.10\""}
+
+[package.extras]
+docs = ["sphinx", "jaraco.packaging (>=9)", "rst.linker (>=1.9)", "jaraco.tidelift (>=1.4)"]
+testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-cov", "pytest-enabler (>=1.3)", "pytest-black (>=0.3.7)", "pytest-mypy (>=0.9.1)"]
+
+[[package]]
 name = "iniconfig"
 version = "1.1.1"
 description = "iniconfig: brain-dead simple config-ini parsing"
@@ -1681,6 +1696,8 @@ python-versions = ">=3.7"
 
 [package.dependencies]
 attrs = ">=17.4.0"
+importlib-resources = {version = ">=1.4.0", markers = "python_version < \"3.9\""}
+pkgutil-resolve-name = {version = ">=1.3.10", markers = "python_version < \"3.9\""}
 pyrsistent = ">=0.14.0,<0.17.0 || >0.17.0,<0.17.1 || >0.17.1,<0.17.2 || >0.17.2"
 
 [package.extras]
@@ -2378,6 +2395,14 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "pkgutil-resolve-name"
+version = "1.3.10"
+description = "Resolve a name to an object."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[[package]]
 name = "platformdirs"
 version = "2.5.2"
 description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
@@ -2983,6 +3008,7 @@ python-versions = ">=3.6.3,<4.0.0"
 [package.dependencies]
 commonmark = ">=0.9.0,<0.10.0"
 pygments = ">=2.6.0,<3.0.0"
+typing-extensions = {version = ">=4.0.0,<5.0", markers = "python_version < \"3.9\""}
 
 [package.extras]
 jupyter = ["ipywidgets (>=7.5.1,<8.0.0)"]
@@ -3541,8 +3567,8 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.9"
-content-hash = "0a5266991c11c33bc4c9afbdd15ada08cff1976a2f6398276a0ddf103c8d484f"
+python-versions = "^3.8"
+content-hash = "89237c1d5f0a24ef949a2673a876fa150244493e29d9db94c739f832c8d67ea8"
 
 [metadata.files]
 adal = [
@@ -3550,8 +3576,7 @@ adal = [
     {file = "adal-1.2.7.tar.gz", hash = "sha256:d74f45b81317454d96e982fd1c50e6fb5c99ac2223728aea8764433a39f566f1"},
 ]
 adlfs = [
-    {file = "adlfs-2022.7.0-py3-none-any.whl", hash = "sha256:4dda53627b77aeacf555138c7ddfdbc8dbda9111eb0d3d29bdb43ce189062724"},
-    {file = "adlfs-2022.7.0.tar.gz", hash = "sha256:33d2584eb173f7a05f122dac36c00eb1a65efa9b01de4c3ef65b3fa6a81a71df"},
+    {file = "adlfs-2022.2.0.tar.gz", hash = "sha256:8543d29ce5b994d49831ad5f86b76b90809a540302b4f24e027591b740127942"},
 ]
 aiobotocore = [
     {file = "aiobotocore-2.3.4-py3-none-any.whl", hash = "sha256:eae059eb51726cee4de2027cfc72bfccc76cf0c229d6b2b08f640e53a568f657"},
@@ -3632,8 +3657,8 @@ aiohttp = [
     {file = "aiohttp-3.8.1.tar.gz", hash = "sha256:fc5471e1a54de15ef71c1bc6ebe80d4dc681ea600e68bfd1cbce40427f0b7578"},
 ]
 aiohttp-retry = [
-    {file = "aiohttp_retry-2.6.1-py3-none-any.whl", hash = "sha256:8a6bd3cda2d278f2b6f28afe5e41bdbe1cb484763e3f2026936857772a83b7f9"},
-    {file = "aiohttp_retry-2.6.1.tar.gz", hash = "sha256:160b5c0aa2811bef601e731574edb4cd493430ffb88f4f4dca7c524bddb36d0d"},
+    {file = "aiohttp_retry-2.7.0-py3-none-any.whl", hash = "sha256:02549f40a7b049eec1c651dc3ca1bf3501a91d68c344fd3598e5bee57c230892"},
+    {file = "aiohttp_retry-2.7.0.tar.gz", hash = "sha256:4ce27b529af9ce9d1a03e4aa19590e93dc80ca6bef3a883e51e3a0e094772799"},
 ]
 aioitertools = [
     {file = "aioitertools-0.10.0-py3-none-any.whl", hash = "sha256:a2ea2a39ebf272a2fbb58bfdb73e1daeeb6686edbbc8082215dfc8b8ffffa6e8"},
@@ -4375,6 +4400,10 @@ importlib-metadata = [
     {file = "importlib_metadata-4.12.0-py3-none-any.whl", hash = "sha256:7401a975809ea1fdc658c3aa4f78cc2195a0e019c5cbc4c06122884e9ae80c23"},
     {file = "importlib_metadata-4.12.0.tar.gz", hash = "sha256:637245b8bab2b6502fcbc752cc4b7a6f6243bb02b31c5c26156ad103d3d45670"},
 ]
+importlib-resources = [
+    {file = "importlib_resources-5.9.0-py3-none-any.whl", hash = "sha256:f78a8df21a79bcc30cfd400bdc38f314333de7c0fb619763f6b9dabab8268bb7"},
+    {file = "importlib_resources-5.9.0.tar.gz", hash = "sha256:5481e97fb45af8dcf2f798952625591c58fe599d0735d86b10f54de086a61681"},
+]
 iniconfig = [
     {file = "iniconfig-1.1.1-py2.py3-none-any.whl", hash = "sha256:011e24c64b7f47f6ebd835bb12a743f2fbe9a26d4cecaa7f53bc4f35ee9da8b3"},
     {file = "iniconfig-1.1.1.tar.gz", hash = "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"},
@@ -4768,6 +4797,10 @@ phonenumbers = [
 pickleshare = [
     {file = "pickleshare-0.7.5-py2.py3-none-any.whl", hash = "sha256:9649af414d74d4df115d5d718f82acb59c9d418196b7b4290ed47a12ce62df56"},
     {file = "pickleshare-0.7.5.tar.gz", hash = "sha256:87683d47965c1da65cdacaf31c8441d12b8044cdec9aca500cd78fc2c683afca"},
+]
+pkgutil-resolve-name = [
+    {file = "pkgutil_resolve_name-1.3.10-py3-none-any.whl", hash = "sha256:ca27cc078d25c5ad71a9de0a7a330146c4e014c2462d9af19c6b828280649c5e"},
+    {file = "pkgutil_resolve_name-1.3.10.tar.gz", hash = "sha256:357d6c9e6a755653cfd78893817c0853af365dd51ec97f3d358a819373bbd174"},
 ]
 platformdirs = [
     {file = "platformdirs-2.5.2-py3-none-any.whl", hash = "sha256:027d8e83a2d7de06bbac4e5ef7e023c02b863d7ea5d079477e722bb41ab25788"},
