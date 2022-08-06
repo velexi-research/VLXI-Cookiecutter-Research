@@ -12,7 +12,7 @@ Kevin T. Chu `<kevin@velexi.com>`
 
 ### Installing a Python Version
 
-* Get a list of the available Python versions.
+* Get a list of the available Python versions for installation.
 
   ```shell
   $ pyenv install -l
@@ -25,27 +25,43 @@ Kevin T. Chu `<kevin@velexi.com>`
   $ pyenv install 3.8.13
   ```
 
-### Setting a Local Python Version
+### Listing Installed Python Versions
 
-`pyenv` supports configuring the Python version used within a specific
-directory (without affecting the Python version used elsewhere on the system).
-
-* Show a list of the available Python versions.
+* Show a list of the installed Python versions.
 
   ```shell
   $ pyenv versions
   ```
 
-* Configure the local directory to use a specific Python version. For example,
-  to set the local Python version to 3.8.13, execute the following command:
+### Setting a User-Level Python Version
 
-  ```shell
-  $ pyenv local 3.8.13
-  ```
+`pyenv` supports configuring the default Python version for a user (without
+affecting the Python version used elsewhere on the system). For example, to
+set the default Python version of the current user to 3.8.13, execute the
+following command:
 
-  __Note__: this command will make Python 3.8.13 the default Python version
-  _only_ for the directory it is executed in. The Python version used outside
-  of the directory will be unaffected.
+```shell
+$ pyenv global 3.8.13
+```
+
+__Note__: this command will make Python 3.8.13 the default Python version
+for the current user _only_. The default Python version for other users on the
+system will be unaffected.
+
+### Setting a Directory-Level Python Version
+
+`pyenv` supports configuring the Python version used within a specific
+directory (without affecting the Python version used by the current user
+elsewhere on the system). For example, to set the Python version used in the
+current directory to 3.8.13, execute the following command:
+
+```shell
+$ pyenv local 3.8.13
+```
+
+__Note__: this command will make Python 3.8.13 the default Python version
+_only_ for the directory it is executed in. The default Python version outside
+of the directory (even for the same user) will be unaffected.
 
 [-----------------------------EXTERNAL LINKS-----------------------------]: #
 
