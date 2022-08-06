@@ -10,6 +10,11 @@ Kevin T. Chu `<kevin@velexi.com>`
 
 -------------------------------------------------------------------------------
 
+### Installing `pyenv`
+
+* See the [installation instructions][pyenv-installation] from the `pyenv`
+  website.
+
 ### Installing a Python Version
 
 * Get a list of the available Python versions for installation.
@@ -66,3 +71,5 @@ of the directory (even for the same user) will be unaffected.
 [-----------------------------EXTERNAL LINKS-----------------------------]: #
 
 [pyenv]: https://github.com/pyenv/pyenv
+
+[pyenv-installation]: https://github.com/pyenv/pyenv#installation
