@@ -2,10 +2,12 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
-0.4.5 (2022-08-04)
+0.4.5 (2022-08-06)
 ==================
-* Update Python dependencies to fix security vulnerabilities.
+* Update Python package dependencies.
+* Add license field to pyproject.toml.
 * Update README file.
+* Add quick reference for `pyenv`.
 
 -------------------------------------------------------------------------------
 0.4.4 (2022-06-09)
