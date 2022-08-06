@@ -76,7 +76,8 @@ __Note__: this project uses `poetry` to manage Python package dependencies.
 
 * ___Prerequisites___
 
-  * Install Python 3.8 (or a later version).
+  * Install Python 3.8 (or a later version). __Recommendation__: use `pyenv`
+    to configure the project to use a specific version of Python.
   {% if cookiecutter.enable_julia == 'yes' %}
   * Install Julia 1.6 (or a later version).
   {% endif %}
@@ -233,6 +234,8 @@ __Note__: this project uses `poetry` to manage Python package dependencies.
 
 * [pdoc Quick Reference][pdoc-quick-reference]
 
+* [pyenv Quick Reference][pyenv-quick-reference]
+
 * [Poetry Quick Reference][poetry-quick-reference]
 
 * [Project Environment][project-environment]
@@ -266,6 +269,8 @@ __Note__: this project uses `poetry` to manage Python package dependencies.
 [mlflow-quick-reference]: docs/references/Quick-References/MLflow-Quick-Reference.md
 
 [pdoc-quick-reference]: docs/references/Quick-References/pdoc-Quick-Reference.md
+
+[pyenv-quick-reference]: docs/references/Quick-References/pyenv-Quick-Reference.md
 
 [poetry-quick-reference]: docs/references/Quick-References/Poetry-Quick-Reference.md
 
