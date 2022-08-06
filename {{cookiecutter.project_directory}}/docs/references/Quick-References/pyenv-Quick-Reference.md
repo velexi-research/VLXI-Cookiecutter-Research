@@ -25,7 +25,7 @@ Kevin T. Chu `<kevin@velexi.com>`
   $ pyenv install 3.8.13
   ```
 
-### Listing Installed Python Versions
+### Getting a List of Installed Python Versions
 
 * Show a list of the installed Python versions.
 
