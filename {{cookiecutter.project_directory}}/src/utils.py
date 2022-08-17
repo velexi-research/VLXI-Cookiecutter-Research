@@ -16,6 +16,7 @@
 """
 Utility functions.
 """
+
 # --- Imports
 
 # Standard library
