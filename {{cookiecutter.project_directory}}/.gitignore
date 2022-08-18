@@ -17,6 +17,9 @@ __pycache__/
 *.egg-info/
 *.egg*
 
+# pyenv
+.python-version
+
 # testing
 htmlcov/
 .cache
