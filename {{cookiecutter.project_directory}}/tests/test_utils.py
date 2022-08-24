@@ -16,6 +16,7 @@
 """
 Unit tests for `utils.py` module.
 """
+
 # --- Imports
 
 # Standard library
