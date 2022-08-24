@@ -2,6 +2,13 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.4.6 (2022-08-24)
+==================
+* Update Python package dependencies.
+* Update README (improve instructions for setting up virtual environments).
+* Update quick reference for `poetry`.
+
+-------------------------------------------------------------------------------
 0.4.5 (2022-08-06)
 ==================
 * Update Python package dependencies.
