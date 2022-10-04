@@ -76,12 +76,12 @@ __Note__: this project uses `poetry` to manage Python package dependencies.
 
 * ___Prerequisites___
 
-  * Install Python 3.8 (or a later version). __Recommendation__: use `pyenv`
+  * Install Python 3.8 (or greater). __Recommendation__: use `pyenv`
     to configure the project to use a specific version of Python.
   {% if cookiecutter.enable_julia == 'yes' %}
-  * Install Julia 1.6 (or a later version).
+  * Install Julia 1.6 (or greater).
   {% endif %}
-  * Install [Poetry](https://python-poetry.org/).
+  * Install [Poetry](https://python-poetry.org/) 1.2 (or greater).
 
 * Set up a dedicated virtual environment for the project. Any of the common
   virtual environment options (e.g., `venv`, `direnv`, `conda`) should work.
