@@ -85,7 +85,7 @@ by Jonathan Whitmore.
 ├── LICENSE            <- license for the cookiecutter
 ├── cookiecutter.json  <- cookiecutter configuration file
 ├── pyproject.toml     <- project metadata file for cookiecutter development
-├── poetry.lock        <- Poetry lock file
+├── poetry.lock        <- Poetry lockfile
 ├── docs/              <- cookiecutter documentation
 ├── extras/            <- additional files that may be useful for cookiecutter development
 ├── hooks/             <- cookiecutter scripts that run before or after project generation

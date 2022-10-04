@@ -35,7 +35,7 @@ A description of the project.
 │                      dependencies)
 ├{% endif %}── pyproject.toml  <- Python project metadata file (e.g., Python package
 │                      dependencies)
-├── poetry.lock     <- Poetry lock file
+├── poetry.lock     <- Poetry lockfile
 │
 ├── bin             <- project scripts and programs
 │
