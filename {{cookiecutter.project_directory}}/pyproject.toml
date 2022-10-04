@@ -3,6 +3,7 @@ name = "{{ cookiecutter.project_name }}"
 version = "0.0.0"
 description = ""
 license = "{% if cookiecutter.license == 'Apache License 2.0' %}Apache-2.0{% elif cookiecutter.license == 'BSD-3-Clause License' %}BSD-3-Clause{% elif cookiecutter.license == 'MIT License' %}MIT{% endif %}"
+readme = "README.md"
 authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}>"]
 
 [tool.poetry.dependencies]
@@ -25,9 +26,7 @@ pywin32 = [
     { version = '>=301', platform = 'win32' },
 ]
 
-[tool.poetry.dev-dependencies]
-# TODO: change section name to [tool.poetry.group.dev.dependencies]
-#       after poetry 1.2.0 is released.
+[tool.poetry.group.test.dependencies]
 coverage = "^6.4"
 flake8 = "^5.0"
 pylint = "^2.14"
