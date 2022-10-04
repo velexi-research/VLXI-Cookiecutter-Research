@@ -2,7 +2,7 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
-0.5.0 (2022-10-??)
+0.5.0 (2022-10-03)
 ==================
 * Update pyproject.toml files to use Poetry dependency group syntax.
 * Update documentation.
