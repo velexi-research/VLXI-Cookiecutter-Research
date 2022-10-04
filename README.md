@@ -106,7 +106,7 @@ contained in the `LICENSE` file.
 
    * Install the [Cookiecutter][cookiecutter] Python package.
 
-   * Install [Poetry](https://python-poetry.org/).
+   * Install [Poetry](https://python-poetry.org/) 1.2 (or greater).
 
      * __Note__. The project template uses `poetry` instead of `pip` for
        management of Python package dependencies.

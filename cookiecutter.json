@@ -8,6 +8,6 @@
                 "BSD-3-Clause License",
                 "MIT License",
                 "Empty license file"],
-    "python_version_requirements": "^3.9",
+    "python_version_requirements": "^3.8",
     "enable_julia": ["yes", "no"]
 }
