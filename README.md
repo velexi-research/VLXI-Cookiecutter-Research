@@ -87,8 +87,10 @@ by Jonathan Whitmore.
 ├── pyproject.toml     <- project metadata file for cookiecutter development
 ├── poetry.lock        <- Poetry lockfile
 ├── docs/              <- cookiecutter documentation
-├── extras/            <- additional files that may be useful for cookiecutter development
-├── hooks/             <- cookiecutter scripts that run before or after project generation
+├── extras/            <- additional files that may be useful for cookiecutter
+│                         development
+├── hooks/             <- cookiecutter scripts that run before or after project
+│                         generation
 └── {{cookiecutter.project_directory}}/  <- cookiecutter template
 ```
 
@@ -300,8 +302,8 @@ to ensure that package dependencies for developing the non-template components
 of the cookiecutter (e.g., `cookiecutter.json`) do not interfere with package
 dependencies for the template.
 
-* Create a local clone of the cookiecutter Git repository to use for cookiecutter
-  development.
+* Create a local clone of the cookiecutter Git repository to use for
+  cookiecutter development.
 
 * Use `cookiecutter` from the local cookiecutter Git repository to create a
   clean project for template dependency updates.
@@ -327,7 +329,8 @@ dependencies for the template.
   * Copy `pyproject.toml` from the pristine project to
     `{{cookiecutter.project_directory}}/pyproject.toml`.
 
-  * Restore the templated values in the `[tool.poetry]` section to the following:
+  * Restore the templated values in the `[tool.poetry]` section to the
+    following:
 
     ```toml
     [tool.poetry]
