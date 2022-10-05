@@ -50,10 +50,6 @@ commands =
     poetry run pytest tests/
 """
 
-[tool.flake8]
-max-line-length = 79
-max-complexity = 10
-
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
