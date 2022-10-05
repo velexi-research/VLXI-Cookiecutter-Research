@@ -56,7 +56,7 @@ by Jonathan Whitmore.
 * Automatic generation of HTML and pure code versions of Jupyter notebooks to
   facilitate review of both (1) research results and (2) implementation
 
-* Quick references for commonly software components (e.g., [FastDS][fastds],
+* Quick references for common software components (e.g., [FastDS][fastds],
   [MLflow][mlflow], [Poetry][poetry], etc.)
 
 * Git and DVC integration to encourage code and data version control
