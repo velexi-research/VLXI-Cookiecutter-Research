@@ -32,6 +32,9 @@ if __name__ == "__main__":
     if "{{ cookiecutter.enable_julia }}" == "no":
         _remove_file("Project.toml")
 
+    if "{{ cookiecutter.license }}" != "Apache License 2.0":
+        _remove_file("NOTICE")
+
     # --- Initialize Git repository project
 
     os.chdir(_PROJECT_DIRECTORY)
