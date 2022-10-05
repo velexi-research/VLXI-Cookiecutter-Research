@@ -81,11 +81,12 @@ by Jonathan Whitmore.
 
 ```
 ├── README.md          <- this file
-├── RELEASE-NOTES.md   <- release notes for the cookiecutter
-├── LICENSE            <- license for the cookiecutter
-├── NOTICE             <- copyright notice for the cookiecutter
+├── RELEASE-NOTES.md   <- cookiecutter release notes
+├── LICENSE            <- cookiecutter license
+├── NOTICE             <- cookiecutter copyright notice
 ├── cookiecutter.json  <- cookiecutter configuration file
-├── pyproject.toml     <- project metadata file for cookiecutter development
+├── pyproject.toml     <- Python project metadata file for cookiecutter
+│                         development
 ├── poetry.lock        <- Poetry lockfile
 ├── docs/              <- cookiecutter documentation
 ├── extras/            <- additional files that may be useful for cookiecutter
