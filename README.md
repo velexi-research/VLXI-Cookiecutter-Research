@@ -96,8 +96,9 @@ by Jonathan Whitmore.
 
 ### 1.2. License
 
-The contents of this cookiecutter are covered under the Apache License
-contained in the `LICENSE` file.
+The contents of this cookiecutter are covered under the Apache License 2.0
+(included in the `LICENSE` file). The copyright for this cookiecutter is
+contained in the `NOTICE` file.
 
 -------------------------------------------------------------------------------
 
