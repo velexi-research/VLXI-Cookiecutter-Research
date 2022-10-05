@@ -208,9 +208,9 @@ __Note__: this project uses `poetry` to manage Python package dependencies.
     if updates are made only a few times a year, it is reasonable to omit the
     month from the file name: `YYYY-AUTHOR_INITIALS-Notes.md`.
 
-* When a non-trivial modification is made to an existing entry, the modification
-  date should be indicated in a "last updated" line that immediately follows
-  the entry header. For instance:
+* When a non-trivial modification is made to an existing entry, the
+  modification date should be indicated in a "last updated" line that
+  immediately follows the entry header. For instance:
 
   `_Last Updated_: 2022-05-31`
 
