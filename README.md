@@ -56,7 +56,7 @@ by Jonathan Whitmore.
 * Automatic generation of HTML and pure code versions of Jupyter notebooks to
   facilitate review of both (1) research results and (2) implementation
 
-* Quick references for commonly software components (e.g., [FastDS][fastds],
+* Quick references for common software components (e.g., [FastDS][fastds],
   [MLflow][mlflow], [Poetry][poetry], etc.)
 
 * Git and DVC integration to encourage code and data version control
@@ -84,17 +84,21 @@ by Jonathan Whitmore.
 ├── RELEASE-NOTES.md   <- release notes for the cookiecutter
 ├── LICENSE            <- license for the cookiecutter
 ├── cookiecutter.json  <- cookiecutter configuration file
-├── pyproject.toml     <- project configuration file for cookiecutter development
+├── pyproject.toml     <- project metadata file for cookiecutter development
+├── poetry.lock        <- Poetry lockfile
 ├── docs/              <- cookiecutter documentation
-├── extras/            <- additional files that may be useful for cookiecutter development
-├── hooks/             <- cookiecutter scripts that run before or after project generation
+├── extras/            <- additional files that may be useful for cookiecutter
+│                         development
+├── hooks/             <- cookiecutter scripts that run before or after project
+│                         generation
 └── {{cookiecutter.project_directory}}/  <- cookiecutter template
 ```
 
 ### 1.2. License
 
-The contents of this cookiecutter are covered under the Apache License
-contained in the `LICENSE` file.
+The contents of this cookiecutter are covered under the Apache License 2.0
+(included in the `LICENSE` file). The copyright for this cookiecutter is
+contained in the `NOTICE` file.
 
 -------------------------------------------------------------------------------
 
@@ -233,8 +237,10 @@ contained in the `LICENSE` file.
 
    * Customize the `README.md` file to reflect the specifics of the project.
 
-   * Verify the correctness of the `LICENSE` file. In particular, check the
-     year and name of the copyright owner.
+   * Verify the year and name of the copyright owner in the copyright file.
+     If the project is licensed under Apache License 2.0, the copyright notice
+     is located in the `NOTICE` file. Otherwise, the copyright notice is
+     located in the `LICENSE` file.
 
 ## 2.2. Known Issues
 
@@ -299,8 +305,8 @@ to ensure that package dependencies for developing the non-template components
 of the cookiecutter (e.g., `cookiecutter.json`) do not interfere with package
 dependencies for the template.
 
-* Create a local clone of the cookiecutter Git repository to use for cookiecutter
-  development.
+* Create a local clone of the cookiecutter Git repository to use for
+  cookiecutter development.
 
 * Use `cookiecutter` from the local cookiecutter Git repository to create a
   clean project for template dependency updates.
@@ -326,7 +332,8 @@ dependencies for the template.
   * Copy `pyproject.toml` from the pristine project to
     `{{cookiecutter.project_directory}}/pyproject.toml`.
 
-  * Restore the templated values in the `[tool.poetry]` section to the following:
+  * Restore the templated values in the `[tool.poetry]` section to the
+    following:
 
     ```toml
     [tool.poetry]

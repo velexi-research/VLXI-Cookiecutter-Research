@@ -33,8 +33,9 @@ A description of the project.
 │                      Use `make help` to show the list of available rules.
 ├{% if cookiecutter.enable_julia == 'yes' %}── Project.toml    <- Julia project configuration file (e.g., Julia package
 │                      dependencies)
-├{% endif %}── pyproject.toml  <- Python project configuration file (e.g., Python package
+├{% endif %}── pyproject.toml  <- Python project metadata file (e.g., Python package
 │                      dependencies)
+├── poetry.lock     <- Poetry lockfile
 │
 ├── bin             <- project scripts and programs
 │

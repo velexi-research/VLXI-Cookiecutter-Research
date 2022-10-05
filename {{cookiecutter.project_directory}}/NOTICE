@@ -1,0 +1,2 @@
+{{ cookiecutter.project_name }}
+Copyright {% now 'utc', '%Y' %} {{ cookiecutter.author }}
