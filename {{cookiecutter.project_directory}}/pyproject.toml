@@ -37,6 +37,23 @@ pytest-pylint = "^0,>=0.18"
 pytest-xdist = "^2.5"
 radon = "^5.1"
 
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+isolated_build = true
+envlist = py27, py36
+
+[testenv]
+whitelist_externals = poetry
+commands =
+    poetry install -v
+    poetry run pytest tests/
+"""
+
+[tool.flake8]
+max-line-length = 79
+max-complexity = 10
+
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
