@@ -236,8 +236,10 @@ contained in the `LICENSE` file.
 
    * Customize the `README.md` file to reflect the specifics of the project.
 
-   * Verify the correctness of the `LICENSE` file. In particular, check the
-     year and name of the copyright owner.
+   * Verify the year and name of the copyright owner in the copyright file.
+     If the project is licensed under Apache License 2.0, the copyright notice
+     is located in the `NOTICE` file. Otherwise, the copyright notice is
+     located in the `LICENSE` file.
 
 ## 2.2. Known Issues
 
