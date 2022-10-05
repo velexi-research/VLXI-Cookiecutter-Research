@@ -2,6 +2,12 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.5.2 (2022-10-04)
+==================
+* Fix errors in README files.
+* Remove obsolete files.
+
+-------------------------------------------------------------------------------
 0.5.1 (2022-10-04)
 ==================
 * Improve application of Apache License 2.0 (for both the cookiecutter and

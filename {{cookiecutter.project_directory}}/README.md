@@ -29,7 +29,8 @@ A description of the project.
 ```
 ├── README.md       <- README for the project
 ├── LICENSE         <- license for contents of project
-├── Makefile        <- Makefile containing useful shortcuts (`make` rules).
+├{% if cookiecutter.license == 'Apache License 2.0' %}── NOTICE          <- copyright notice for the project
+├{% endif %}── Makefile        <- Makefile containing useful shortcuts (`make` rules).
 │                      Use `make help` to show the list of available rules.
 ├{% if cookiecutter.enable_julia == 'yes' %}── Project.toml    <- Julia project configuration file (e.g., Julia package
 │                      dependencies)
