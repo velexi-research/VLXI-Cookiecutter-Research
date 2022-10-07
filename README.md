@@ -182,6 +182,12 @@ contained in the `NOTICE` file.
 
 4. Configure Git.
 
+   * Install git hook scripts.
+
+     ```shell
+     $ pre-commit install
+     ```
+
    * Set up a remote Git repository (e.g., GitHub repository).
 
    * Configure the remote Git repository.
