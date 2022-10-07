@@ -14,21 +14,20 @@ fastds = "^0,>=0.6"
 ipython = "^8.4"
 jupyterlab = "^3.4"
 mlflow = "^1.27"
-pdoc3 = "^0,>=0.10"
+pdoc = "^12.2.0"
 python-slugify = "^6.1"
 PyYAML = ">=5.4"
 tqdm = "^4.64"
 typer = "^0,>=0.6"
 
 # security vulnerability fixes
-#mistune = "^2.0.3"
 pywin32 = [
     { version = '>=301', platform = 'win32' },
 ]
 
 [tool.poetry.group.test.dependencies]
 coverage = "^6.4"
-flake8 = "^5.0"
+flake8 = "<5.0.0"  # Unpin after compatibility with pytest-flake8 is fixed
 pylint = "^2.14"
 pytest = "^7.1"
 pytest-cov = "^3.0"
@@ -37,17 +36,39 @@ pytest-pylint = "^0,>=0.18"
 pytest-xdist = "^2.5"
 radon = "^5.1"
 
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra --doctest-modules --flake8 --cov"
+python_files = "test_*.py"
+testpaths = [
+    "src",
+    "tests"
+]
+doctest_optionflags = [
+    "NORMALIZE_WHITESPACE",
+    "IGNORE_EXCEPTION_DETAIL",
+    "ALLOW_UNICODE",
+    "ALLOW_BYTES",
+]
+norecursedirs = ["data", "docs", "extras", "notebooks", "spikes"]
+
+[tool.coverage.run]
+source = ["src/"]
+
+[tool.coverage.report]
+omit = ["*/tests/*"]
+
 [tool.tox]
 legacy_tox_ini = """
 [tox]
 isolated_build = true
-envlist = py27, py36
+envlist = py37, py38, py39, py310
 
 [testenv]
 whitelist_externals = poetry
 commands =
     poetry install -v
-    poetry run pytest tests/
+    poetry run pytest -n auto --cov-report=term-missing
 """
 
 [build-system]
