@@ -10,8 +10,7 @@ CODE_DIRS=${SRC_DIR} tests
 # Testing parameters
 NPROCS=auto
 
-PYTEST_SEARCH_PATHS=${CODE_DIRS}
-PYTEST_OPTIONS=-n ${NPROCS} --cov=${SRC_DIR}
+PYTEST_OPTIONS=-n ${NPROCS} --cov-report=term-missing
 PYTEST_PYLINT_OPTIONS=
 
 # --- Testing rules
@@ -21,7 +20,7 @@ PYTEST_PYLINT_OPTIONS=
 
 ## Run all tests
 test:
-	py.test ${PYTEST_SEARCH_PATHS} ${PYTEST_OPTIONS} ${PYTEST_PYLINT_OPTIONS}
+	pytest ${PYTEST_OPTIONS} ${PYTEST_PYLINT_OPTIONS}
 
 ## Run tests in fail-fast mode (i.e., stop at first failure)
 fast-test:
