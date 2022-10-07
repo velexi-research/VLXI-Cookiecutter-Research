@@ -58,19 +58,6 @@ source = ["src/"]
 [tool.coverage.report]
 omit = ["*/tests/*"]
 
-[tool.tox]
-legacy_tox_ini = """
-[tox]
-isolated_build = true
-envlist = py37, py38, py39, py310
-
-[testenv]
-whitelist_externals = poetry
-commands =
-    poetry install -v
-    poetry run pytest -n auto --cov-report=term-missing
-"""
-
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
