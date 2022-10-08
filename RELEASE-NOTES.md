@@ -2,7 +2,7 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
-0.5.3 (2022-10-08)
+0.6.0 (2022-10-08)
 ==================
 ## Cookiecutter Template Enhancements
 * Consolidate Python project metadata and tool configurations into
