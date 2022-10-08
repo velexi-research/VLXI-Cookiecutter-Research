@@ -1,5 +1,4 @@
-{% if cookiecutter.license == 'Apache License 2.0' %}
-                                 Apache License
+{% if cookiecutter.license == 'Apache License 2.0' %}                                 Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
 
@@ -199,9 +198,7 @@
    distributed under the License is distributed on an "AS IS" BASIS,
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
-   limitations under the License.
-{% elif cookiecutter.license == 'BSD-3-Clause License' %}
-Copyright {% now 'utc', '%Y' %} {{ cookiecutter.author }}
+   limitations under the License.{% elif cookiecutter.license == 'BSD-3-Clause License' %}Copyright {% now 'utc', '%Y' %} {{ cookiecutter.author }}
 
 Redistribution and use in source and binary forms, with or without modification,
 are permitted provided that the following conditions are met:
@@ -226,9 +223,7 @@ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
 SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-{% elif cookiecutter.license == 'MIT License' %}
-Copyright {% now 'utc', '%Y' %} {{ cookiecutter.author }}
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.{% elif cookiecutter.license == 'MIT License' %}Copyright {% now 'utc', '%Y' %} {{ cookiecutter.author }}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -246,6 +241,4 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-{% else %}
-{% endif %}
+SOFTWARE.{% else %}{% endif %}
