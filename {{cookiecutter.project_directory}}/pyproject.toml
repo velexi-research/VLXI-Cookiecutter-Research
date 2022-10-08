@@ -9,17 +9,13 @@ authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 bcrypt = "^3.2.2"
-black = {extras = ["jupyter"], version = "^22.10.0"}
 dvc = {extras = ["all"], version = "^2.17"}
 fastds = "^0,>=0.6"
-flake8 = "<5.0.0"  # Unpin after compatibility with pytest-flake8 is fixed
 ipython = "^8.4"
 jupyterlab = "^3.4"
 mlflow = "^1.27"
 pdoc = "^12.2.0"
-pre-commit = "^2.20.0"
 python-slugify = "^6.1"
-radon = "^5.1"
 PyYAML = ">=5.4"
 tqdm = "^4.64"
 typer = "^0,>=0.6"
@@ -28,6 +24,12 @@ typer = "^0,>=0.6"
 pywin32 = [
     { version = '>=301', platform = 'win32' },
 ]
+
+[tool.poetry.group.code-quality.dependencies]
+black = {extras = ["jupyter"], version = "^22.10.0"}
+flake8 = "<5.0.0"  # Unpin after compatibility with pytest-flake8 is fixed
+pre-commit = "^2.20.0"
+radon = "^5.1"
 
 [tool.poetry.group.test.dependencies]
 coverage = "^6.4"
