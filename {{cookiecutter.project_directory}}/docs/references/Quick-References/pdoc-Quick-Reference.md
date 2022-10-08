@@ -6,7 +6,7 @@ Kevin T. Chu `<kevin@velexi.com>`
 
 ------------------------------------------------------------------------------
 
-[pdoc][pdoc3] is a simple CLI tool that generates API documentation from
+[pdoc][pdoc] is a simple CLI tool that generates API documentation from
 Python source code (docstrings).
 
 This project is configured to support auto-generation of API documentation
@@ -33,7 +33,7 @@ generate documentation for Python modules and packages in any location.
 * Generate HTML-formatted documentation for a Python package or module.
 
   ```shell
-  $ pdoc --html MODULE -o DOC_DIR
+  $ pdoc MODULE -o DOC_DIR
   ```
 
   __Notes__
@@ -47,4 +47,4 @@ generate documentation for Python modules and packages in any location.
 
 [-----------------------------EXTERNAL LINKS-----------------------------]: #
 
-[pdoc3]: https://pdoc3.github.io/pdoc/
+[pdoc]: https://pdoc.dev/

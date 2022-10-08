@@ -10,8 +10,7 @@ CODE_DIRS=${SRC_DIR} tests
 # Testing parameters
 NPROCS=auto
 
-PYTEST_SEARCH_PATHS=${CODE_DIRS}
-PYTEST_OPTIONS=-n ${NPROCS} --cov=${SRC_DIR}
+PYTEST_OPTIONS=-n ${NPROCS} --cov-report=term-missing
 PYTEST_PYLINT_OPTIONS=
 
 # --- Testing rules
@@ -21,7 +20,7 @@ PYTEST_PYLINT_OPTIONS=
 
 ## Run all tests
 test:
-	py.test ${PYTEST_SEARCH_PATHS} ${PYTEST_OPTIONS} ${PYTEST_PYLINT_OPTIONS}
+	pytest ${PYTEST_OPTIONS} ${PYTEST_PYLINT_OPTIONS}
 
 ## Run tests in fail-fast mode (i.e., stop at first failure)
 fast-test:
@@ -79,7 +78,7 @@ radon-raw:
 
 ## Generate API documentation in HTML format.{% if cookiecutter.enable_julia == 'yes' %} Note: only generates docs for Python modules.{% endif %}
 docs:
-	pdoc --html -o docs/api ${SRC_DIR}
+	pdoc ${SRC_DIR} -o docs/api
 
 # --- Utility rules
 
@@ -91,7 +90,7 @@ clean:
 	find . -type d -name "__pycache__" -delete  # compiled python
 	find . -type f -name "*.py[co]" -delete  # compiled python
 	rm -rf .cache  # pytest
-	rm -rf .coverage .coverage.* coverage htmlcov  # coverage
+	rm -rf .coverage .coverage.* coverage htmlcov coverage.xml  # coverage
 	find . -name "*.log" -exec rm -f {} \;  # log files
 	rm -rf docs/api  # generated API documentation
 

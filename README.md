@@ -15,9 +15,9 @@ Table of Contents
 
    1.2. [License][#1.2]
 
-2. [Setting Up a New Research Project][#2]
+2. [Usage][#2]
 
-   2.1. [Instructions][#2.1]
+   2.1 [Setting Up a New Research Project][#2.1]
 
    2.2. [Known Issues][#2.2]
 
@@ -48,50 +48,47 @@ by Jonathan Whitmore.
 
 * Support for common research workflows (for both individuals and teams)
 
-* A directory structure that organizes and separates different components of
-  research data, exploration/experimentation (e.g., Jupyter notebooks),
-  documentation (e.g., reports, references), and software (e.g., custom
-  functions and test code)
+* A directory structure that organizes and separates different components and
+  stages of research: data, exploration/experimentation (e.g., Jupyter
+  notebooks), documentation (e.g., reports, references), and software (e.g.,
+  custom functions and test code)
 
-* Automatic generation of HTML and pure code versions of Jupyter notebooks to
-  facilitate review of both (1) research results and (2) implementation
+* Integration with tools that encourage code, data, and scientific quality
+  while facilitating research efficiency.
 
-* Quick references for common software components (e.g., [FastDS][fastds],
+  * Code version control: [Git][git]
+  * Data version control: [DVC][dvc], [FastDS][fastds]
+  * Experiment tracking: [MLflow Tracking][mlflow-tracking]
+  * Automated testing and coverage reporting: [pytest][pytest], [coverage][coverage]
+  * Code quality[pre-commit][pre-commit], [black][black], [flake8][flake8],
+    [radon][radon]
+
+* Quick references for software tools (e.g., [FastDS][fastds],
   [MLflow][mlflow], [Poetry][poetry], etc.)
-
-* Git and DVC integration to encourage code and data version control
-
-* Python package and dependency management using [Poetry][poetry]
-
-* Default Python packages for data and experiment management, interactive work
-  environments, and code quality
-
-  * [MLflow Tracking][mlflow-tracking] to encourage good scientific record
-    keeping habits
-
-  * [FastDS][fastds] to reduce common errors that arise when Git and DVC are
-    used separately
 
 * Support for Julia
 
-* Directory-based shell (and Python) environment isolation for systems with
-  `direnv` installed
+* Python package and dependency management using [Poetry][poetry]
+
+* Directory-based shell and Python environment isolation with [direnv][direnv]
 
 ### 1.1. Repository Contents
 
 ```
 ├── README.md          <- this file
-├── RELEASE-NOTES.md   <- release notes for the cookiecutter
-├── LICENSE            <- license for the cookiecutter
-├── NOTICE             <- copyright notice for the cookiecutter
+├── RELEASE-NOTES.md   <- cookiecutter release notes
+├── LICENSE            <- cookiecutter license
+├── NOTICE             <- cookiecutter copyright notice
 ├── cookiecutter.json  <- cookiecutter configuration file
-├── pyproject.toml     <- project metadata file for cookiecutter development
-├── poetry.lock        <- Poetry lockfile
+├── pyproject.toml     <- Python project metadata file for cookiecutter
+│                         development
+├── poetry.lock        <- Poetry lockfile for cookiecutter development
 ├── docs/              <- cookiecutter documentation
 ├── extras/            <- additional files that may be useful for cookiecutter
 │                         development
-├── hooks/             <- cookiecutter scripts that run before or after project
-│                         generation
+├── hooks/             <- cookiecutter scripts that run before and/or after
+│                         project generation
+├── spikes/            <- experimental code
 └── {{cookiecutter.project_directory}}/  <- cookiecutter template
 ```
 
@@ -103,18 +100,22 @@ contained in the `NOTICE` file.
 
 -------------------------------------------------------------------------------
 
-## 2. Setting Up a New Research Project
+## 2. Usage
 
-## 2.1. Instructions
+### 2.1. Setting Up a New Research Project
 
 1. ___Prerequisites___.
 
-   * Install the [Cookiecutter][cookiecutter] Python package.
+   * Install [Git][git].
 
    * Install [Poetry](https://python-poetry.org/) 1.2 (or greater).
 
      * __Note__. The project template uses `poetry` instead of `pip` for
        management of Python package dependencies.
+
+   * Install the [Cookiecutter][cookiecutter] Python package.
+
+   * ___Optional___. Install [direnv][direnv].
 
 2. Use `cookiecutter` to create a new research project.
 
@@ -124,13 +125,13 @@ contained in the `NOTICE` file.
 
 3. Finish setting up the new research project.
 
-   * ___Optional___. Set up the project to use `direnv` to manage the
-     environment (for both Python and the shell).
+   * ___Optional___. Set up the project to use direnv to manage the environment
+     (for both Python and the shell).
 
      * Copy `extras/dot-envrc` to the project root directory and rename it to
        `.envrc`.
 
-     * Grant permission to `direnv` to execute the `.envrc` file.
+     * Grant permission to direnv to execute the `.envrc` file.
 
        ```shell
        $ direnv allow
@@ -163,8 +164,8 @@ contained in the `NOTICE` file.
      * Commit the updated `pyproject.toml` and `poetry.lock` files to the
        project Git repository.
 
-   * Configure the Julia package dependencies for the project (if the project
-     was created with Julia support enabled).
+   * If the project was created with Julia support enabled, configure the Julia
+     package dependencies for the project 
 
      ```julia
      julia> ]
@@ -181,6 +182,12 @@ contained in the `NOTICE` file.
 
 4. Configure Git.
 
+   * Install the git pre-commit hooks.
+
+     ```shell
+     $ pre-commit install
+     ```
+
    * Set up a remote Git repository (e.g., GitHub repository).
 
    * Configure the remote Git repository.
@@ -191,9 +198,16 @@ contained in the `NOTICE` file.
 
      where `GIT_REMOTE` is the URL to the remote Git repository.
 
+   * Push the `main` branch to the remote Git repository.
+
+     ```shell
+     $ git checkout main
+     $ git push -u origin main
+     ```
+
 5. Configure DVC.
 
-   * Initialize DVC (data version control). In the following command
+   * Initialize DVC (Data Version Control). In the following command
      `PROJECT_DIR` should be replaced by the path to the newly created research
      project.
 
@@ -243,9 +257,9 @@ contained in the `NOTICE` file.
      is located in the `NOTICE` file. Otherwise, the copyright notice is
      located in the `LICENSE` file.
 
-## 2.2. Known Issues
+### 2.2. Known Issues
 
-* When including numba as a project dependency, the Python version constraint
+* When including `numba` as a project dependency, the Python version constraint
   `pyproject.toml` needs to be more restrictive than default `^3.9`. For
   numba 0.55, the Python version constraint in `pyproject.toml` should be set
   to:
@@ -268,7 +282,7 @@ contained in the `NOTICE` file.
 
 #### Optional Packages
 
-* `direnv`
+* direnv
 
 #### Python Packages
 
@@ -276,13 +290,13 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 ### 3.2. Setting Up to Develop the Cookiecutter
 
-1. ___Optional___. Set up the cookiecutter project to use `direnv` to manage
+1. ___Optional___. Set up the cookiecutter project to use direnv to manage
   the environment (for both Python and the shell).
 
     * Copy `extras/dot-envrc` to the Git repository's root directory, and
       rename it to `.envrc`.
 
-    * Grant permission to `direnv` to execute the `.envrc` file.
+    * Grant permission to direnv to execute the `.envrc` file.
 
       ```shell
       $ direnv allow
@@ -303,8 +317,8 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 To update the Python dependencies for the template (contained in the
 `{{cookiecutter.project_directory}}` directory), use the following procedure
 to ensure that package dependencies for developing the non-template components
-of the cookiecutter (e.g., `cookiecutter.json`) do not interfere with package
-dependencies for the template.
+of the cookiecutter (e.g., `hooks/post_gen_project.py`) do not interfere with
+package dependencies for the template.
 
 * Create a local clone of the cookiecutter Git repository to use for
   cookiecutter development.
@@ -319,14 +333,14 @@ dependencies for the template.
 * In the pristine project, perform the following steps to update the template's
   package dependencies.
 
-  * Set up a virtual environment for developing the template (e.g., a `direnv`
+  * Set up a virtual environment for developing the template (e.g., a direnv
     environment).
 
-  * Edit `pyproject.toml` to (1) make changes to the package dependency list
-    and (2) update the package dependency versions.
+  * Use `poetry` or manually edit `pyproject.toml` to (1) make changes to the
+    package dependency list and (2) update the package dependency versions.
 
-  * Use `poetry` to update the implicit package dependencies and versions
-    recorded in the `poetry.lock` file.
+  * Use `poetry` to update the package dependencies and versions recorded in
+    the `poetry.lock` file.
 
 * Update `{{cookiecutter.project_directory}}/pyproject.toml`.
 
@@ -374,8 +388,8 @@ dependencies for the template.
 [#1.1]: #11-repository-contents
 [#1.2]: #12-license
 
-[#2]: #2-setting-up-a-new-research-project
-[#2.1]: #21-instructions
+[#2]: #2-usage
+[#2.1]: #21-setting-up-a-new-research-project
 [#2.2]: #22-known-issues
 
 [#3]: #3-contributor-notes
@@ -399,11 +413,23 @@ dependencies for the template.
 
 [-----------------------------EXTERNAL LINKS-----------------------------]: #
 
+[black]: https://black.readthedocs.io/
+
 [cookiecutter]: https://cookiecutter.readthedocs.io/en/latest/
 
 [cookiecutter-data-science]: https://github.com/drivendata/cookiecutter-data-science
 
+[coverage]: https://coverage.readthedocs.io/
+
+[direnv]: https://direnv.net/
+
+[dvc]: https://dvc.org/
+
 [fastds]: https://github.com/DAGsHub/fds/
+
+[flake8]: https://flake8.pycqa.org/
+
+[git]: https://git-scm.com/
 
 [khuyentran-data-science-template]: https://github.com/khuyentran1401/data-science-template
 
@@ -412,5 +438,11 @@ dependencies for the template.
 [mlflow-tracking]: https://www.mlflow.org/docs/latest/tracking.html
 
 [poetry]: https://python-poetry.org/
+
+[pre-commit]: https://pre-commit.com/
+
+[pytest]: https://docs.pytest.org/
+
+[radon]: https://radon.readthedocs.io/
 
 [whitmore-2016]: https://www.svds.com/tbt-jupyter-notebook-best-practices-data-science/
