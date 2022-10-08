@@ -2,6 +2,29 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.5.3 (2022-10-08)
+==================
+## Cookiecutter Template Enhancements
+* Consolidate Python project metadata and tool configurations into
+  pyproject.toml.
+* Add and streamline integrations with code quality tools: pytest, coverage,
+  flake8, black, git pre-commit hooks.
+* Migrate to `pdoc` from `pdoc3`.
+* Update documentation.
+* Update all files to pass all pre-commit checks.
+* Improve application of Apache License 2.0.
+
+## Cookiecutter Template Bug Fixes
+* Fix bugs in Jinja2 logic in template files.
+* Remove obsolete configurations and files.
+
+## Cookiecutter Development Enhancements
+* Add integrations with tools for supporting code quality: black and git
+  pre-commit hooks.
+* Update all files to pass all pre-commit checks.
+* Improve application of Apache License 2.0.
+
+-------------------------------------------------------------------------------
 0.5.2 (2022-10-04)
 ==================
 * Fix errors in README files.
