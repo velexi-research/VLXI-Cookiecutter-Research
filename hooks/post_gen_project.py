@@ -35,8 +35,9 @@ if __name__ == "__main__":
     if "{{ cookiecutter.license }}" != "Apache License 2.0":
         _remove_file("NOTICE")
 
-    # --- Initialize Git repository project
+    # --- Set up Git repository for project
 
+    # Initialize Git repository
     os.chdir(_PROJECT_DIRECTORY)
     cmd = ["git", "init"]
     subprocess.run(cmd, check=True)
