@@ -110,6 +110,8 @@ contained in the `NOTICE` file.
 
 1. ___Prerequisites___.
 
+   * Install the [Git][git].
+
    * Install the [Cookiecutter][cookiecutter] Python package.
 
    * Install [Poetry](https://python-poetry.org/) 1.2 (or greater).
@@ -411,6 +413,8 @@ dependencies for the template.
 [cookiecutter-data-science]: https://github.com/drivendata/cookiecutter-data-science
 
 [fastds]: https://github.com/DAGsHub/fds/
+
+[git]: https://git-scm.com/
 
 [khuyentran-data-science-template]: https://github.com/khuyentran1401/data-science-template
 
