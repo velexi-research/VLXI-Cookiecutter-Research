@@ -15,9 +15,9 @@ Table of Contents
 
    1.2. [License][#1.2]
 
-2. [Setting Up a New Research Project][#2]
+2. [Usage][#2]
 
-   2.1. [Instructions][#2.1]
+   2.1 [Setting Up a New Research Project][#2.1]
 
    2.2. [Known Issues][#2.2]
 
@@ -104,9 +104,9 @@ contained in the `NOTICE` file.
 
 -------------------------------------------------------------------------------
 
-## 2. Setting Up a New Research Project
+## 2. Usage
 
-## 2.1. Instructions
+### 2.1. Setting Up a New Research Project
 
 1. ___Prerequisites___.
 
@@ -250,7 +250,7 @@ contained in the `NOTICE` file.
      is located in the `NOTICE` file. Otherwise, the copyright notice is
      located in the `LICENSE` file.
 
-## 2.2. Known Issues
+### 2.2. Known Issues
 
 * When including numba as a project dependency, the Python version constraint
   `pyproject.toml` needs to be more restrictive than default `^3.9`. For
@@ -381,8 +381,8 @@ dependencies for the template.
 [#1.1]: #11-repository-contents
 [#1.2]: #12-license
 
-[#2]: #2-setting-up-a-new-research-project
-[#2.1]: #21-instructions
+[#2]: #2-usage
+[#2.1]: #21-setting-up-a-new-research-project
 [#2.2]: #22-known-issues
 
 [#3]: #3-contributor-notes
