@@ -60,10 +60,7 @@ A description of the project.
 │                      Conventions" section for notebook conventions.
 │
 ├── src             <- project source code
-│
-├── tests           <- test code
-│
-└── tox.ini         <- configuration file for tox testing framework
+└── tests           <- project test code
 ```
 
 ## 1.2. References
