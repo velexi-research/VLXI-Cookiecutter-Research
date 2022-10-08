@@ -28,8 +28,8 @@ from slugify import slugify
 
 # --- Utility functions
 
-def get_experiment_name(description: str,
-                        include_timestamp: bool = False) -> str:
+
+def get_experiment_name(description: str, include_timestamp: bool = False) -> str:
     """
     Get standard experiment name.
 
@@ -43,7 +43,7 @@ def get_experiment_name(description: str,
     ------------
     experiment name
     """
-    description_slugified = slugify(description, separator='_')
+    description_slugified = slugify(description, separator="_")
 
     datestamp = datetime.date.today().isoformat()
     if include_timestamp:
