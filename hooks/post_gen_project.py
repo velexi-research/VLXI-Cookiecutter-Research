@@ -13,10 +13,13 @@ import subprocess
 
 _PROJECT_DIRECTORY = Path.cwd()
 
-
 # --- Utility functions
 
+
 def _remove_file(*filepath):
+    """
+    Remove file relative to _PROJECT_DIRECTORY.
+    """
     try:
         Path(_PROJECT_DIRECTORY, *filepath).unlink()
     except FileNotFoundError:
@@ -26,6 +29,11 @@ def _remove_file(*filepath):
 # --- Main program
 
 if __name__ == "__main__":
+
+    # --- Preparations
+
+    # Change to project directory
+    os.chdir(_PROJECT_DIRECTORY)
 
     # --- Update project template files based on user configuration
 
@@ -38,6 +46,12 @@ if __name__ == "__main__":
     # --- Set up Git repository for project
 
     # Initialize Git repository
-    os.chdir(_PROJECT_DIRECTORY)
     cmd = ["git", "init"]
+    subprocess.run(cmd, check=True)
+
+    # Commit cookiecutter files
+    cmd = ["git", "add", "."]
+    subprocess.run(cmd, check=True)
+
+    cmd = ["git", "commit", "-m", "Initial commit."]
     subprocess.run(cmd, check=True)
