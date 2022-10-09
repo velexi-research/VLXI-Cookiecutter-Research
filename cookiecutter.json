@@ -1,6 +1,6 @@
 {
-  "project_name": "Project Name",
-  "project_directory": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "project_name": "project-name",
+  "package_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
   "author": "Your Name",
   "email": "{{ cookiecutter.author.lower().replace(' ', '.') }}@example.com",
   "license": [
