@@ -19,7 +19,9 @@ Table of Contents
 
    2.1 [Setting Up a New Research Project][#2.1]
 
-   2.2. [Known Issues][#2.2]
+   2.2. [Publishing Project Documentation to GitHub Pages][#2.2]
+
+   2.3. [Known Issues][#2.3]
 
 3. [Contributor Notes][#3]
 
@@ -166,7 +168,7 @@ contained in the `NOTICE` file.
        project Git repository.
 
    * If the project was created with Julia support enabled, configure the Julia
-     package dependencies for the project 
+     package dependencies for the project
 
      ```julia
      julia> ]
@@ -258,7 +260,24 @@ contained in the `NOTICE` file.
      is located in the `NOTICE` file. Otherwise, the copyright notice is
      located in the `LICENSE` file.
 
-### 2.2. Known Issues
+### 2.2. Publishing Project Documentation to GitHub Pages
+
+1. From the project GitHub repository, navigate to "Settings" > "Pages" (in the
+   "Code and automation" section of the side menu) and configure GitHub Pages
+   to deploy from the `main` branch.
+
+   * Source: Deploy from a branch
+   * Branch: main
+     * Folder: /(root)
+
+2. That's it! Every time the `main` branch is updated, GitHub will
+   automatically build project documentation from the `README.md` file (and
+   any linked Markdown files) and publish them to the project GitHub Pages.
+
+3. _Optional_. In the "About" section of the project GitHub repository, set
+   "Website" to the URL for the project GitHub Pages.
+
+### 2.3. Known Issues
 
 * When including `numba` as a project dependency, the Python version constraint
   `pyproject.toml` needs to be more restrictive than default `^3.9`. For
@@ -391,7 +410,8 @@ package dependencies for the template.
 
 [#2]: #2-usage
 [#2.1]: #21-setting-up-a-new-research-project
-[#2.2]: #22-known-issues
+[#2.2]: #22-publishing-project-documentation-to-github-pages
+[#2.3]: #23-known-issues
 
 [#3]: #3-contributor-notes
 [#3.1]: #31-software-requirements
