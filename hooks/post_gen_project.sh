@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #------------------------------------------------------------------------------
-# Apply post-generation project configuration and setup
+# Cookiecutter post-generation script
 #------------------------------------------------------------------------------
 
 # --- Update project template files based on user configuration
