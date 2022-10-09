@@ -109,7 +109,7 @@ contained in the `NOTICE` file.
 
    * Install [Git][git].
 
-   * Install [Poetry](https://python-poetry.org/) 1.2 (or greater).
+   * Install [Poetry][poetry] 1.2 (or greater).
 
      * __Note__. The project template uses `poetry` instead of `pip` for
        management of Python package dependencies.
