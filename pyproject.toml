@@ -7,15 +7,8 @@ authors = ["Kevin Chu <kevin@velexi.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-black = "^22.10.0"
 cookiecutter = "^2.1.1"
-coverage = "^6.3.2"
-flake8 = "^4.0.1"
 pre-commit = "^2.20.0"
-pylint = "^2.13.7"
-pytest = "^7.1.1"
-pytest-cov = "^3.0.0"
-pytest-xdist = "^2.5.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
