@@ -75,10 +75,12 @@ __Note__: this project uses `poetry` to manage Python package dependencies.
 
 * ___Prerequisites___
 
-  * Install Python 3.8 (or greater). __Recommendation__: use `pyenv`
+  * Install [Git][git].
+
+  * Install [Python][python] 3.8 (or greater). __Recommendation__: use `pyenv`
     to configure the project to use a specific version of Python.
   {% if cookiecutter.enable_julia == 'yes' %}
-  * Install Julia 1.6 (or greater).
+  * Install [Julia][julia] 1.6 (or greater).
   {% endif %}
   * Install [Poetry][poetry] 1.2 (or greater).
 
@@ -307,5 +309,11 @@ __Note__: this project uses `poetry` to manage Python package dependencies.
 [-----------------------------EXTERNAL LINKS-----------------------------]: #
 
 [direnv]: https://direnv.net/
+
+[git]: https://git-scm.com/
+
+[julia]: https://julialang.org/
+
+[python]: https://www.python.org/
 
 [poetry]: https://python-poetry.org/
