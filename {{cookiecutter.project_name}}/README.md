@@ -82,7 +82,7 @@ __Note__: this project uses `poetry` to manage Python package dependencies.
   {% endif %}
   * Install [Poetry][poetry] 1.2 (or greater).
 
-   * ___Optional___. Install [direnv][direnv].
+   * _Optional_. Install [direnv][direnv].
 
 * Set up a dedicated virtual environment for the project. Any of the common
   virtual environment options (e.g., `venv`, `direnv`, `conda`) should work.
