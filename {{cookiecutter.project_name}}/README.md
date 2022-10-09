@@ -87,6 +87,7 @@ __Note__: this project uses `poetry` to manage Python package dependencies.
 * Set up a dedicated virtual environment for the project. Any of the common
   virtual environment options (e.g., `venv`, `direnv`, `conda`) should work.
   Below are instructions for setting up a `direnv` or `poetry` environment.
+
   __Note__: to avoid conflicts between virtual environments, only one method
   should be used to manage the virtual environment.
 

@@ -113,8 +113,8 @@ contained in the `NOTICE` file.
 
    * Install [Poetry][poetry] 1.2 (or greater).
 
-     * __Note__. The project template uses `poetry` instead of `pip` for
-       management of Python package dependencies.
+     __Note__. The project template uses `poetry` instead of `pip` for
+     management of Python package dependencies.
 
    * Install the [Cookiecutter][cookiecutter] Python package.
 
