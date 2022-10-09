@@ -115,8 +115,6 @@ __Note__: this project uses `poetry` to manage Python package dependencies.
   * __`poetry` Environment__. __Note__: `poetry` only manages the Python
     environment (it does not manage the shell environment).
 
-    * ___Prerequisite___. Install [Poetry][poetry].
-
     * Create a `poetry` environment that uses a specific Python executable.
       For instance, if `python3` is on your `PATH`, the following command
       creates (or activates if it already exists) a Python virtual environment

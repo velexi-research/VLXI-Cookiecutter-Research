@@ -188,6 +188,13 @@ contained in the `NOTICE` file.
 
      * Commit the updated `Project.toml` file to the project Git repository.
 
+   * Verify the year and name of the copyright owner in the copyright file.
+     If the project is licensed under Apache License 2.0, the copyright notice
+     is located in the `NOTICE` file. Otherwise, the copyright notice is
+     located in the `LICENSE` file.
+
+   * Customize the `README.md` file to reflect the specifics of the project.
+
 4. Configure Git.
 
    * Install the git pre-commit hooks.
@@ -255,15 +262,6 @@ contained in the `NOTICE` file.
      ```shell
      $dvc config core.autostage true
      ```
-
-6. Update the project documentation.
-
-   * Customize the `README.md` file to reflect the specifics of the project.
-
-   * Verify the year and name of the copyright owner in the copyright file.
-     If the project is licensed under Apache License 2.0, the copyright notice
-     is located in the `NOTICE` file. Otherwise, the copyright notice is
-     located in the `LICENSE` file.
 
 ### 2.2. Publishing Project Documentation to GitHub Pages
 
