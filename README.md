@@ -109,9 +109,9 @@ by Jonathan Whitmore.
 
 * `license`: type of license to use for the project
 
-* `python_version_requirements`: Python versions compatible with project. See
-  the "[Dependency sepcification][poetry-dependency-specification]" section of
-  the Poetry documentation for version specifier semantics.
+* `python_version`: Python versions compatible with project. See the
+  "[Dependency sepcification][poetry-dependency-specification]" section
+  of the Poetry documentation for version specifier semantics.
 
 * `enable_julia`: flag indicating whether Julia should be enabled for the
   project

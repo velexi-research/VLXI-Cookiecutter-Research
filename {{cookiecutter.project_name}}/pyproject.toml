@@ -7,7 +7,7 @@ readme = "README.md"
 authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}> and contributors"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "{{ cookiecutter.python_version }}"
 bcrypt = "^3.2.2"
 dvc = {extras = ["all"], version = "^2.17"}
 fastds = "^0,>=0.6"
