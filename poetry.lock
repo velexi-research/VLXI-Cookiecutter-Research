@@ -414,8 +414,8 @@ testing = ["coverage (>=6.2)", "coverage-enable-subprocess (>=1)", "flaky (>=3.7
 
 [metadata]
 lock-version = "1.1"
-python-versions = "^3.9"
-content-hash = "7a50d3c15f52b49cadc514ed9167594a7a2d3a92b35f3cddca8527d8c8849255"
+python-versions = "^3.8"
+content-hash = "97df6f0344377f711f1e3ffe114d63cdf67414341edc9248e4d41cdadc6c405c"
 
 [metadata.files]
 arrow = [
