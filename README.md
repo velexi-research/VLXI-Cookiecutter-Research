@@ -186,22 +186,24 @@ contained in the `NOTICE` file.
      $ pre-commit install
      ```
 
-   * Set up a remote Git repository (e.g., GitHub repository).
+   * _Optional_. Set up a remote Git repository (e.g., GitHub repository).
 
-   * Configure the remote Git repository.
+     * Create a remote Git repository.
 
-     ```shell
-     $ git remote add origin GIT_REMOTE
-     ```
+     * Configure the remote Git repository.
 
-     where `GIT_REMOTE` is the URL to the remote Git repository.
+       ```shell
+       $ git remote add origin GIT_REMOTE
+       ```
 
-   * Push the `main` branch to the remote Git repository.
+       where `GIT_REMOTE` is the URL to the remote Git repository.
 
-     ```shell
-     $ git checkout main
-     $ git push -u origin main
-     ```
+     * Push the `main` branch to the remote Git repository.
+
+       ```shell
+       $ git checkout main
+       $ git push -u origin main
+       ```
 
 6. Configure DVC.
 
