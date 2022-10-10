@@ -311,12 +311,12 @@ contained in the `NOTICE` file.
    * Branch: main
      * Folder: /(root)
 
-2. That's it! Every time the `main` branch is updated, GitHub will
+2. In the "About" section of the project GitHub repository, set "Website" to
+   the URL for the project GitHub Pages.
+
+3. That's it! Every time the `main` branch is updated, GitHub will
    automatically build project documentation from the `README.md` file (and
    any linked Markdown files) and publish them to the project GitHub Pages.
-
-3. _Optional_. In the "About" section of the project GitHub repository, set
-   "Website" to the URL for the project GitHub Pages.
 
 ### 2.3. Known Issues
 
