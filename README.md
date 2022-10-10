@@ -13,7 +13,9 @@ Table of Contents
 
    1.1. [Repository Contents][#1.1]
 
-   1.2. [License][#1.2]
+   1.2 [Cookiecutter Parameters][#1.2]
+
+   1.3. [License][#1.3]
 
 2. [Usage][#2]
 
@@ -95,7 +97,26 @@ by Jonathan Whitmore.
 └── {{cookiecutter.project_name}}/  <- cookiecutter template
 ```
 
-### 1.2. License
+### 1.2. Cookiecutter Parameters
+
+* `project_name`: project name
+
+* `package_name`: name for Python package
+
+* `author`: project's primary author
+
+* `email`: primary author's email
+
+* `license`: type of license to use for the project
+
+* `python_version_requirements`: Python versions compatible with project. See
+  the "[Dependency sepcification][poetry-dependency-specification]" section of
+  the Poetry documentation for version specifier semantics.
+
+* `enable_julia`: flag indicating whether Julia should be enabled for the
+  project
+
+### 1.3. License
 
 The contents of this cookiecutter are covered under the Apache License 2.0
 (included in the `LICENSE` file). The copyright for this cookiecutter is
@@ -444,7 +465,8 @@ package dependencies for the template.
 
 [#1]: #1-overview
 [#1.1]: #11-repository-contents
-[#1.2]: #12-license
+[#1.2]: #12-cookiecutter-parameters
+[#1.3]: #13-license
 
 [#2]: #2-usage
 [#2.1]: #21-setting-up-a-new-research-project
@@ -499,6 +521,8 @@ package dependencies for the template.
 [mlflow-tracking]: https://www.mlflow.org/docs/latest/tracking.html
 
 [poetry]: https://python-poetry.org/
+
+[poetry-dependency-specification]: https://python-poetry.org/docs/dependency-specification/
 
 [pre-commit]: https://pre-commit.com/
 
