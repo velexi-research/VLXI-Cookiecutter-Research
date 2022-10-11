@@ -40,10 +40,11 @@ Table of Contents
 ## 1. Overview
 
 The [Velexi Research Project Cookiecutter][vlxi-cookiecutter-research] is
-intended to streamline the process of setting up a general Jupyter-based
-research project involving computational work that is not centered around data
-science and machine learning models. The structure of this research project
-template is inspired by [Cookiecutter Data Science][cookiecutter-data-science],
+intended to streamline the process of setting up a Jupyter-based research
+project involving computational work (but that is not necessarily centered
+around data science and/or machine learning models). The structure of this
+research project template is inspired by
+[Cookiecutter Data Science][cookiecutter-data-science],
 Kuygen Tran's [Data Science Template][khuyentran-data-science-template], the
 blog article ["Jupyter Notebook Best Practices for Data Science"][whitmore-2016]
 by Jonathan Whitmore.
@@ -58,19 +59,19 @@ by Jonathan Whitmore.
   custom functions and test code)
 
 * Integration with tools that encourage code, data, and scientific quality
-  while facilitating research efficiency.
+  while promoting research efficiency.
 
   * Code version control: [Git][git]
   * Data version control: [DVC][dvc], [FastDS][fastds]
   * Experiment tracking: [MLflow Tracking][mlflow-tracking]
   * Automated testing and coverage reporting: [pytest][pytest], [coverage][coverage]
-  * Code quality[pre-commit][pre-commit], [black][black], [flake8][flake8],
+  * Code quality: [pre-commit][pre-commit], [black][black], [flake8][flake8],
     [radon][radon]
 
 * Quick references for software tools (e.g., [FastDS][fastds],
-  [MLflow][mlflow], [Poetry][poetry], etc.)
+  [MLflow][mlflow], [Poetry][poetry])
 
-* Support for Julia
+* Support for the [Julia][julia] programming language
 
 * Python package and dependency management using [Poetry][poetry]
 
@@ -184,7 +185,7 @@ contained in the `NOTICE` file.
      * Create a `poetry` environment that uses a specific Python executable.
        For instance, if `python3` is on your `PATH`, the following command
        creates (or activates if it already exists) a Python virtual environment
-       for the project that uses `python3`.
+       that uses `python3` for the project.
 
        ```shell
        $ poetry env use python3
@@ -217,7 +218,7 @@ contained in the `NOTICE` file.
        $ git remote add origin GIT_REMOTE
        ```
 
-       where `GIT_REMOTE` is the URL to the remote Git repository.
+       where `GIT_REMOTE` is the URL of the remote Git repository.
 
      * Push the `main` branch to the remote Git repository.
 
@@ -266,7 +267,7 @@ contained in the `NOTICE` file.
    * Configure DVC to automatically stage changes to `*.dvc` files with Git.
 
      ```shell
-     $dvc config core.autostage true
+     $ dvc config core.autostage true
      ```
 
 7. Finish setting up the new research project.
@@ -342,12 +343,12 @@ contained in the `NOTICE` file.
 ### 2.3. Known Issues
 
 * When including `numba` as a project dependency, the Python version constraint
-  `pyproject.toml` needs to be more restrictive than default `^3.9`. For
-  numba 0.55, the Python version constraint in `pyproject.toml` should be set
-  to:
+  `pyproject.toml` needs to be more restrictive than the default `^3.8`. For
+  numba 0.55, the Python version constraint in `[tool.poetry.dependencies]`
+  section of `pyproject.toml` should be set to:
 
   ```
-  python = ">=3.9,<3.11"
+  python = ">=3.8,<3.11"
   ```
 
 -------------------------------------------------------------------------------
@@ -401,6 +402,10 @@ package dependencies for the template.
 
 * Create a local clone of the cookiecutter Git repository to use for
   cookiecutter development.
+
+  ```shell
+  $ git clone git@github.com:velexi-research/VLXI-Cookiecutter-Research.git
+  ```
 
 * Use `cookiecutter` from the local cookiecutter Git repository to create a
   clean project for template dependency updates.
