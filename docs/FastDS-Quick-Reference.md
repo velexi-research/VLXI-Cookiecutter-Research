@@ -1,1 +1,1 @@
-../{{cookiecutter.project_directory}}/docs/references/Quick-References/FastDS-Quick-Reference.md
+../{{cookiecutter.project_name}}/docs/references/Quick-References/FastDS-Quick-Reference.md
