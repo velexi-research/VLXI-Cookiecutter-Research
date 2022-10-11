@@ -434,6 +434,7 @@ package dependencies for the template.
   * Restore the templated values in the `[tool.poetry]` section to the
     following:
 
+    <!-- {% raw %} -->
     ```jinja
     [tool.poetry]
     name = "{{ cookiecutter.package_name }}"
@@ -443,6 +444,7 @@ package dependencies for the template.
     readme = "README.md"
     authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}> and contributors"]
     ```
+    <!-- {% endraw %} -->
 
 * Update `{{cookiecutter.project_name}}/poetry.lock`.
 
