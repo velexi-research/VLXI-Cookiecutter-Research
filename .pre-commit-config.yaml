@@ -6,13 +6,13 @@ repos:
       entry: black
       language: python
       types: [python]
-      exclude: ^{{cookiecutter.project_directory}}
+      exclude: ^{{cookiecutter.project_name}}
     - id: flake8
       name: flake8
       entry: flake8
       language: python
       types: [python]
-      exclude: ^{{cookiecutter.project_directory}}|^spikes
+      exclude: ^{{cookiecutter.project_name}}|^spikes
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v2.5.0
     hooks:

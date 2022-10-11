@@ -75,16 +75,21 @@ __Note__: this project uses `poetry` to manage Python package dependencies.
 
 * ___Prerequisites___
 
-  * Install Python 3.8 (or greater). __Recommendation__: use `pyenv`
+  * Install [Git][git].
+
+  * Install [Python][python] 3.8 (or greater). __Recommendation__: use `pyenv`
     to configure the project to use a specific version of Python.
   {% if cookiecutter.enable_julia == 'yes' %}
-  * Install Julia 1.6 (or greater).
+  * Install [Julia][julia] 1.6 (or greater).
   {% endif %}
-  * Install [Poetry](https://python-poetry.org/) 1.2 (or greater).
+  * Install [Poetry][poetry] 1.2 (or greater).
+
+   * _Optional_. Install [direnv][direnv].
 
 * Set up a dedicated virtual environment for the project. Any of the common
   virtual environment options (e.g., `venv`, `direnv`, `conda`) should work.
   Below are instructions for setting up a `direnv` or `poetry` environment.
+
   __Note__: to avoid conflicts between virtual environments, only one method
   should be used to manage the virtual environment.
 
@@ -109,8 +114,6 @@ __Note__: this project uses `poetry` to manage Python package dependencies.
 
   * __`poetry` Environment__. __Note__: `poetry` only manages the Python
     environment (it does not manage the shell environment).
-
-    * ___Prerequisite___. Install [Poetry](https://python-poetry.org/).
 
     * Create a `poetry` environment that uses a specific Python executable.
       For instance, if `python3` is on your `PATH`, the following command
@@ -300,3 +303,15 @@ __Note__: this project uses `poetry` to manage Python package dependencies.
 [poetry-quick-reference]: docs/references/Quick-References/Poetry-Quick-Reference.md
 
 [project-environment]: docs/references/Quick-References/Project-Environment.md
+
+[-----------------------------EXTERNAL LINKS-----------------------------]: #
+
+[direnv]: https://direnv.net/
+
+[git]: https://git-scm.com/
+
+[julia]: https://julialang.org/
+
+[python]: https://www.python.org/
+
+[poetry]: https://python-poetry.org/

@@ -2,9 +2,24 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.7.0 (2022-10-10)
+==================
+### Cookiecutter Template Enhancements
+* Simplify user-specified cookiecutter parameters.
+* Add pre-generation hook to validate package name.
+* Improve consistency of Jinja template variable expressions.
+* Fix bugs.
+
+### Cookiecutter Development Enhancements
+* Migrate cookiecutter hooks to shell scripts.
+* Remove unneeded package dependencies for cookiecutter development.
+* Simplify pre-commit hooks.
+* Update documentation.
+
+-------------------------------------------------------------------------------
 0.6.0 (2022-10-08)
 ==================
-## Cookiecutter Template Enhancements
+### Cookiecutter Template Enhancements
 * Consolidate Python project metadata and tool configurations into
   pyproject.toml.
 * Add and streamline integrations with code quality tools: pytest, coverage,
@@ -14,7 +29,7 @@ Velexi Research Project Cookiecutter Release Notes
 * Update all files to pass all pre-commit checks.
 * Improve application of Apache License 2.0.
 
-## Cookiecutter Template Bug Fixes
+### Cookiecutter Template Bug Fixes
 * Fix bugs in Jinja2 logic in template files.
 * Remove obsolete configurations and files.
 
