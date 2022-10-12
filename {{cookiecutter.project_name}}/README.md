@@ -8,9 +8,9 @@ Table of Contents
 
 1. [Overview][#1]
 
-    1.1. [Project Organization][#1.1]
+   1.1. [Project Organization][#1.1]
 
-    1.2. [References][#1.2]
+   1.2. [References][#1.2]
 
 2. [Getting Started][#2]
 
