@@ -1,8 +1,8 @@
 {
   "project_name": "project-name",
-  "package_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+  "package_name": "{{ cookiecutter.project_name | slugify(separator='_') }}",
   "author": "Your Name",
-  "email": "{{ cookiecutter.author.lower().replace(' ', '.') }}@example.com",
+  "email": "{{ cookiecutter.author | slugify(separator='.') }}@example.com",
   "license": [
     "Apache License 2.0",
     "BSD-3-Clause License",
