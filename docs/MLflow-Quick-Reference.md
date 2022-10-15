@@ -1,1 +1,1 @@
-../{{cookiecutter.project_name}}/docs/references/Quick-References/MLflow-Quick-Reference.md
+../{{cookiecutter.project_name}}/extras/quick-references/MLflow-Quick-Reference.md
