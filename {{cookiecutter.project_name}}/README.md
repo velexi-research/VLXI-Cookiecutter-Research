@@ -1,6 +1,12 @@
 {{ cookiecutter.project_name }}
 ===============================================================================
 
+An brief description of the package.
+
+The goals of the {{ cookiecutter.project_name }} are:
+
+* a list of the core features of the project.
+
 -------------------------------------------------------------------------------
 
 Table of Contents
@@ -8,23 +14,31 @@ Table of Contents
 
 1. [Overview][#1]
 
-   1.1. [Project Organization][#1.1]
-
-   1.2. [References][#1.2]
-
 2. [Getting Started][#2]
+
+   2.1. [Project Organization][#2.1]
+
+   2.2. [Setting Up the Project][#2.2]
 
 3. [Project Conventions][#3]
 
-4. [Documentation][#4]
+4. [Software Quick References][#4]
 
 -------------------------------------------------------------------------------
 
 ## 1. Overview
 
-A description of the project.
+A more detailed description of the project.
 
-### 1.1. Project Organization
+### References
+
+* List of key project references
+
+-------------------------------------------------------------------------------
+
+## 2. Getting Started
+
+### 2.1. Project Organization
 
 ```
 ├── README.md             <- this file
@@ -61,13 +75,7 @@ A description of the project.
 └── tests/                <- project test code
 ```
 
-## 1.2. References
-
-* List of key project references
-
--------------------------------------------------------------------------------
-
-## 2. Getting Started
+### 2.2. Setting Up the Project
 
 __Note__: this project uses `poetry` to manage Python package dependencies.
 
@@ -246,7 +254,7 @@ __Note__: this project uses `poetry` to manage Python package dependencies.
 
 -------------------------------------------------------------------------------
 
-## 4. Documentation
+## 4. Software Quick References
 
 * [Automated Testing][automated-testing]
 
@@ -271,16 +279,16 @@ __Note__: this project uses `poetry` to manage Python package dependencies.
 [-----------------------------INTERNAL LINKS-----------------------------]: #
 
 [#1]: #1-overview
-[#1.1]: #11-project-organization
-[#1.2]: #12-references
 
 [#2]: #2-getting-started
+[#2.1]: #21-project-organization
+[#2.2]: #22-setting-up-the-project
 
 [#3]: #3-project-conventions
 [#3.1]: #31-jupyter-notebook-conventions
 [#3.2]: #32-guidelines-for-organizing-data
 
-[#4]: #4-documentation
+[#4]: #4-software-quick-references
 
 [-----------------------------REPOSITORY LINKS-----------------------------]: #
 
