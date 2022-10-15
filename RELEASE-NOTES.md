@@ -2,6 +2,18 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.7.2 (2022-10-14)
+==================
+### Cookiecutter Template
+* Move quick references to `extras` directory to separate them from project
+  documentation.
+* Update README template.
+
+### Cookiecutter Development Enhancements
+* Simplify logic for default values in cookiecutter.json.
+* Update documentation.
+
+-------------------------------------------------------------------------------
 0.7.1 (2022-10-10)
 ==================
 ### Bug Fixes
