@@ -1,44 +1,6 @@
 Velexi Research Project Cookiecutter
 ====================================
 
-__Authors__  
-Kevin T. Chu `<kevin@velexi.com>`
-
--------------------------------------------------------------------------------
-
-Table of Contents
------------------
-
-1. [Overview][#1]
-
-   1.1. [Repository Contents][#1.1]
-
-   1.2 [Cookiecutter Parameters][#1.2]
-
-   1.3. [License][#1.3]
-
-2. [Usage][#2]
-
-   2.1 [Setting Up a New Research Project][#2.1]
-
-   2.2. [Publishing Project Documentation to GitHub Pages][#2.2]
-
-   2.3. [Known Issues][#2.3]
-
-3. [Contributor Notes][#3]
-
-   3.1. [Software Requirements][#3.1]
-
-   3.2. [Setting Up to Develop the Cookiecutter][#3.2]
-
-   3.3. [Additional Notes][#3.3]
-
-4. [Documentation][#4]
-
--------------------------------------------------------------------------------
-
-## 1. Overview
-
 The [Velexi Research Project Cookiecutter][vlxi-cookiecutter-research] is
 intended to streamline the process of setting up a Jupyter-based research
 project involving computational work (but that is not necessarily centered
@@ -77,28 +39,40 @@ by Jonathan Whitmore.
 
 * Directory-based development environment isolation with [direnv][direnv]
 
-### 1.1. Repository Contents
+-------------------------------------------------------------------------------
 
-```
-├── README.md                       <- this file
-├── RELEASE-NOTES.md                <- cookiecutter release notes
-├── LICENSE                         <- cookiecutter license
-├── NOTICE                          <- cookiecutter copyright notice
-├── cookiecutter.json               <- cookiecutter configuration file
-├── pyproject.toml                  <- Python project metadata file for
-│                                      cookiecutter development
-├── poetry.lock                     <- Poetry lockfile for cookiecutter
-│                                      development
-├── docs/                           <- cookiecutter documentation
-├── extras/                         <- additional files that may be useful for
-│                                      cookiecutter development
-├── hooks/                          <- cookiecutter scripts that run before
-│                                      and/or after project generation
-├── spikes/                         <- experimental code
-└── {{cookiecutter.project_name}}/  <- cookiecutter template
-```
+Table of Contents
+-----------------
 
-### 1.2. Cookiecutter Parameters
+1. [Usage][#1]
+
+   1.1. [Cookiecutter Parameters][#1.1]
+
+   1.2. [Setting Up a New Research Project][#1.2]
+
+   1.3. [Publishing Project Documentation to GitHub Pages][#1.3]
+
+   1.4. [Known Issues][#1.4]
+
+2. [Contributor Notes][#2]
+
+   2.1. [License][#2.1]
+
+   2.2. [Repository Contents][#2.2]
+
+   2.3. [Software Requirements][#2.3]
+
+   2.4. [Setting Up to Develop the Cookiecutter][#2.4]
+
+   2.5. [Additional Notes][#2.4]
+
+3. [Documentation][#3]
+
+-------------------------------------------------------------------------------
+
+## 1. Usage
+
+### 1.1. Cookiecutter Parameters
 
 * `project_name`: project name
 
@@ -117,17 +91,7 @@ by Jonathan Whitmore.
 * `enable_julia`: flag indicating whether Julia should be enabled for the
   project
 
-### 1.3. License
-
-The contents of this cookiecutter are covered under the Apache License 2.0
-(included in the `LICENSE` file). The copyright for this cookiecutter is
-contained in the `NOTICE` file.
-
--------------------------------------------------------------------------------
-
-## 2. Usage
-
-### 2.1. Setting Up a New Research Project
+### 1.2. Setting Up a New Research Project
 
 1. ___Prerequisites___
 
@@ -323,7 +287,7 @@ contained in the `NOTICE` file.
    * Commit all updated files (e.g., `poetry.lock`, `Project.toml`) to the
      project Git repository.
 
-### 2.2. Publishing Project Documentation to GitHub Pages
+### 1.3. Publishing Project Documentation to GitHub Pages
 
 1. From the project GitHub repository, navigate to "Settings" > "Pages" (in the
    "Code and automation" section of the side menu) and configure GitHub Pages
@@ -340,7 +304,7 @@ contained in the `NOTICE` file.
    automatically build project documentation from the `README.md` file (and
    any linked Markdown files) and publish them to the project GitHub Pages.
 
-### 2.3. Known Issues
+### 1.4. Known Issues
 
 * When including `numba` as a project dependency, the Python version constraint
   `pyproject.toml` needs to be more restrictive than the default `^3.8`. For
@@ -353,9 +317,36 @@ contained in the `NOTICE` file.
 
 -------------------------------------------------------------------------------
 
-## 3. Contributor Notes
+## 2. Contributor Notes
 
-### 3.1. Software Requirements
+### 2.1. License
+
+The contents of this cookiecutter are covered under the Apache License 2.0
+(included in the `LICENSE` file). The copyright for this cookiecutter is
+contained in the `NOTICE` file.
+
+### 2.2. Repository Contents
+
+```
+├── README.md                       <- this file
+├── RELEASE-NOTES.md                <- cookiecutter release notes
+├── LICENSE                         <- cookiecutter license
+├── NOTICE                          <- cookiecutter copyright notice
+├── cookiecutter.json               <- cookiecutter configuration file
+├── pyproject.toml                  <- Python project metadata file for
+│                                      cookiecutter development
+├── poetry.lock                     <- Poetry lockfile for cookiecutter
+│                                      development
+├── docs/                           <- cookiecutter documentation
+├── extras/                         <- additional files that may be useful for
+│                                      cookiecutter development
+├── hooks/                          <- cookiecutter scripts that run before
+│                                      and/or after project generation
+├── spikes/                         <- experimental code
+└── {{cookiecutter.project_name}}/  <- cookiecutter template
+```
+
+### 2.3. Software Requirements
 
 #### Base Requirements
 
@@ -371,7 +362,7 @@ contained in the `NOTICE` file.
 
 See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
-### 3.2. Setting Up to Develop the Cookiecutter
+### 2.4. Setting Up to Develop the Cookiecutter
 
 1. Set up a dedicated virtual environment for cookiecutter development.
    See Step 3 from [Section 2.1][#2.1] for instructions on how to set up
@@ -390,7 +381,7 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 4. Make the cookiecutter better!
 
-### 3.3. Additional Notes
+### 2.5. Additional Notes
 
 #### Updating Cookiecutter Template Dependencies
 
@@ -456,7 +447,7 @@ package dependencies for the template.
 
 -------------------------------------------------------------------------------
 
-## 4. Documentation
+## 3. Documentation
 
 * [FastDS Quick Reference][fastds-quick-reference]
 
@@ -468,38 +459,36 @@ package dependencies for the template.
 
 -------------------------------------------------------------------------------
 
-[-----------------------------INTERNAL LINKS-----------------------------]: #
+[----------------------------- INTERNAL LINKS -----------------------------]: #
 
-[#1]: #1-overview
-[#1.1]: #11-repository-contents
-[#1.2]: #12-cookiecutter-parameters
-[#1.3]: #13-license
+[#1]: #1-usage
+[#1.1]: #11-cookiecutter-parameters
+[#1.2]: #12-setting-up-a-new-research-project
+[#1.3]: #13-publishing-project-documentation-to-github-pages
+[#1.4]: #14-known-issues
 
-[#2]: #2-usage
-[#2.1]: #21-setting-up-a-new-research-project
-[#2.2]: #22-publishing-project-documentation-to-github-pages
-[#2.3]: #23-known-issues
+[#2]: #2-contributor-notes
+[#2.1]: #21-license
+[#2.2]: #22-repository-contents
+[#2.3]: #23-software-requirements
+[#2.4]: #24-setting-up-to-develop-the-cookiecutter
+[#2.5]: #25-additional-notes
 
-[#3]: #3-contributor-notes
-[#3.1]: #31-software-requirements
-[#3.2]: #32-setting-up-to-develop-the-cookiecutter
-[#3.3]: #33-additional-notes
+[#3]: #3-documentation
 
-[#4]: #4-documentation
+[---------------------------- REPOSITORY LINKS ----------------------------]: #
 
-[-----------------------------REPOSITORY LINKS-----------------------------]: #
+[fastds-quick-reference]: {{cookiecutter.project_name}}/extras/quick-references/FastDS-Quick-Reference.md
 
-[fastds-quick-reference]: {{cookiecutter.project_name}}/docs/references/Quick-References/FastDS-Quick-Reference.md
+[julia-quick-reference]: {{cookiecutter.project_name}}/extras/quick-references/Julia-Quick-Reference.md
 
-[julia-quick-reference]: {{cookiecutter.project_name}}/docs/references/Quick-References/Julia-Quick-Reference.md
+[mlflow-quick-reference]: {{cookiecutter.project_name}}/extras/quick-references/MLflow-Quick-Reference.md
 
-[mlflow-quick-reference]: {{cookiecutter.project_name}}/docs/references/Quick-References/MLflow-Quick-Reference.md
-
-[poetry-quick-reference]: {{cookiecutter.project_name}}/docs/references/Quick-References/Poetry-Quick-Reference.md
+[poetry-quick-reference]: {{cookiecutter.project_name}}/extras/quick-references/Poetry-Quick-Reference.md
 
 [vlxi-cookiecutter-research]: https://github.com/velexi-corporation/VLXI-Cookiecutter-Research
 
-[-----------------------------EXTERNAL LINKS-----------------------------]: #
+[----------------------------- EXTERNAL LINKS -----------------------------]: #
 
 [black]: https://black.readthedocs.io/
 
