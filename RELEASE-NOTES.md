@@ -4,7 +4,7 @@ Velexi Research Project Cookiecutter Release Notes
 -------------------------------------------------------------------------------
 0.7.3 (2022-10-17)
 ==================
-* Fix bug in authors field of all pyproject.toml files.
+* Fix bug in authors field of pyproject.toml files.
 * Update documentation.
 
 -------------------------------------------------------------------------------
