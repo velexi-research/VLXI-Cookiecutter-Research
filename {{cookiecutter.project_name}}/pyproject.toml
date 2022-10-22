@@ -42,8 +42,7 @@ pytest-xdist = "^2.5"
 
 [tool.pytest.ini_options]
 minversion = "6.0"
-addopts = "-ra --doctest-modules --flake8 --cov"
-python_files = "test_*.py"
+addopts = "-ra --doctest-modules --flake8 --cov --cov-report="
 testpaths = [
     "src",
     "tests"
