@@ -34,7 +34,7 @@ radon = "^5.1"
 [tool.poetry.group.test.dependencies]
 coverage = "^6.4"
 pylint = "^2.14"
-pytest = "^7.1"
+pytest = "^7.2"
 pytest-cov = "^3.0"
 pytest-flake8 = "^1.1"
 pytest-pylint = "^0,>=0.18"
