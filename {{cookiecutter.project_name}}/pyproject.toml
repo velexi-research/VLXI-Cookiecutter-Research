@@ -9,7 +9,7 @@ authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}>"]
 [tool.poetry.dependencies]
 python = "{{ cookiecutter.python_version }}"
 bcrypt = "^3.2.2"
-dvc = {extras = ["all"], version = "^2.17"}
+dvc = {extras = ["s3"], version = "^2.17"}
 fastds = "^0,>=0.6"
 ipython = "^8.4"
 jupyterlab = "^3.4"
