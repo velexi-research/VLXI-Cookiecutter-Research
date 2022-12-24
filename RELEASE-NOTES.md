@@ -2,13 +2,27 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.7.5 (2022-12-24)
+==================
+### Cookiecutter Template Enhancements
+* Restructure repository to be more tuned for research workflows.
+* Update pre-commit configuration to allow larger file sizes (e.g., Jupyter
+  notebooks with figures).
+* Change default project name in `pyproject.toml` to use dashes instead of
+  underscores.
+* Update package dependencies to address security vulnerabilities.
+* Update README template.
+
+-------------------------------------------------------------------------------
 0.7.4 (2022-10-22)
 ==================
+### Cookiecutter Template Enhancements
 * Improve pytest configuration.
 
 -------------------------------------------------------------------------------
 0.7.3 (2022-10-17)
 ==================
+### Cookiecutter Template Enhancements
 * Fix bug in authors field of pyproject.toml files.
 * Update documentation.
 
