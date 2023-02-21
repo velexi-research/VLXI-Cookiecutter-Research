@@ -74,7 +74,7 @@ radon-raw:
 
 ## Generate API documentation in HTML format.{% if cookiecutter.enable_julia == 'yes' %} Note: only generates docs for Python modules.{% endif %}
 docs:
-	pdoc ${SRC_DIR} -o docs/api
+	pdoc ${SRC_DIR} -o docs/api --math
 
 # --- Utility rules
 
