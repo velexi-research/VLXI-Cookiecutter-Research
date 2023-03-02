@@ -25,7 +25,7 @@ pywin32 = [
     { version = '>=301', platform = 'win32' },
 ]
 
-[tool.poetry.group.code-quality.dependencies]
+[tool.poetry.group.dev.dependencies]
 black = {extras = ["jupyter"], version = "^22.10.0"}
 flake8 = "<5.0.0"  # Unpin after compatibility with pytest-flake8 is fixed
 pre-commit = "^2.20.0"
