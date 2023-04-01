@@ -21,11 +21,7 @@ MLFLOW_TRACKING_URI=
 
 # ====================== DO NOT EDIT BELOW ====================== #
 
-# --- Enable Python 3 layout
-
-layout_python3
-
-# --- Configure environment
+# --- Preparations
 
 # Find project root directory
 #
@@ -33,14 +29,20 @@ layout_python3
 #       (e.g., autoenv)
 PROJECT_ROOT_DIR=`builtin cd $(dirname "${BASH_SOURCE[0]}") && pwd`
 
-# Python
+# --- Python configuration
+
+# Enable Python 3 layout
+layout_python3
+
+# Python environment
 export PYTHONPATH=$PROJECT_ROOT_DIR
 PYTHONPATH_EXTRA="src $PYTHONPATH_EXTRA"
 for DIR in $PYTHONPATH_EXTRA; do
     path_add PYTHONPATH $PROJECT_ROOT_DIR/$DIR
 done
 
-# Julia
+# --- Julia configuration
+
 export JULIA_PROJECT=@.
 export JULIA_LOAD_PATH=$PROJECT_ROOT_DIR
 JULIA_LOAD_PATH_EXTRA="src $JULIA_LOAD_PATH_EXTRA"
@@ -50,15 +52,19 @@ done
 export JULIA_LOAD_PATH=$JULIA_LOAD_PATH:  # Append trailing ":" so that Julia
                                           # includes the default LOAD_PATH
 
-# Jupyter
+# --- Jupyter configuration
+
 export JUPYTER_CONFIG_DIR=$PROJECT_ROOT_DIR/.jupyter
 path_add JUPYTER_PATH $LIB_DIR
 
-# MLflow
+# --- MLflow configuration
+
 if [ -z "$MLFLOW_TRACKING_URI" ]; then
     MLFLOW_TRACKING_URI=$PROJECT_ROOT_DIR/mlruns
 fi
 export MLFLOW_TRACKING_URI
+
+# --- Shell environment
 
 # Set PATH
 PATH_EXTRA="bin $PATH_EXTRA"
