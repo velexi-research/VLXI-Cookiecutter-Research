@@ -95,7 +95,7 @@ Table of Contents
 
    * Install [Git][git].
 
-   * Install [Python][python] 3.8 (or greater).
+   * Install [Python][python] 3.9 (or greater).
 
    * If the project uses [Julia][julia], install [Julia][julia] 1.6 (or
      greater).
@@ -305,12 +305,12 @@ Table of Contents
 ### 1.4. Known Issues
 
 * When including `numba` as a project dependency, the Python version constraint
-  `pyproject.toml` needs to be more restrictive than the default `^3.8`. For
+  `pyproject.toml` needs to be more restrictive than the default `^3.9`. For
   numba 0.55, the Python version constraint in `[tool.poetry.dependencies]`
   section of `pyproject.toml` should be set to:
 
   ```
-  python = ">=3.8,<3.11"
+  python = ">=3.9,<3.11"
   ```
 
 -------------------------------------------------------------------------------
@@ -349,7 +349,7 @@ contained in the `NOTICE` file.
 #### Base Requirements
 
 * [Git][git]
-* [Python][python] (>=3.8)
+* [Python][python] (>=3.9)
 * [Poetry][poetry]
 
 #### Optional Packages
