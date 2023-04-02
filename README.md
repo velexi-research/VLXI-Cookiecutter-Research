@@ -350,7 +350,7 @@ contained in the `NOTICE` file.
 
 * [Git][git]
 * [Python][python] (>=3.9)
-* [Poetry][poetry]
+* [Poetry][poetry] (>=1.2)
 
 #### Optional Packages
 
