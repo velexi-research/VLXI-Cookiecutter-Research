@@ -9,7 +9,7 @@
     "MIT License",
     "None"
   ],
-  "python_version": "^3.8",
+  "python_version": "^3.9",
   "enable_julia": [
     "yes",
     "no"
