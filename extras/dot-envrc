@@ -14,10 +14,6 @@ PYTHONPATH_EXTRA=
 
 # ====================== DO NOT EDIT BELOW ====================== #
 
-# --- Enable Python 3 layout
-
-layout_python3
-
 # --- Configure environment
 
 # Find project root directory
@@ -26,11 +22,18 @@ layout_python3
 #       (e.g., autoenv)
 PROJECT_ROOT_DIR=`builtin cd $(dirname "${BASH_SOURCE[0]}") && pwd`
 
-# Python
+# --- Python configuration
+
+# Enable Python 3 layout
+layout_python3
+
+# Python environment
 export PYTHONPATH=$PROJECT_ROOT_DIR
 for DIR in $PYTHONPATH_EXTRA; do
     path_add PYTHONPATH $PROJECT_ROOT_DIR/$DIR
 done
+
+# --- Shell configuration
 
 # Set PATH
 PATH_EXTRA="bin $PATH_EXTRA"
