@@ -1,6 +1,6 @@
 {
   "project_name": "project-name",
-  "package_name": "{{ cookiecutter.project_name | slugify(separator='_') }}",
+  "__package_name": "{{ cookiecutter.project_name | slugify(separator='_') }}",
   "author": "Your Name",
   "email": "{{ cookiecutter.author | slugify(separator='.') }}@example.com",
   "license": [
@@ -9,7 +9,7 @@
     "MIT License",
     "None"
   ],
-  "python_version": "^3.8",
+  "python_version": "^3.9",
   "enable_julia": [
     "yes",
     "no"

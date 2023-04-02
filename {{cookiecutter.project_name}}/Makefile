@@ -15,7 +15,7 @@ PYTEST_PYLINT_OPTIONS=
 
 # --- Testing rules
 
-.PHONY: test fast-test full-test \
+.PHONY: test fast-test \
         coverage-report coverage-html
 
 ## Run all tests
@@ -25,10 +25,6 @@ test:
 ## Run tests in fail-fast mode (i.e., stop at first failure)
 fast-test:
 	make test PYTEST_OPTIONS="-x ${PYTEST_OPTIONS}"
-
-## Run comprehensive tests (includes linting with pylint)
-full-test:
-	make test PYTEST_PYLINT_OPTIONS="--pylint --pylint-error-types=EF";
 
 .coverage:
 	-make test
@@ -78,7 +74,7 @@ radon-raw:
 
 ## Generate API documentation in HTML format.{% if cookiecutter.enable_julia == 'yes' %} Note: only generates docs for Python modules.{% endif %}
 docs:
-	pdoc ${SRC_DIR} -o docs/api
+	pdoc ${SRC_DIR} -o docs/api --math
 
 # --- Utility rules
 

@@ -2,6 +2,20 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.8.0 (2023-04-02)
+==================
+### Cookiecutter Template
+* Update cookiecutter parameters.
+  * "package_name" is no longer user-defined. It is now automatically set.
+* Remove "full-test" target from Makefile.
+* Reorganize dependency groups in `pyproject.toml`.
+* Update package dependency versions.
+* Polish code and documentation.
+
+### Cookiecutter Development
+* Update package dependency versions.
+
+-------------------------------------------------------------------------------
 0.7.5 (2022-12-24)
 ==================
 ### Cookiecutter Template Enhancements
