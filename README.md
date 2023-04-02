@@ -76,8 +76,6 @@ Table of Contents
 
 * `project_name`: project name
 
-* `package_name`: name for Python package
-
 * `author`: project's primary author
 
 * `email`: primary author's email
@@ -428,7 +426,7 @@ package dependencies for the template.
     <!-- {% raw %} -->
     ```jinja
     [tool.poetry]
-    name = "{{ cookiecutter.project_name | slugify }}"
+    name = "{{ cookiecutter.__package_name }}"
     version = "0.0.0"
     description = ""
     license = "{% if cookiecutter.license == 'Apache License 2.0' %}Apache-2.0{% elif cookiecutter.license == 'BSD-3-Clause License' %}BSD-3-Clause{% elif cookiecutter.license == 'MIT License' %}MIT{% endif %}"
