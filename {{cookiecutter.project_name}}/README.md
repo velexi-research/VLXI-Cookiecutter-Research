@@ -84,7 +84,7 @@ package dependencies.
 
   * Install [Git][git].
 
-  * Install [Python][python] 3.8 (or greater).
+  * Install [Python][python] {{ cookiecutter.python_version | trim("~") | trim("^") }} (or greater).
     <strong><em>Recommendation</em></strong>: use `pyenv` to configure the
     project to use a specific version of Python.
   {% if cookiecutter.enable_julia == 'yes' %}
