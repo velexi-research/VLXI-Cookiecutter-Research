@@ -7,7 +7,7 @@ import sys
 
 PACKAGE_NAME_REGEX = r"^[_a-zA-Z][_a-zA-Z0-9]+$"
 
-package_name = "{{ cookiecutter.package_name }}"
+package_name = "{{ cookiecutter.__package_name }}"
 
 if not re.match(PACKAGE_NAME_REGEX, package_name):
     print()
