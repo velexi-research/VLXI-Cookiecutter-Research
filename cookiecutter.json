@@ -1,5 +1,6 @@
 {
   "project_name": "project-name",
+  "__project_name": "{{ cookiecutter.project_name | slugify }}",
   "__package_name": "{{ cookiecutter.project_name | slugify(separator='_') }}",
   "author": "Your Name",
   "email": "{{ cookiecutter.author | slugify(separator='.') }}@example.com",
