@@ -266,9 +266,9 @@ Table of Contents
      $ poetry add numpy
      ```
 
-   * Customize the `README.md` file to reflect the specifics of the project.
-
    * Fill in any empty fields in `pyproject.toml`.
+
+   * Customize the `README.md` file to reflect the specifics of the project.
 
    * If the project was created with Julia support enabled, configure the Julia
      package dependencies for the project
