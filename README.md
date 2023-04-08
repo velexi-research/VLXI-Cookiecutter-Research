@@ -478,13 +478,13 @@ package dependencies for the template.
 
 [---------------------------- REPOSITORY LINKS ----------------------------]: #
 
-[fastds-quick-reference]: {{cookiecutter.project_name}}/extras/quick-references/FastDS-Quick-Reference.md
+[fastds-quick-reference]: {{cookiecutter.__project_name}}/extras/quick-references/FastDS-Quick-Reference.md
 
-[julia-quick-reference]: {{cookiecutter.project_name}}/extras/quick-references/Julia-Quick-Reference.md
+[julia-quick-reference]: {{cookiecutter.__project_name}}/extras/quick-references/Julia-Quick-Reference.md
 
-[mlflow-quick-reference]: {{cookiecutter.project_name}}/extras/quick-references/MLflow-Quick-Reference.md
+[mlflow-quick-reference]: {{cookiecutter.__project_name}}/extras/quick-references/MLflow-Quick-Reference.md
 
-[poetry-quick-reference]: {{cookiecutter.project_name}}/extras/quick-references/Poetry-Quick-Reference.md
+[poetry-quick-reference]: {{cookiecutter.__project_name}}/extras/quick-references/Poetry-Quick-Reference.md
 
 [vlxi-cookiecutter-research]: https://github.com/velexi-corporation/VLXI-Cookiecutter-Research
 
