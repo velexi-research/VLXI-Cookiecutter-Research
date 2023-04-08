@@ -328,22 +328,22 @@ contained in the `NOTICE` file.
 ### 2.2. Repository Contents
 
 ```
-├── README.md                       <- this file
-├── RELEASE-NOTES.md                <- cookiecutter release notes
-├── LICENSE                         <- cookiecutter license
-├── NOTICE                          <- cookiecutter copyright notice
-├── cookiecutter.json               <- cookiecutter configuration file
-├── pyproject.toml                  <- Python project metadata file for
-│                                      cookiecutter development
-├── poetry.lock                     <- Poetry lockfile for cookiecutter
-│                                      development
-├── docs/                           <- cookiecutter documentation
-├── extras/                         <- additional files that may be useful for
-│                                      cookiecutter development
-├── hooks/                          <- cookiecutter scripts that run before
-│                                      and/or after project generation
-├── spikes/                         <- experimental code
-└── {{cookiecutter.project_name}}/  <- cookiecutter template
+├── README.md                         <- this file
+├── RELEASE-NOTES.md                  <- cookiecutter release notes
+├── LICENSE                           <- cookiecutter license
+├── NOTICE                            <- cookiecutter copyright notice
+├── cookiecutter.json                 <- cookiecutter configuration file
+├── pyproject.toml                    <- Python project metadata file for
+│                                        cookiecutter development
+├── poetry.lock                       <- Poetry lockfile for cookiecutter
+│                                        development
+├── docs/                             <- cookiecutter documentation
+├── extras/                           <- additional files that may be useful for
+│                                        cookiecutter development
+├── hooks/                            <- cookiecutter scripts that run before
+│                                        and/or after project generation
+├── spikes/                           <- experimental code
+└── {{cookiecutter.__project_name}}/  <- cookiecutter template
 ```
 
 ### 2.3. Software Requirements
@@ -386,7 +386,7 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 #### Updating Cookiecutter Template Dependencies
 
 To update the Python dependencies for the template (contained in the
-`{{cookiecutter.project_name}}` directory), use the following procedure to
+`{{cookiecutter.__project_name}}` directory), use the following procedure to
 ensure that package dependencies for developing the non-template components
 of the cookiecutter (e.g., `hooks/pre_gen_project.py`) do not interfere with
 package dependencies for the template.
@@ -417,10 +417,10 @@ package dependencies for the template.
   * Use `poetry` to update the package dependencies and versions recorded in
     the `poetry.lock` file.
 
-* Update `{{cookiecutter.project_name}}/pyproject.toml`.
+* Update `{{cookiecutter.__project_name}}/pyproject.toml`.
 
   * Copy `pyproject.toml` from the pristine project to
-    `{{cookiecutter.project_name}}/pyproject.toml`.
+    `{{cookiecutter.__project_name}}/pyproject.toml`.
 
   * Restore the templated values in the `[tool.poetry]` section to the
     following:
@@ -437,10 +437,10 @@ package dependencies for the template.
     ```
     <!-- {% endraw %} -->
 
-* Update `{{cookiecutter.project_name}}/poetry.lock`.
+* Update `{{cookiecutter.__project_name}}/poetry.lock`.
 
   * Copy `poetry.lock` from the pristine project to
-    `{{cookiecutter.project_name}}/poetry.lock`.
+    `{{cookiecutter.__project_name}}/poetry.lock`.
 
 * Commit the updated `pyproject.toml` and `poetry.lock` files to the Git
   repository.
