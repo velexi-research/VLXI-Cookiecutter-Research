@@ -2,26 +2,26 @@
 
 [[package]]
 name = "aiobotocore"
-version = "2.4.2"
+version = "2.5.0"
 description = "Async client for aws services using botocore and aiohttp"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "aiobotocore-2.4.2-py3-none-any.whl", hash = "sha256:4acd1ebe2e44be4b100aa553910bda899f6dc090b3da2bc1cf3d5de2146ed208"},
-    {file = "aiobotocore-2.4.2.tar.gz", hash = "sha256:0603b74a582dffa7511ce7548d07dc9b10ec87bc5fb657eb0b34f9bd490958bf"},
+    {file = "aiobotocore-2.5.0-py3-none-any.whl", hash = "sha256:9a2a022d7b78ec9a2af0de589916d2721cddbf96264401b78d7a73c1a1435f3b"},
+    {file = "aiobotocore-2.5.0.tar.gz", hash = "sha256:6a5b397cddd4f81026aa91a14c7dd2650727425740a5af8ba75127ff663faf67"},
 ]
 
 [package.dependencies]
 aiohttp = ">=3.3.1"
 aioitertools = ">=0.5.1"
-boto3 = {version = ">=1.24.59,<1.24.60", optional = true, markers = "extra == \"boto3\""}
-botocore = ">=1.27.59,<1.27.60"
+boto3 = {version = ">=1.26.76,<1.26.77", optional = true, markers = "extra == \"boto3\""}
+botocore = ">=1.29.76,<1.29.77"
 wrapt = ">=1.10.10"
 
 [package.extras]
-awscli = ["awscli (>=1.25.60,<1.25.61)"]
-boto3 = ["boto3 (>=1.24.59,<1.24.60)"]
+awscli = ["awscli (>=1.27.76,<1.27.77)"]
+boto3 = ["boto3 (>=1.26.76,<1.26.77)"]
 
 [[package]]
 name = "aiohttp"
@@ -179,14 +179,14 @@ frozenlist = ">=1.1.0"
 
 [[package]]
 name = "alembic"
-version = "1.10.2"
+version = "1.10.3"
 description = "A database migration tool for SQLAlchemy."
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "alembic-1.10.2-py3-none-any.whl", hash = "sha256:8b48368f6533c064b39c024e1daba15ae7f947eac84185c28c06bbe1301a5497"},
-    {file = "alembic-1.10.2.tar.gz", hash = "sha256:457eafbdc0769d855c2c92cbafe6b7f319f916c80cf4ed02b8f394f38b51b89d"},
+    {file = "alembic-1.10.3-py3-none-any.whl", hash = "sha256:b2e0a6cfd3a8ce936a1168320bcbe94aefa3f4463cd773a968a55071beb3cd37"},
+    {file = "alembic-1.10.3.tar.gz", hash = "sha256:32a69b13a613aeb7e8093f242da60eff9daed13c0df02fff279c1b06c32965d2"},
 ]
 
 [package.dependencies]
@@ -499,14 +499,14 @@ typecheck = ["mypy"]
 
 [[package]]
 name = "beautifulsoup4"
-version = "4.12.0"
+version = "4.12.2"
 description = "Screen-scraping library"
 category = "main"
 optional = false
 python-versions = ">=3.6.0"
 files = [
-    {file = "beautifulsoup4-4.12.0-py3-none-any.whl", hash = "sha256:2130a5ad7f513200fae61a17abb5e338ca980fa28c439c0571014bc0217e9591"},
-    {file = "beautifulsoup4-4.12.0.tar.gz", hash = "sha256:c5fceeaec29d09c84970e47c65f2f0efe57872f7cff494c9691a26ec0ff13234"},
+    {file = "beautifulsoup4-4.12.2-py3-none-any.whl", hash = "sha256:bd2520ca0d9d7d12694a53d44ac482d181b4ec1888909b035a3dbf40d0f57d4a"},
+    {file = "beautifulsoup4-4.12.2.tar.gz", hash = "sha256:492bbc69dca35d12daac71c4db1bfff0c876c00ef4a2ffacce226d4638eb72da"},
 ]
 
 [package.dependencies]
@@ -587,18 +587,18 @@ css = ["tinycss2 (>=1.1.0,<1.2)"]
 
 [[package]]
 name = "boto3"
-version = "1.24.59"
+version = "1.26.76"
 description = "The AWS SDK for Python"
 category = "main"
 optional = false
 python-versions = ">= 3.7"
 files = [
-    {file = "boto3-1.24.59-py3-none-any.whl", hash = "sha256:34ab44146a2c4e7f4e72737f4b27e6eb5e0a7855c2f4599e3d9199b6a0a2d575"},
-    {file = "boto3-1.24.59.tar.gz", hash = "sha256:a50b4323f9579cfe22fcf5531fbd40b567d4d74c1adce06aeb5c95fce2a6fb40"},
+    {file = "boto3-1.26.76-py3-none-any.whl", hash = "sha256:b4c2969b7677762914394b8273cc1905dfe5b71f250741c1a575487ae357e729"},
+    {file = "boto3-1.26.76.tar.gz", hash = "sha256:30c7d967ed1c6b5a05643e42cae9d4d36c3f1cb6782637ddc7007a104cfd9027"},
 ]
 
 [package.dependencies]
-botocore = ">=1.27.59,<1.28.0"
+botocore = ">=1.29.76,<1.30.0"
 jmespath = ">=0.7.1,<2.0.0"
 s3transfer = ">=0.6.0,<0.7.0"
 
@@ -607,14 +607,14 @@ crt = ["botocore[crt] (>=1.21.0,<2.0a0)"]
 
 [[package]]
 name = "botocore"
-version = "1.27.59"
+version = "1.29.76"
 description = "Low-level, data-driven core of boto 3."
 category = "main"
 optional = false
 python-versions = ">= 3.7"
 files = [
-    {file = "botocore-1.27.59-py3-none-any.whl", hash = "sha256:69d756791fc024bda54f6c53f71ae34e695ee41bbbc1743d9179c4837a4929da"},
-    {file = "botocore-1.27.59.tar.gz", hash = "sha256:eda4aed6ee719a745d1288eaf1beb12f6f6448ad1fa12f159405db14ba9c92cf"},
+    {file = "botocore-1.29.76-py3-none-any.whl", hash = "sha256:70735b00cd529f152992231ca6757e458e5ec25db43767b3526e9a35b2f143b7"},
+    {file = "botocore-1.29.76.tar.gz", hash = "sha256:c2f67b6b3f8acf2968eafca06526f07b9fb0d27bac4c68a635d51abb675134a7"},
 ]
 
 [package.dependencies]
@@ -623,7 +623,7 @@ python-dateutil = ">=2.1,<3.0.0"
 urllib3 = ">=1.25.4,<1.27"
 
 [package.extras]
-crt = ["awscrt (==0.14.0)"]
+crt = ["awscrt (==0.16.9)"]
 
 [[package]]
 name = "celery"
@@ -1050,29 +1050,30 @@ tabulate = ">=0.7.7"
 
 [[package]]
 name = "debugpy"
-version = "1.6.6"
+version = "1.6.7"
 description = "An implementation of the Debug Adapter Protocol for Python"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "debugpy-1.6.6-cp310-cp310-macosx_11_0_x86_64.whl", hash = "sha256:0ea1011e94416e90fb3598cc3ef5e08b0a4dd6ce6b9b33ccd436c1dffc8cd664"},
-    {file = "debugpy-1.6.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:dff595686178b0e75580c24d316aa45a8f4d56e2418063865c114eef651a982e"},
-    {file = "debugpy-1.6.6-cp310-cp310-win32.whl", hash = "sha256:87755e173fcf2ec45f584bb9d61aa7686bb665d861b81faa366d59808bbd3494"},
-    {file = "debugpy-1.6.6-cp310-cp310-win_amd64.whl", hash = "sha256:72687b62a54d9d9e3fb85e7a37ea67f0e803aaa31be700e61d2f3742a5683917"},
-    {file = "debugpy-1.6.6-cp37-cp37m-macosx_10_15_x86_64.whl", hash = "sha256:78739f77c58048ec006e2b3eb2e0cd5a06d5f48c915e2fc7911a337354508110"},
-    {file = "debugpy-1.6.6-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:23c29e40e39ad7d869d408ded414f6d46d82f8a93b5857ac3ac1e915893139ca"},
-    {file = "debugpy-1.6.6-cp37-cp37m-win32.whl", hash = "sha256:7aa7e103610e5867d19a7d069e02e72eb2b3045b124d051cfd1538f1d8832d1b"},
-    {file = "debugpy-1.6.6-cp37-cp37m-win_amd64.whl", hash = "sha256:f6383c29e796203a0bba74a250615ad262c4279d398e89d895a69d3069498305"},
-    {file = "debugpy-1.6.6-cp38-cp38-macosx_10_15_x86_64.whl", hash = "sha256:23363e6d2a04d726bbc1400bd4e9898d54419b36b2cdf7020e3e215e1dcd0f8e"},
-    {file = "debugpy-1.6.6-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9b5d1b13d7c7bf5d7cf700e33c0b8ddb7baf030fcf502f76fc061ddd9405d16c"},
-    {file = "debugpy-1.6.6-cp38-cp38-win32.whl", hash = "sha256:70ab53918fd907a3ade01909b3ed783287ede362c80c75f41e79596d5ccacd32"},
-    {file = "debugpy-1.6.6-cp38-cp38-win_amd64.whl", hash = "sha256:c05349890804d846eca32ce0623ab66c06f8800db881af7a876dc073ac1c2225"},
-    {file = "debugpy-1.6.6-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a771739902b1ae22a120dbbb6bd91b2cae6696c0e318b5007c5348519a4211c6"},
-    {file = "debugpy-1.6.6-cp39-cp39-win32.whl", hash = "sha256:549ae0cb2d34fc09d1675f9b01942499751d174381b6082279cf19cdb3c47cbe"},
-    {file = "debugpy-1.6.6-cp39-cp39-win_amd64.whl", hash = "sha256:de4a045fbf388e120bb6ec66501458d3134f4729faed26ff95de52a754abddb1"},
-    {file = "debugpy-1.6.6-py2.py3-none-any.whl", hash = "sha256:be596b44448aac14eb3614248c91586e2bc1728e020e82ef3197189aae556115"},
-    {file = "debugpy-1.6.6.zip", hash = "sha256:b9c2130e1c632540fbf9c2c88341493797ddf58016e7cba02e311de9b0a96b67"},
+    {file = "debugpy-1.6.7-cp310-cp310-macosx_11_0_x86_64.whl", hash = "sha256:b3e7ac809b991006ad7f857f016fa92014445085711ef111fdc3f74f66144096"},
+    {file = "debugpy-1.6.7-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e3876611d114a18aafef6383695dfc3f1217c98a9168c1aaf1a02b01ec7d8d1e"},
+    {file = "debugpy-1.6.7-cp310-cp310-win32.whl", hash = "sha256:33edb4afa85c098c24cc361d72ba7c21bb92f501104514d4ffec1fb36e09c01a"},
+    {file = "debugpy-1.6.7-cp310-cp310-win_amd64.whl", hash = "sha256:ed6d5413474e209ba50b1a75b2d9eecf64d41e6e4501977991cdc755dc83ab0f"},
+    {file = "debugpy-1.6.7-cp37-cp37m-macosx_10_15_x86_64.whl", hash = "sha256:38ed626353e7c63f4b11efad659be04c23de2b0d15efff77b60e4740ea685d07"},
+    {file = "debugpy-1.6.7-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:279d64c408c60431c8ee832dfd9ace7c396984fd7341fa3116aee414e7dcd88d"},
+    {file = "debugpy-1.6.7-cp37-cp37m-win32.whl", hash = "sha256:dbe04e7568aa69361a5b4c47b4493d5680bfa3a911d1e105fbea1b1f23f3eb45"},
+    {file = "debugpy-1.6.7-cp37-cp37m-win_amd64.whl", hash = "sha256:f90a2d4ad9a035cee7331c06a4cf2245e38bd7c89554fe3b616d90ab8aab89cc"},
+    {file = "debugpy-1.6.7-cp38-cp38-macosx_10_15_x86_64.whl", hash = "sha256:5224eabbbeddcf1943d4e2821876f3e5d7d383f27390b82da5d9558fd4eb30a9"},
+    {file = "debugpy-1.6.7-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:bae1123dff5bfe548ba1683eb972329ba6d646c3a80e6b4c06cd1b1dd0205e9b"},
+    {file = "debugpy-1.6.7-cp38-cp38-win32.whl", hash = "sha256:9cd10cf338e0907fdcf9eac9087faa30f150ef5445af5a545d307055141dd7a4"},
+    {file = "debugpy-1.6.7-cp38-cp38-win_amd64.whl", hash = "sha256:aaf6da50377ff4056c8ed470da24632b42e4087bc826845daad7af211e00faad"},
+    {file = "debugpy-1.6.7-cp39-cp39-macosx_11_0_x86_64.whl", hash = "sha256:0679b7e1e3523bd7d7869447ec67b59728675aadfc038550a63a362b63029d2c"},
+    {file = "debugpy-1.6.7-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:de86029696e1b3b4d0d49076b9eba606c226e33ae312a57a46dca14ff370894d"},
+    {file = "debugpy-1.6.7-cp39-cp39-win32.whl", hash = "sha256:d71b31117779d9a90b745720c0eab54ae1da76d5b38c8026c654f4a066b0130a"},
+    {file = "debugpy-1.6.7-cp39-cp39-win_amd64.whl", hash = "sha256:c0ff93ae90a03b06d85b2c529eca51ab15457868a377c4cc40a23ab0e4e552a3"},
+    {file = "debugpy-1.6.7-py2.py3-none-any.whl", hash = "sha256:53f7a456bc50706a0eaabecf2d3ce44c4d5010e46dfc65b6b81a518b42866267"},
+    {file = "debugpy-1.6.7.zip", hash = "sha256:c4c2f0810fa25323abfdfa36cbbbb24e5c3b1a42cb762782de64439c575d67f2"},
 ]
 
 [[package]]
@@ -1279,14 +1280,14 @@ pgp = ["gpg"]
 
 [[package]]
 name = "dvc"
-version = "2.52.0"
+version = "2.53.0"
 description = "Git for data scientists - manage your code and data together"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "dvc-2.52.0-py3-none-any.whl", hash = "sha256:f89e32706fc3a9dddefb8fb81a1ba6f54d83e9c1c702eaff62c2ab1e5d6b5158"},
-    {file = "dvc-2.52.0.tar.gz", hash = "sha256:a527a7b833cec0e2f1b235b6b37299d3b817f7d6248f19e847a9bfba2eb013a8"},
+    {file = "dvc-2.53.0-py3-none-any.whl", hash = "sha256:22ad0c03cb1ad36611601e9f047ebb811142180cac15bf474eb911360ca1d822"},
+    {file = "dvc-2.53.0.tar.gz", hash = "sha256:d1d160fa04802676cef701bbd32a950bf490d832d387037c45acfd64e88dc567"},
 ]
 
 [package.dependencies]
@@ -1294,7 +1295,7 @@ colorama = ">=0.3.9"
 configobj = ">=5.0.6"
 distro = ">=1.3"
 dpath = ">=2.1.0,<3"
-dvc-data = ">=0.46.0,<0.47"
+dvc-data = ">=0.47.1,<0.48"
 dvc-http = "*"
 dvc-render = ">=0.3.1,<0.4.0"
 dvc-s3 = {version = "2.21", optional = true, markers = "extra == \"s3\""}
@@ -1317,7 +1318,7 @@ pyparsing = ">=2.4.7"
 requests = ">=2.22"
 rich = ">=12"
 "ruamel.yaml" = ">=0.17.11"
-scmrepo = ">=0.1.17,<1"
+scmrepo = ">=0.2.1,<1"
 shortuuid = ">=0.5"
 shtab = ">=1.3.4,<2"
 tabulate = ">=0.8.7"
@@ -1333,7 +1334,7 @@ dev = ["dvc[azure,gdrive,gs,hdfs,lint,oss,s3,ssh,terraform,tests,webdav,webhdfs]
 gdrive = ["dvc-gdrive (==2.19.1)"]
 gs = ["dvc-gs (==2.22.0)"]
 hdfs = ["dvc-hdfs (==2.19)"]
-lint = ["mypy (==1.1.1)", "pylint (==2.17.1)", "types-colorama", "types-psutil", "types-requests", "types-tabulate", "types-toml", "types-tqdm"]
+lint = ["mypy (==1.1.1)", "pylint (==2.17.2)", "types-colorama", "types-psutil", "types-requests", "types-tabulate", "types-toml", "types-tqdm"]
 oss = ["dvc-oss (==2.19)"]
 s3 = ["dvc-s3 (==2.21)"]
 ssh = ["dvc-ssh (==2.21)"]
@@ -1347,14 +1348,14 @@ webhdfs-kerberos = ["dvc-webhdfs[kerberos] (==2.19)"]
 
 [[package]]
 name = "dvc-data"
-version = "0.46.0"
+version = "0.47.1"
 description = "dvc data"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "dvc-data-0.46.0.tar.gz", hash = "sha256:194c97066abdad708b23146612b06a75636fe79e2b9206e68fd4b325435451cb"},
-    {file = "dvc_data-0.46.0-py3-none-any.whl", hash = "sha256:223c7ac173393d0cdb15bfdaa06c0176993db8b269f60d55c9c6c3735c0a8750"},
+    {file = "dvc-data-0.47.1.tar.gz", hash = "sha256:8981aa2f79dabb8536449345609032ea35ee66a7deafd4f3cfb00eb71318e4de"},
+    {file = "dvc_data-0.47.1-py3-none-any.whl", hash = "sha256:ec29445b860afbcb2d80823f409db323992a415e3ee86b927821af7f4f2ea05b"},
 ]
 
 [package.dependencies]
@@ -1595,18 +1596,18 @@ devel = ["colorama", "json-spec", "jsonschema", "pylint", "pytest", "pytest-benc
 
 [[package]]
 name = "filelock"
-version = "3.10.7"
+version = "3.11.0"
 description = "A platform independent file lock."
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "filelock-3.10.7-py3-none-any.whl", hash = "sha256:bde48477b15fde2c7e5a0713cbe72721cb5a5ad32ee0b8f419907960b9d75536"},
-    {file = "filelock-3.10.7.tar.gz", hash = "sha256:892be14aa8efc01673b5ed6589dbccb95f9a8596f0507e232626155495c18105"},
+    {file = "filelock-3.11.0-py3-none-any.whl", hash = "sha256:f08a52314748335c6460fc8fe40cd5638b85001225db78c2aa01c8c0db83b318"},
+    {file = "filelock-3.11.0.tar.gz", hash = "sha256:3618c0da67adcc0506b015fd11ef7faf1b493f0b40d87728e19986b536890c37"},
 ]
 
 [package.extras]
-docs = ["furo (>=2022.12.7)", "sphinx (>=6.1.3)", "sphinx-autodoc-typehints (>=1.22,!=1.23.4)"]
+docs = ["furo (>=2023.3.27)", "sphinx (>=6.1.3)", "sphinx-autodoc-typehints (>=1.22,!=1.23.4)"]
 testing = ["covdefaults (>=2.3)", "coverage (>=7.2.2)", "diff-cover (>=7.5)", "pytest (>=7.2.2)", "pytest-cov (>=4)", "pytest-mock (>=3.10)", "pytest-timeout (>=2.1)"]
 
 [[package]]
@@ -1778,14 +1779,14 @@ files = [
 
 [[package]]
 name = "fsspec"
-version = "2023.3.0"
+version = "2023.4.0"
 description = "File-system specification"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "fsspec-2023.3.0-py3-none-any.whl", hash = "sha256:bf57215e19dbfa4fe7edae53040cc1deef825e3b1605cca9a8d2c2fadd2328a0"},
-    {file = "fsspec-2023.3.0.tar.gz", hash = "sha256:24e635549a590d74c6c18274ddd3ffab4753341753e923408b1904eaabafe04d"},
+    {file = "fsspec-2023.4.0-py3-none-any.whl", hash = "sha256:f398de9b49b14e9d84d2c2d11b7b67121bc072fe97b930c4e5668ac3917d8307"},
+    {file = "fsspec-2023.4.0.tar.gz", hash = "sha256:bf064186cd8808f0b2f6517273339ba0a0c8fb1b7048991c28bc67f58b8b67cd"},
 ]
 
 [package.dependencies]
@@ -1797,7 +1798,9 @@ abfs = ["adlfs"]
 adl = ["adlfs"]
 arrow = ["pyarrow (>=1)"]
 dask = ["dask", "distributed"]
+devel = ["pytest", "pytest-cov"]
 dropbox = ["dropbox", "dropboxdrivefs", "requests"]
+full = ["adlfs", "aiohttp (!=4.0.0a0,!=4.0.0a1)", "dask", "distributed", "dropbox", "dropboxdrivefs", "fusepy", "gcsfs", "libarchive-c", "ocifs", "panel", "paramiko", "pyarrow (>=1)", "pygit2", "requests", "s3fs", "smbprotocol", "tqdm"]
 fuse = ["fusepy"]
 gcs = ["gcsfs"]
 git = ["pygit2"]
@@ -2778,14 +2781,14 @@ files = [
 
 [[package]]
 name = "mlflow"
-version = "1.30.0"
+version = "1.30.1"
 description = "MLflow: A Platform for ML Development and Productionization"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "mlflow-1.30.0-py3-none-any.whl", hash = "sha256:c464f40e902e4fc1f040f03dbb10b5b729a1fc5797e0d0f2e28c50481a416135"},
-    {file = "mlflow-1.30.0.tar.gz", hash = "sha256:2e7d51f6e2dc6cc2316e72dcf4135217c581c8f4f1f9dde1066aaba9e0b22c7a"},
+    {file = "mlflow-1.30.1-py3-none-any.whl", hash = "sha256:f9d27fc86530a8075f9e633741915af698f410403d474f398165fbdab74ae30d"},
+    {file = "mlflow-1.30.1.tar.gz", hash = "sha256:458e0330b3791c1eb7beeb34efd7a0b9137d4ac78ddae0230e28424f077626a0"},
 ]
 
 [package.dependencies]
@@ -3094,14 +3097,14 @@ setuptools = "*"
 
 [[package]]
 name = "notebook"
-version = "6.5.3"
+version = "6.5.4"
 description = "A web-based notebook environment for interactive computing"
 category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "notebook-6.5.3-py3-none-any.whl", hash = "sha256:50a334ad9d60b30cb759405168ef6fc3d60350ab5439fb1631544bb09dcb2cce"},
-    {file = "notebook-6.5.3.tar.gz", hash = "sha256:b12bee3292211d85dd7e588a790ddce30cb3e8fbcfa1e803522a207f60819e05"},
+    {file = "notebook-6.5.4-py3-none-any.whl", hash = "sha256:dd17e78aefe64c768737b32bf171c1c766666a21cc79a44d37a1700771cab56f"},
+    {file = "notebook-6.5.4.tar.gz", hash = "sha256:517209568bd47261e2def27a140e97d49070602eea0d226a696f42a7f16c9a4e"},
 ]
 
 [package.dependencies]
@@ -3844,18 +3847,17 @@ files = [
 
 [[package]]
 name = "pytest"
-version = "7.2.2"
+version = "7.3.0"
 description = "pytest: simple powerful testing with Python"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "pytest-7.2.2-py3-none-any.whl", hash = "sha256:130328f552dcfac0b1cec75c12e3f005619dc5f874f0a06e8ff7263f0ee6225e"},
-    {file = "pytest-7.2.2.tar.gz", hash = "sha256:c99ab0c73aceb050f68929bc93af19ab6db0558791c6a0715723abe9d0ade9d4"},
+    {file = "pytest-7.3.0-py3-none-any.whl", hash = "sha256:933051fa1bfbd38a21e73c3960cebdad4cf59483ddba7696c48509727e17f201"},
+    {file = "pytest-7.3.0.tar.gz", hash = "sha256:58ecc27ebf0ea643ebfdf7fb1249335da761a00c9f955bcd922349bcb68ee57d"},
 ]
 
 [package.dependencies]
-attrs = ">=19.2.0"
 colorama = {version = "*", markers = "sys_platform == \"win32\""}
 exceptiongroup = {version = ">=1.0.0rc8", markers = "python_version < \"3.11\""}
 iniconfig = "*"
@@ -3864,7 +3866,7 @@ pluggy = ">=0.12,<2.0"
 tomli = {version = ">=1.0.0", markers = "python_version < \"3.11\""}
 
 [package.extras]
-testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
+testing = ["argcomplete", "attrs (>=19.2.0)", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
 
 [[package]]
 name = "pytest-cov"
@@ -4360,24 +4362,24 @@ files = [
 
 [[package]]
 name = "s3fs"
-version = "2023.3.0"
+version = "2023.4.0"
 description = "Convenient Filesystem interface over S3"
 category = "main"
 optional = false
 python-versions = ">= 3.8"
 files = [
-    {file = "s3fs-2023.3.0-py3-none-any.whl", hash = "sha256:8858cc9a03a00eaf81f8641f080d1765953181bdc0d242df682941171e9214c3"},
-    {file = "s3fs-2023.3.0.tar.gz", hash = "sha256:5c154ded38e3c3d8f0eba7fec2706f29b41e0c395f19fbfef3ba8e70c685b049"},
+    {file = "s3fs-2023.4.0-py3-none-any.whl", hash = "sha256:be0afe8f01c67951566d6e9b8a954eaf09b674a4a28002d08eecde29c74a3310"},
+    {file = "s3fs-2023.4.0.tar.gz", hash = "sha256:963ee2e070e03e2952d535dbc6fd2b341869fcd16006cf74b90bcf39fd26cded"},
 ]
 
 [package.dependencies]
-aiobotocore = ">=2.4.2,<2.5.0"
+aiobotocore = ">=2.5.0,<2.6.0"
 aiohttp = "<4.0.0a0 || >4.0.0a0,<4.0.0a1 || >4.0.0a1"
-fsspec = "2023.3.0"
+fsspec = "2023.4.0"
 
 [package.extras]
-awscli = ["aiobotocore[awscli] (>=2.4.2,<2.5.0)"]
-boto3 = ["aiobotocore[boto3] (>=2.4.2,<2.5.0)"]
+awscli = ["aiobotocore[awscli] (>=2.5.0,<2.6.0)"]
+boto3 = ["aiobotocore[boto3] (>=2.5.0,<2.6.0)"]
 
 [[package]]
 name = "s3transfer"
@@ -4438,14 +4440,14 @@ test = ["asv", "gmpy2", "mpmath", "pytest", "pytest-cov", "pytest-xdist", "sciki
 
 [[package]]
 name = "scmrepo"
-version = "0.2.0"
+version = "0.2.1"
 description = "SCM wrapper and fsspec filesystem for Git for use in DVC"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "scmrepo-0.2.0-py3-none-any.whl", hash = "sha256:7076890ad5dd137e9fdec5ca9879cd1787bd9739f90f954247d9f6707674fd85"},
-    {file = "scmrepo-0.2.0.tar.gz", hash = "sha256:d210a057e456377ad5d0317bff631c4f6eda6979b98bb086dadbb5ab340c3825"},
+    {file = "scmrepo-0.2.1-py3-none-any.whl", hash = "sha256:5d885f23649c416c8251f9cd5cd3bb4d85dcd737e4471dfec1050ce99f9957eb"},
+    {file = "scmrepo-0.2.1.tar.gz", hash = "sha256:99d1f7aa30ec4d895c21f7662b457fdedeba185af1bbc1b1008beff8da9a57bc"},
 ]
 
 [package.dependencies]
@@ -4658,14 +4660,14 @@ files = [
 
 [[package]]
 name = "sqltrie"
-version = "0.3.0"
+version = "0.3.1"
 description = "SQL-based prefix tree inspired by pygtrie and python-diskcache"
 category = "main"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "sqltrie-0.3.0-py3-none-any.whl", hash = "sha256:5c19fc547378f84fd0fa88b0e6be160303b5e9933e8c01e2f48ecbbb61208b36"},
-    {file = "sqltrie-0.3.0.tar.gz", hash = "sha256:edb81e142ce7fc2d9b4ae2063a08fbec143309a93bd80826f8ceafc155f08cc6"},
+    {file = "sqltrie-0.3.1-py3-none-any.whl", hash = "sha256:8cbb616049ab50cf543c605d0c4c72bc2eadfa94e90823227f7e01acf2ca7b69"},
+    {file = "sqltrie-0.3.1.tar.gz", hash = "sha256:63d562dc90dc88f1de6bacb3c1c8796b127544f84fd670bcca64f96c92695e53"},
 ]
 
 [package.dependencies]
