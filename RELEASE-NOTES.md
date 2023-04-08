@@ -2,6 +2,18 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.8.1 (2023-04-08)
+==================
+### Cookiecutter Template
+* Slugify project name in places where special characters may cause problems
+  (e.g., URLs and directory names).
+* Polish code and documentation.
+
+### Cookiecutter Development
+* Add Apache license incantations to cookiecutter hook scripts.
+* Update private cookiecutter variables.
+
+-------------------------------------------------------------------------------
 0.8.0 (2023-04-02)
 ==================
 ### Cookiecutter Template
