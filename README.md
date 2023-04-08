@@ -91,18 +91,18 @@ Table of Contents
 
 ### 1.2. Setting Up a New Research Project
 
-1. ___Prerequisites___
+1. Prerequisites
 
    * Install [Git][git].
 
-   * Install [Python][python] 3.8 (or greater).
+   * Install [Python][python] 3.9 (or greater).
 
    * If the project uses [Julia][julia], install [Julia][julia] 1.6 (or
      greater).
 
    * Install [Poetry][poetry] 1.2 (or greater).
 
-     __Note__. The project template uses `poetry` instead of `pip` for
+     ___Note___. The project template uses `poetry` instead of `pip` for
      management of Python package dependencies.
 
    * Install the [Cookiecutter][cookiecutter] Python package.
@@ -119,13 +119,13 @@ Table of Contents
    virtual environment options (e.g., `venv`, `direnv`, `conda`) should work.
    Below are instructions for setting up a `direnv` or `poetry` environment.
 
-   __Note__: to avoid conflicts between virtual environments, only one method
+   ___Note___: to avoid conflicts between virtual environments, only one method
    should be used to manage the virtual environment.
 
-   * __`direnv` Environment__. __Note__: `direnv` manages the environment for
+   * __`direnv` Environment__. _Note_: `direnv` manages the environment for
      both Python and the shell.
 
-     * ___Prerequisite___. Install `direnv`.
+     * Prerequisite. Install `direnv`.
 
      * Copy `extras/dot-envrc` to the project root directory, and rename it to
        `.envrc`.
@@ -141,7 +141,7 @@ Table of Contents
        $ direnv allow
        ```
 
-   * __`poetry` Environment__. __Note__: `poetry` only manages the Python
+   * __`poetry` Environment__. _Note_: `poetry` only manages the Python
      environment (it does not manage the shell environment).
 
      * Create a `poetry` environment that uses a specific Python executable.
@@ -164,7 +164,7 @@ Table of Contents
 
 5. Configure Git.
 
-   * Install the git pre-commit hooks.
+   * Install the Git pre-commit hooks.
 
      ```shell
      $ pre-commit install
@@ -266,6 +266,8 @@ Table of Contents
      $ poetry add numpy
      ```
 
+   * Fill in any empty fields in `pyproject.toml`.
+
    * Customize the `README.md` file to reflect the specifics of the project.
 
    * If the project was created with Julia support enabled, configure the Julia
@@ -305,12 +307,12 @@ Table of Contents
 ### 1.4. Known Issues
 
 * When including `numba` as a project dependency, the Python version constraint
-  `pyproject.toml` needs to be more restrictive than the default `^3.8`. For
+  `pyproject.toml` needs to be more restrictive than the default `^3.9`. For
   numba 0.55, the Python version constraint in `[tool.poetry.dependencies]`
   section of `pyproject.toml` should be set to:
 
   ```
-  python = ">=3.8,<3.11"
+  python = ">=3.9,<3.11"
   ```
 
 -------------------------------------------------------------------------------
@@ -349,8 +351,8 @@ contained in the `NOTICE` file.
 #### Base Requirements
 
 * [Git][git]
-* [Python][python] (>=3.8)
-* [Poetry][poetry]
+* [Python][python] (>=3.9)
+* [Poetry][poetry] (>=1.2)
 
 #### Optional Packages
 
@@ -371,7 +373,7 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
    ```shell
    $ poetry install
 
-3. Install the git pre-commit hooks.
+3. Install the Git pre-commit hooks.
 
    ```shell
    $ pre-commit install
@@ -426,7 +428,7 @@ package dependencies for the template.
     <!-- {% raw %} -->
     ```jinja
     [tool.poetry]
-    name = "{{ cookiecutter.__package_name }}"
+    name = "{{ cookiecutter.__project_name }}"
     version = "0.0.0"
     description = ""
     license = "{% if cookiecutter.license == 'Apache License 2.0' %}Apache-2.0{% elif cookiecutter.license == 'BSD-3-Clause License' %}BSD-3-Clause{% elif cookiecutter.license == 'MIT License' %}MIT{% endif %}"
