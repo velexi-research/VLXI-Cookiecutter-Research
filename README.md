@@ -383,13 +383,13 @@ See `[tool.poetry.dependencies]` section of [`pyproject.toml`](pyproject.toml).
 
 ### 2.5. Additional Notes
 
-#### Updating Cookiecutter Template Dependencies
+#### Updating Template Dependencies
 
 To update the Python dependencies for the template (contained in the
 `{{cookiecutter.__project_name}}` directory), use the following procedure to
-ensure that package dependencies for developing the non-template components
-of the cookiecutter (e.g., `hooks/pre_gen_project.py`) do not interfere with
-package dependencies for the template.
+ensure that Python package dependencies for developing the non-template
+components of the cookiecutter (e.g., `hooks/pre_gen_project.py`) do not
+interfere with Python package dependencies for the template.
 
 * Create a local clone of the cookiecutter Git repository to use for
   cookiecutter development.
@@ -398,28 +398,29 @@ package dependencies for the template.
   $ git clone git@github.com:velexi-research/VLXI-Cookiecutter-Research.git
   ```
 
-* Use `cookiecutter` from the local cookiecutter Git repository to create a
-  clean project for template dependency updates.
+* Use `cookiecutter` from the local cookiecutter Git repository to create an
+  instance of the template to use for updating Python package dependencies.
 
   ```shell
   $ cookiecutter PATH/TO/LOCAL/REPO
   ```
 
-* In the pristine project, perform the following steps to update the template's
-  package dependencies.
+* In the instance of the template, perform the following steps to update the
+  template's Python package dependencies.
 
   * Set up a virtual environment for developing the template (e.g., a direnv
     environment).
 
   * Use `poetry` or manually edit `pyproject.toml` to (1) make changes to the
-    package dependency list and (2) update the package dependency versions.
+    Python package dependency list and (2) update the versions of Python package
+    dependencies.
 
-  * Use `poetry` to update the package dependencies and versions recorded in
-    the `poetry.lock` file.
+  * Use `poetry` to update the Python package dependencies and versions recorded
+    in the `poetry.lock` file.
 
 * Update `{{cookiecutter.__project_name}}/pyproject.toml`.
 
-  * Copy `pyproject.toml` from the pristine project to
+  * Copy `pyproject.toml` from the instance of the template to
     `{{cookiecutter.__project_name}}/pyproject.toml`.
 
   * Restore the templated values in the `[tool.poetry]` section to the
@@ -439,7 +440,7 @@ package dependencies for the template.
 
 * Update `{{cookiecutter.__project_name}}/poetry.lock`.
 
-  * Copy `poetry.lock` from the pristine project to
+  * Copy `poetry.lock` from the instance of the template to
     `{{cookiecutter.__project_name}}/poetry.lock`.
 
 * Commit the updated `pyproject.toml` and `poetry.lock` files to the Git
