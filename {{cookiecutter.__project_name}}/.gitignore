@@ -1,11 +1,3 @@
-# --- Data
-
-# data directory
-/data
-
-# DVC files
-!*.dvc
-
 # --- Python
 
 # compiled code
