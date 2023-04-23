@@ -6,6 +6,7 @@ Velexi Research Project Cookiecutter Release Notes
 ==================
 ### Cookiecutter Template
 * Fix DVC bugs in .gitignore.
+* Update package dependency versions.
 
 -------------------------------------------------------------------------------
 0.8.2 (2023-04-09)
