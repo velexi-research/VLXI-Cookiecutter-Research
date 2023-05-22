@@ -2,6 +2,16 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.8.4 (2023-05-21)
+==================
+### Cookiecutter Template
+* Fix pytest configuration bugs in Makefile.
+* Update package dependency versions.
+
+### Cookiecutter Development
+* Update package dependency versions.
+
+-------------------------------------------------------------------------------
 0.8.3 (2023-04-22)
 ==================
 ### Cookiecutter Template
