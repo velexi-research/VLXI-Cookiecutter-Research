@@ -5,11 +5,15 @@
 # --- Project-Specific Configuration Parameters
 
 # Paths to add to PATH
-# NOTE: paths should be specified relative to the project root directory
+#
+# NOTE: paths should be space-separated and specified relative to
+#       the project root directory
 PATH_EXTRA=
 
 # Paths to add to PYTHONPATH
-# NOTE: paths should be specified relative to the project root directory
+#
+# NOTE: paths should be space-separated and specified relative to
+#       the project root directory
 PYTHONPATH_EXTRA=
 
 # ====================== DO NOT EDIT BELOW ====================== #
