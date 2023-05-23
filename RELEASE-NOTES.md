@@ -2,6 +2,15 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.8.5 (2023-05-22)
+==================
+### Cookiecutter Template
+* Polish dot-envrc.
+
+### Cookiecutter Development
+* Polish dot-envrc.
+
+-------------------------------------------------------------------------------
 0.8.4 (2023-05-21)
 ==================
 ### Cookiecutter Template
