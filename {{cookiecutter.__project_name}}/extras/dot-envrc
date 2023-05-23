@@ -7,19 +7,19 @@
 # Paths to add to PATH
 #
 # NOTE: paths should be space-separated and specified relative to
-# the project root directory
+#       the project root directory
 PATH_EXTRA=
 
 # Paths to add to PYTHONPATH
 #
 # NOTE: paths should be space-separated and specified relative to
-# the project root directory
+#       the project root directory
 PYTHONPATH_EXTRA=
 
 # Paths to add to JULIA_LOAD_PATH
 #
 # NOTE: paths should be space-separated and specified relative to
-# the project root directory
+#       the project root directory
 JULIA_LOAD_PATH_EXTRA=
 
 # URI of MLflow tracking server
