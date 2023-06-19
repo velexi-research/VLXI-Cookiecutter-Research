@@ -1,10 +1,16 @@
-# --- Generated Cookiecutter files
+# --- Environments
 
-{{cookiecutter.project_directory}}/notebooks/*.html
-{{cookiecutter.project_directory}}/notebooks/*.py
-{{cookiecutter.project_directory}}/notebooks/*.jl
+# direnv
+.direnv
+.envrc
 
-# --- Python files
+# conda
+.conda
+
+# Python virtual environment
+.venv
+
+# --- Python
 
 # compiled code
 __pycache__/
@@ -17,18 +23,6 @@ htmlcov/
 .coverage.*
 .pytest_cache
 .tox/
-
-# --- Environments
-
-# direnv
-.direnv
-.envrc
-
-# conda
-.conda
-
-# common manually-created Python virtual environments
-.venv
 
 # --- Code editors
 

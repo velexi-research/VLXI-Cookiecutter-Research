@@ -7,6 +7,10 @@
 SRC_DIR=src
 CODE_DIRS=${SRC_DIR} tests
 
+# Package directories
+PKG_DIR=src/{{ cookiecutter.__package_name }}
+DOCS_DIR=docs/{{ cookiecutter.__project_name }}
+
 # Testing parameters
 NPROCS=auto
 
@@ -75,7 +79,7 @@ radon-raw:
 
 ## Generate API documentation in HTML format.{% if cookiecutter.enable_julia == 'yes' %} Note: only generates docs for Python modules.{% endif %}
 docs:
-	pdoc ${SRC_DIR} -o docs/api --math
+	pdoc ${PKG_DIR} -o ${DOCS_DIR} --math
 
 # --- Utility rules
 

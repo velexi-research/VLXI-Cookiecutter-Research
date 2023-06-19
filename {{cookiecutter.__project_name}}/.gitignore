@@ -1,4 +1,19 @@
+# --- Environments
+
+# direnv
+.direnv
+.envrc
+
+# conda
+.conda
+
+# Python virtual environment
+.venv
+
 # --- Python
+
+# pyenv
+.python-version
 
 # compiled code
 __pycache__/
@@ -9,9 +24,6 @@ __pycache__/
 *.egg-info/
 *.egg*
 
-# pyenv
-.python-version
-
 # testing
 htmlcov/
 .cache
@@ -21,13 +33,14 @@ htmlcov/
 .tox/
 
 # pdoc auto-generated documentation
-docs/api
+docs/{{cookiecutter.__project_name}}
 
 # DotEnv configuration
 .env
 
 # --- Julia
 
+# Manifest
 Manifest.toml
 
 # --- Compiled code
@@ -55,15 +68,6 @@ nbconvert
 
 # vim
 *.sw[po]
-
-# --- Environments
-
-# direnv
-.direnv
-.envrc
-
-# conda
-.conda
 
 # --- Miscellaneous
 

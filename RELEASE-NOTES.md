@@ -2,6 +2,18 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.8.7 (2023-06-19)
+==================
+### Cookiecutter Template
+* Improve organization of project Python package.
+* Polish .gitignore.
+* Polish pre-commit configuration.
+
+### Cookiecutter Development
+* Polish .gitignore.
+* Polish pre-commit configuration.
+
+-------------------------------------------------------------------------------
 0.8.6 (2023-06-18)
 ==================
 ### Cookiecutter Template
