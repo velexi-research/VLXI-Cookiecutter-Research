@@ -7,6 +7,8 @@ Velexi Research Project Cookiecutter Release Notes
 ### Cookiecutter Template
 * Fix pre-commit configuration bug.
   - Add --allow-missing-credentials option for detect-aws-credentials.
+* Simplify pyproject.toml.
+  - Merge dependencies from "test" and "dev" groups into main dependency list.
 * Update package dependency versions.
 
 ### Cookiecutter Development
