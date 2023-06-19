@@ -1,9 +1,3 @@
-# --- Generated Cookiecutter files
-
-{{cookiecutter.project_directory}}/notebooks/*.html
-{{cookiecutter.project_directory}}/notebooks/*.py
-{{cookiecutter.project_directory}}/notebooks/*.jl
-
 # --- Python files
 
 # compiled code
