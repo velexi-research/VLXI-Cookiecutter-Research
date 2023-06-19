@@ -25,13 +25,7 @@ pywin32 = [
     { version = '>=301', platform = 'win32' },
 ]
 
-[tool.poetry.group.dev.dependencies]
-black = {extras = ["jupyter"], version = "^22.10.0"}
-flake8 = "<5.0.0"  # Unpin after compatibility with pytest-flake8 is fixed
-pre-commit = "^2.20.0"
-radon = "^5.1"
-
-[tool.poetry.group.test.dependencies]
+# software testing packages
 coverage = "^6.4"
 pylint = "^2.14"
 pytest = "^7.2"
@@ -39,6 +33,11 @@ pytest-cov = "^3.0"
 pytest-flake8 = "^1.1"
 pytest-pylint = "^0,>=0.18"
 pytest-xdist = "^2.5"
+
+# code quality packages
+black = {extras = ["jupyter"], version = "^22.10.0"}
+flake8 = "<5.0.0"  # Unpin after compatibility with pytest-flake8 is fixed
+pre-commit = "^2.20.0"
 
 [tool.pytest.ini_options]
 minversion = "6.0"
