@@ -33,7 +33,7 @@ htmlcov/
 .tox/
 
 # pdoc auto-generated documentation
-docs/api
+docs/{{cookiecutter.__project_name}}
 
 # DotEnv configuration
 .env
