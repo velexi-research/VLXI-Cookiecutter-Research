@@ -7,7 +7,7 @@
 # conda
 .conda
 
-# Python virtual environments
+# Python virtual environment
 .venv
 
 # --- Python
