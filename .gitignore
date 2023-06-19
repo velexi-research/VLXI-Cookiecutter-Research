@@ -10,7 +10,7 @@
 # Python virtual environments
 .venv
 
-# --- Python files
+# --- Python
 
 # compiled code
 __pycache__/

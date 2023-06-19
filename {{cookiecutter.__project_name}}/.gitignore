@@ -1,4 +1,19 @@
+# --- Environments
+
+# direnv
+.direnv
+.envrc
+
+# conda
+.conda
+
+# Python virtual environments
+.venv
+
 # --- Python
+
+# pyenv
+.python-version
 
 # compiled code
 __pycache__/
@@ -8,9 +23,6 @@ __pycache__/
 /dist/
 *.egg-info/
 *.egg*
-
-# pyenv
-.python-version
 
 # testing
 htmlcov/
@@ -55,15 +67,6 @@ nbconvert
 
 # vim
 *.sw[po]
-
-# --- Environments
-
-# direnv
-.direnv
-.envrc
-
-# conda
-.conda
 
 # --- Miscellaneous
 
