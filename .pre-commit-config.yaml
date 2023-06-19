@@ -6,6 +6,7 @@ repos:
       entry: black
       language: python
       types: [python]
+      exclude: ^spikes
     - id: flake8
       name: flake8
       entry: flake8
