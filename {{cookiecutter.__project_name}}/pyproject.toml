@@ -10,17 +10,16 @@ authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}>"]
 python = "{{ cookiecutter.python_version }}"
 dvc = {extras = ["s3"], version = "^3.0"}
 fds = {git = "https://github.com/velexi-research/fds.git"}  # Fork of FastDS
-ipython = "^8.4"
+ipython = "^8.0"
 jupyterlab = "^4.0"
 mlflow = "^2.4"
 pdoc = "^14.0"
 python-slugify = "^8.0"
-PyYAML = ">=5.4"
+PyYAML = "^6.0"
 tqdm = "^4.64"
 typer = "^0,>=0.9"
 
 # security vulnerability fixes
-bcrypt = "^3.2.2"  # TODO: consider removing this
 pywin32 = [
     { version = '>=301', platform = 'win32' },
 ]
