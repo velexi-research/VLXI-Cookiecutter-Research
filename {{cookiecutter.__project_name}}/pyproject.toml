@@ -8,17 +8,16 @@ authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}>"]
 
 [tool.poetry.dependencies]
 python = "{{ cookiecutter.python_version }}"
-bcrypt = "^3.2.2"
-dvc = {extras = ["s3"], version = "^2.17"}
-fastds = "^0,>=0.6"
-ipython = "^8.4"
-jupyterlab = "^3.4"
-mlflow = "^2.2"
-pdoc = "^12.2.0"
-python-slugify = "^6.1"
-PyYAML = ">=5.4"
+dvc = {extras = ["s3"], version = "^3.0"}
+fds = {git = "https://github.com/velexi-research/fds.git"}  # Fork of FastDS
+ipython = "^8.0"
+jupyterlab = "^4.0"
+mlflow = "^2.4"
+pdoc = "^14.0"
+python-slugify = "^8.0"
+PyYAML = "^6.0"
 tqdm = "^4.64"
-typer = "^0,>=0.6"
+typer = "^0,>=0.9"
 
 # security vulnerability fixes
 pywin32 = [
@@ -26,18 +25,18 @@ pywin32 = [
 ]
 
 # software testing packages
-coverage = "^6.4"
+coverage = "^7.0"
 pylint = "^2.14"
 pytest = "^7.2"
-pytest-cov = "^3.0"
+pytest-cov = "^4.0"
 pytest-flake8 = "^1.1"
 pytest-pylint = "^0,>=0.18"
-pytest-xdist = "^2.5"
+pytest-xdist = "^3.0"
 
 # code quality packages
-black = {extras = ["jupyter"], version = "^22.10.0"}
+black = {extras = ["jupyter"], version = "^23.0"}
 flake8 = "<5.0.0"  # Unpin after compatibility with pytest-flake8 is fixed
-pre-commit = "^2.20.0"
+pre-commit = "^3.2"
 
 [tool.pytest.ini_options]
 minversion = "6.0"
