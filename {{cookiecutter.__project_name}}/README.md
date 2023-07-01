@@ -42,8 +42,8 @@ A more detailed description of the project.
 
 ```
 ├── README.md             <- this file
-├── LICENSE               <- license for contents of the project
-├{% if cookiecutter.license == 'Apache License 2.0' %}── NOTICE                <- copyright notice for contents of the project
+├── LICENSE               <- license for the contents of the project
+├{% if cookiecutter.license == 'Apache License 2.0' %}── NOTICE                <- copyright notice for the contents of the project
 ├{% endif %}── Makefile              <- Makefile containing useful shortcuts (`make`
 │                            rules). Use `make help` to show the list of
 │                            available rules.
