@@ -2370,27 +2370,6 @@ test = ["pytest (<7.1)", "pytest-asyncio", "testpath"]
 test-extra = ["curio", "matplotlib (!=3.2.0)", "nbformat", "numpy (>=1.21)", "pandas", "pytest (<7.1)", "pytest-asyncio", "testpath", "trio"]
 
 [[package]]
-name = "ipywidgets"
-version = "8.0.6"
-description = "Jupyter interactive widgets"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "ipywidgets-8.0.6-py3-none-any.whl", hash = "sha256:a60bf8d2528997e05ac83fd19ea2fbe65f2e79fbe1b2b35779bdfc46c2941dcc"},
-    {file = "ipywidgets-8.0.6.tar.gz", hash = "sha256:de7d779f2045d60de9f6c25f653fdae2dba57898e6a1284494b3ba20b6893bb8"},
-]
-
-[package.dependencies]
-ipykernel = ">=4.5.1"
-ipython = ">=6.1.0"
-jupyterlab-widgets = ">=3.0.7,<3.1.0"
-traitlets = ">=4.3.1"
-widgetsnbextension = ">=4.0.7,<4.1.0"
-
-[package.extras]
-test = ["ipykernel", "jsonschema", "pytest (>=3.6.0)", "pytest-cov", "pytz"]
-
-[[package]]
 name = "isoduration"
 version = "20.11.0"
 description = "Operations with ISO 8601 durations"
@@ -2791,17 +2770,6 @@ requests = ">=2.28"
 docs = ["autodoc-traits", "jinja2 (<3.2.0)", "mistune (<4)", "myst-parser", "pydata-sphinx-theme", "sphinx", "sphinx-copybutton", "sphinxcontrib-openapi (>0.8)"]
 openapi = ["openapi-core (>=0.16.1,<0.17.0)", "ruamel-yaml"]
 test = ["hatch", "ipykernel", "jupyterlab-server[openapi]", "openapi-spec-validator (>=0.5.1,<0.6.0)", "pytest (>=7.0)", "pytest-console-scripts", "pytest-cov", "pytest-jupyter[server] (>=0.6.2)", "pytest-timeout", "requests-mock", "sphinxcontrib-spelling", "strict-rfc3339", "werkzeug"]
-
-[[package]]
-name = "jupyterlab-widgets"
-version = "3.0.7"
-description = "Jupyter interactive widgets for JupyterLab"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "jupyterlab_widgets-3.0.7-py3-none-any.whl", hash = "sha256:c73f8370338ec19f1bec47254752d6505b03601cbd5a67e6a0b184532f73a459"},
-    {file = "jupyterlab_widgets-3.0.7.tar.gz", hash = "sha256:c3a50ed5bf528a0c7a869096503af54702f86dda1db469aee1c92dc0c01b43ca"},
-]
 
 [[package]]
 name = "kiwisolver"
@@ -5484,17 +5452,6 @@ files = [
 ]
 
 [[package]]
-name = "webio-jupyter-extension"
-version = "0.1.0"
-description = "A JupyterLab extension."
-optional = false
-python-versions = ">=3.6"
-files = [
-    {file = "webio_jupyter_extension-0.1.0-py3-none-any.whl", hash = "sha256:97478bd68f3b0d3f16958e92b3ff37492f7efab56b7b2a99a4e9dbccfb9f96d2"},
-    {file = "webio_jupyter_extension-0.1.0.tar.gz", hash = "sha256:9b41496b86dd0b5734d99f98785ba68cf4b3cd75ae5c704b97bbacbf198ed2b7"},
-]
-
-[[package]]
 name = "websocket-client"
 version = "1.6.1"
 description = "WebSocket client for Python with low level API options"
@@ -5526,17 +5483,6 @@ MarkupSafe = ">=2.1.1"
 
 [package.extras]
 watchdog = ["watchdog (>=2.3)"]
-
-[[package]]
-name = "widgetsnbextension"
-version = "4.0.7"
-description = "Jupyter interactive widgets for Jupyter Notebook"
-optional = false
-python-versions = ">=3.7"
-files = [
-    {file = "widgetsnbextension-4.0.7-py3-none-any.whl", hash = "sha256:be3228a73bbab189a16be2d4a3cd89ecbd4e31948bfdc64edac17dcdee3cd99c"},
-    {file = "widgetsnbextension-4.0.7.tar.gz", hash = "sha256:ea67c17a7cd4ae358f8f46c3b304c40698bc0423732e3f273321ee141232c8be"},
-]
 
 [[package]]
 name = "wrapt"
@@ -5744,4 +5690,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "b21244d79d872ef64aff541c0ea1bda4023badcddf64920b0b125710905d5496"
+content-hash = "053c01b7de7dd989abb69b97caf3117c02f5d7bb36920a80d0ff8131acbd6413"
