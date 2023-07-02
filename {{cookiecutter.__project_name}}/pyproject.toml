@@ -19,11 +19,6 @@ PyYAML = "^6.0"
 tqdm = "^4.64"
 typer = "^0,>=0.9"
 
-# security vulnerability fixes
-pywin32 = [
-    { version = '>=301', platform = 'win32' },
-]
-
 # software testing packages
 coverage = "^7.0"
 pylint = "^2.14"
@@ -37,6 +32,13 @@ pytest-xdist = "^3.0"
 black = {extras = ["jupyter"], version = "^23.0"}
 flake8 = "<5.0.0"  # Unpin after compatibility with pytest-flake8 is fixed
 pre-commit = "^3.2"
+
+# security vulnerability fixes
+pywin32 = [
+    { version = '>=301', platform = 'win32' },
+]
+
+# project-specific packages
 
 [tool.pytest.ini_options]
 minversion = "6.0"
