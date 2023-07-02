@@ -93,7 +93,7 @@ clean:
 	rm -rf .cache .pytest_cache  # pytest
 	rm -rf .coverage .coverage.* coverage htmlcov coverage.xml  # coverage
 	find . -name "*.log" -exec rm -f {} \;  # log files
-	rm -rf docs/api  # generated API documentation
+	rm -rf ${DOCS_DIR}  # generated API documentation
 
 # --- Makefile Self-Documentation
 
