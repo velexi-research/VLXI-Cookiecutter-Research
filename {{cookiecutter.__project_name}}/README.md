@@ -250,11 +250,11 @@ package dependencies.
     - Replaced `distplot()` with `histplot()` because `distplot()` has been deprecated.
     ```
 
-  * When signification changes are made to a notebook (e.g., major
-    modifications to algorithms, addition of experiments to explore a new
-    direction), the modified notebook should saved to a new file with a name
-    constructed from the modification date and the initials of the person who
-    made the modifications.
+  * When significant changes are made to a notebook (e.g., major modifications
+    to algorithms, addition of experiments to explore a new direction), the
+    modified notebook should saved to a new file with a name constructed from
+    the modification date and the initials of the person who made the
+    modifications.
 
 -------------------------------------------------------------------------------
 
