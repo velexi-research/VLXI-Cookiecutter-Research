@@ -11,31 +11,20 @@ Kevin T. Chu `<kevin@velexi.com>`
 * Launch a JupyterLab session.
 
   ```shell
-  $ jupyter-lab
+  $ jupyter lab
   ```
 
-* Use the GUI to create Jupyter notebooks, edit and run Jupyter notebooks,
-  manage files in the file system, etc.
+* Use the GUI to create notebooks, edit and run notebooks, manage files in the
+  file system, etc.
 
-### Using a Jupyter Notebooks Session
+### Opening a Specific Jupyter Notebook
 
-* Launch a Jupyter Notebook session.
+* Launch a JupyterLab session with a specific notebook opened.
 
   ```shell
-  $ jupyter notebook
+  $ jupyter lab NOTEBOOK.ipynb
   ```
 
-* Use the GUI to create Jupyter notebooks, edit and run Jupyter notebooks,
-  manage files in the file system, etc.
-
-### Opening a Single Jupyter Notebook
-
-* Launch a Jupyter Notebook session for a specific Jupyter notebook.
-
-  ```shell
-  $ jupyter notebook NOTEBOOK.ipynb
-  ```
-
-  where `NOTEBOOK.ipynb` is the name of the Jupyter notebook to open.
+  where `NOTEBOOK.ipynb` is the name of the notebook to open.
 
 ------------------------------------------------------------------------------
