@@ -2735,6 +2735,17 @@ docs-screenshots = ["altair (==5.0.1)", "ipython (==8.14.0)", "ipywidgets (==8.0
 test = ["coverage", "pytest (>=7.0)", "pytest-check-links (>=0.7)", "pytest-console-scripts", "pytest-cov", "pytest-jupyter (>=0.5.3)", "pytest-timeout", "pytest-tornasync", "requests", "requests-cache", "virtualenv"]
 
 [[package]]
+name = "jupyterlab-mathjax3"
+version = "4.3.0"
+description = "MathJax 3 math renderer for JupyterLab"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "jupyterlab-mathjax3-4.3.0.tar.gz", hash = "sha256:daee13969453ecfa22ac8969cd1daa8f887731ace8adb93a574b47aecabdc5dd"},
+    {file = "jupyterlab_mathjax3-4.3.0-py3-none-any.whl", hash = "sha256:07d2a40cea9293bb56210b87620088e6aa5bb45c05aac86d3e917d6c1aded711"},
+]
+
+[[package]]
 name = "jupyterlab-pygments"
 version = "0.2.2"
 description = "Pygments theme using JupyterLab CSS variables"
@@ -5690,4 +5701,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "053c01b7de7dd989abb69b97caf3117c02f5d7bb36920a80d0ff8131acbd6413"
+content-hash = "d975b20ac8d6291505390f1b7292ff7e2eeff71e556857c31416e4cf434746c3"
