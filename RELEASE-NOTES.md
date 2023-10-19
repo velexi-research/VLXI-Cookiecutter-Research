@@ -2,6 +2,12 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.8.10 (2023-10-19)
+===================
+### Cookiecutter Template
+* Update default Python version to fix security vulnerability.
+
+-------------------------------------------------------------------------------
 0.8.9 (2023-10-19)
 ==================
 ### Cookiecutter Template
