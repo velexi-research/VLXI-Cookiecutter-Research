@@ -2,6 +2,16 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.8.13 (2024-01-12)
+===================
+### Cookiecutter Template
+* Exclude `.ipynb` files from `pretty-format-json` pre-commit hook.
+* Update package dependency versions.
+
+### Cookiecutter Development
+* Update package dependency versions.
+
+-------------------------------------------------------------------------------
 0.8.12 (2023-12-28)
 ===================
 ### Cookiecutter Template
