@@ -38,7 +38,7 @@ pytest-pylint = "^0,>=0.18"
 pytest-xdist = "^3"
 
 # code quality
-black = {extras = ["jupyter"], version = "^23"}
+black = {extras = ["jupyter"], version = "^24"}
 flake8 = "<5.0.0"  # Unpin after compatibility with pytest-flake8 is fixed
 pre-commit = "^3"
 radon = "^6"
