@@ -2,6 +2,15 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.8.15 (2024-??-??)
+===================
+### Cookiecutter Template
+* Update package version dependencies.
+
+### Cookiecutter Development
+* Update package version dependencies.
+
+-------------------------------------------------------------------------------
 0.8.14 (2024-05-06)
 ===================
 ### Cookiecutter Template
