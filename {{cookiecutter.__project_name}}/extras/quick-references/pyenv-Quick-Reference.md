@@ -4,11 +4,13 @@ pyenv Quick Reference
 __Authors__  
 Kevin T. Chu `<kevin@velexi.com>`
 
--------------------------------------------------------------------------------
+__Version__: 2024-06-13
+
+--------------------------------------------------------------------------------------------
 
 [pyenv][pyenv] is a simple CLI tool for managing Python versions.
 
--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
 
 ### Installing `pyenv`
 
@@ -24,10 +26,10 @@ Kevin T. Chu `<kevin@velexi.com>`
   ```
 
 * Install the desired Python version. For example, if you want to install
-  Python 3.8.13, execute the following command:
+  Python 3.11.9, execute the following command:
 
   ```shell
-  $ pyenv install 3.8.13
+  $ pyenv install 3.11.9
   ```
 
 ### Getting a List of Installed Python Versions
@@ -42,14 +44,14 @@ Kevin T. Chu `<kevin@velexi.com>`
 
 `pyenv` supports configuring the default Python version for a user (without
 affecting the Python version used elsewhere on the system). For example, to
-set the default Python version of the current user to 3.8.13, execute the
+set the default Python version of the current user to 3.11.9, execute the
 following command:
 
 ```shell
-$ pyenv global 3.8.13
+$ pyenv global 3.11.9
 ```
 
-__Note__: this command will make Python 3.8.13 the default Python version
+__Note__: this command will make Python 3.11.9 the default Python version
 for the current user _only_. The default Python version for other users on the
 system will be unaffected.
 
@@ -58,17 +60,17 @@ system will be unaffected.
 `pyenv` supports configuring the Python version used within a specific
 directory (without affecting the Python version used by the current user
 elsewhere on the system). For example, to set the Python version used in the
-current directory to 3.8.13, execute the following command:
+current directory to 3.11.9, execute the following command:
 
 ```shell
-$ pyenv local 3.8.13
+$ pyenv local 3.11.9
 ```
 
-__Note__: this command will make Python 3.8.13 the default Python version
+__Note__: this command will make Python 3.11.9 the default Python version
 _only_ for the directory it is executed in. The default Python version outside
 of the directory (even for the same user) will be unaffected.
 
-[-----------------------------EXTERNAL LINKS-----------------------------]: #
+[----------------------------------- EXTERNAL LINKS -----------------------------------]: #
 
 [pyenv]: https://github.com/pyenv/pyenv
 
