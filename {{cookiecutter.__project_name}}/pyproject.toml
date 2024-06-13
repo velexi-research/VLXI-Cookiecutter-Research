@@ -26,15 +26,13 @@ pdoc = "^14"
 python-slugify = "^8"
 PyYAML = "^6"
 tqdm = "^4"
-typer = "^0,>=0.9"
+typer = "^0,>=0.12"
 
 # software testing
 coverage = "^7"
-pylint = "^3"
 pytest = "^8"
 pytest-cov = "^5"
 pytest-flake8 = "^1.1"
-pytest-pylint = "^0,>=0.18"
 pytest-xdist = "^3"
 
 # code quality
