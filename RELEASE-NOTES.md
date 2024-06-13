@@ -2,6 +2,18 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.8.16 (2024-06-13)
+===================
+### Cookiecutter Template
+* Update quick references.
+* Bump minimum Python version to 3.10.
+* Update Python package dependencies.
+
+### Cookiecutter Development
+* Bump minimum Python version to 3.10.
+* Update Python package dependencies.
+
+-------------------------------------------------------------------------------
 0.8.15 (2024-05-07)
 ===================
 ### Cookiecutter Template
