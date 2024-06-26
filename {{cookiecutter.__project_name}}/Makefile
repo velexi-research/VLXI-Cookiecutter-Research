@@ -5,7 +5,7 @@
 
 # Source directories
 SRC_DIR=src
-CODE_DIRS=${SRC_DIR} tests
+CODE_DIRS=${SRC_DIR}
 
 # Package directories
 PKG_DIR=src/{{ cookiecutter.__package_name }}
@@ -22,23 +22,24 @@ PYTEST_PYLINT_OPTIONS=
 .PHONY: test fast-test \
         coverage-report coverage-html
 
-## Run all tests
+## Run all tests.
 test:
 	pytest ${PYTEST_OPTIONS} ${PYTEST_PYLINT_OPTIONS}
-	-make coverage-report
+	@make lint
+	@make coverage-report
 
-## Run tests in fail-fast mode (i.e., stop at first failure)
+## Run tests in fail-fast mode (i.e., stop at first failure).
 fast-test:
 	make test PYTEST_OPTIONS="-x ${PYTEST_OPTIONS}"
 
 .coverage:
 	-make test
 
-## Generate basic coverage report
+## Generate basic coverage report.
 coverage-report: .coverage
 	coverage report --show-missing
 
-## Generate coverage report in HTML format
+## Generate coverage report in HTML format.
 coverage-html: .coverage
 	coverage html -d coverage
 
@@ -47,9 +48,25 @@ coverage-html: .coverage
 .PHONY: lint \
 		radon-mi radon-mi-fail radon-cc radon-cc-fail radon-raw
 
-## Lint code using flake8
+## Lint code using flake8.
 lint:
-	flake8 ${CODE_DIRS}
+	{% raw %}@echo
+	@SHELL=/bin/bash; \
+     MESSAGE=" flake8 start "; \
+     BOOKENDS="$$(( (`tput cols` - $${#MESSAGE}) / 2))"; \
+     yes "" | head -n $$BOOKENDS | tr \\n "="; \
+     printf "$$MESSAGE"; \
+     yes "" | head -n $$BOOKENDS | tr \\n "=";
+	@echo
+	-flake8 ${CODE_DIRS}
+	@SHELL=/bin/bash; \
+     MESSAGE=" flake8 end "; \
+     BOOKENDS="$$(( (`tput cols` - $${#MESSAGE}) / 2))"; \
+     yes "" | head -n $$BOOKENDS | tr \\n "="; \
+     printf "$$MESSAGE"; \
+     yes "" | head -n $$BOOKENDS | tr \\n "=";
+	@echo
+	@echo{% endraw %}
 
 ## Compute the Maintainability Index for source code files.
 radon-mi:
@@ -86,7 +103,7 @@ docs:
 .PHONY: clean
 
 ## Clean up project directory (e.g., remove all compiled code, coverage files,
-## etc.)
+## etc.).
 clean:
 	find . -type d -name "__pycache__" -delete  # compiled python
 	find . -type f -name "*.py[co]" -delete  # compiled python
@@ -117,7 +134,7 @@ clean:
 
 .PHONY: help
 
-## Display this list of available rules
+## Display this list of available rules.
 help:
 	@echo "$$(tput bold)Default rule:$$(tput sgr0) ${.DEFAULT_GOAL}"
 	@echo

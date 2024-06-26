@@ -2,6 +2,19 @@ Velexi Research Project Cookiecutter Release Notes
 ==================================================
 
 -------------------------------------------------------------------------------
+0.9.0 (2024-06-25)
+==================
+### Cookiecutter Template
+* Remove dependency on pytest-flake8 package.
+* Update Makefile to use `lint` target to perform flake8 checks during testing.
+* Reorganize `src` directory to separate project-specific code from code used
+  for managing experiments.
+* Update package dependencies.
+
+### Cookiecutter Development
+* Update package dependencies.
+
+-------------------------------------------------------------------------------
 0.8.17 (2024-06-17)
 ===================
 ### Cookiecutter Template
