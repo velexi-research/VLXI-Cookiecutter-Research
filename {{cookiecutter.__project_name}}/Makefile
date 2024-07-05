@@ -15,7 +15,6 @@ DOCS_DIR=docs/{{ cookiecutter.__project_name }}
 NPROCS=auto
 
 PYTEST_OPTIONS=-n ${NPROCS}
-PYTEST_PYLINT_OPTIONS=
 
 # --- Testing rules
 
@@ -24,7 +23,7 @@ PYTEST_PYLINT_OPTIONS=
 
 ## Run all tests.
 test:
-	pytest ${PYTEST_OPTIONS} ${PYTEST_PYLINT_OPTIONS}
+	pytest ${PYTEST_OPTIONS}
 	@make lint
 	@make coverage-report
 
