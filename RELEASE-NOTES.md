@@ -5,6 +5,7 @@ Velexi Research Project Cookiecutter Release Notes
 0.9.4 (2025-06-25)
 ==================
 ### Cookiecutter Template
+* Update Python version constraint in `pyproject.toml`
 * Update package dependencies.
 
 ### Cookiecutter Development
