@@ -15,15 +15,15 @@ dvc = {extras = ["s3"], version = "^3"}
 fds = {git = "https://github.com/velexi-research/fds.git"}  # Fork of FastDS
 
 # research infrastructure
-ipython = "^8"
+ipython = "^9"
 jupyter-dash = "^0,>=0.4.2"
 jupyterlab = "^4"
 jupyterlab-mathjax3 = "^4"
 matplotlib = "^3"
-mlflow = "^2"
+mlflow = "^3"
 
 # miscellaneous utilities
-pdoc = "^14"
+pdoc = "^15"
 python-slugify = "^8"
 PyYAML = "^6"
 tqdm = "^4"
@@ -32,13 +32,13 @@ typer = "^0,>=0.12"
 # software testing
 coverage = "^7"
 pytest = "^8"
-pytest-cov = "^5"
+pytest-cov = "^6"
 pytest-xdist = "^3"
 
 # code quality
-black = {extras = ["jupyter"], version = "^24"}
+black = {extras = ["jupyter"], version = "^25"}
 flake8 = "^7"
-pre-commit = "^3"
+pre-commit = "^4"
 radon = "^6"
 
 # security vulnerability fixes
