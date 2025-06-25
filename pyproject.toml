@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Velexi Research Project Cookiecutter"
-version = "0.9.3"
+version = "0.9.4"
 description = "Template for research projects that utilize Jupyter notebooks for exploration, experimentation, analysis, and reporting"
 license = "Apache-2.0"
 authors = ["Kevin Chu <kevin@velexi.com>"]
@@ -8,8 +8,8 @@ authors = ["Kevin Chu <kevin@velexi.com>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 cookiecutter = "^2"
-pre-commit = "^3"
-black = "^24"
+pre-commit = "^4"
+black = "^25"
 flake8 = "^7"
 
 [build-system]
