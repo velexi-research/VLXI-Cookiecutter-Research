@@ -23,20 +23,20 @@ matplotlib = "^3"
 mlflow = "^3"
 
 # miscellaneous utilities
-pdoc = "^15"
+pdoc = "^16"
 python-slugify = "^8"
 PyYAML = "^6"
 tqdm = "^4"
-typer = "^0,>=0.12"
+typer = "^0,>=0.24"
 
 # software testing
 coverage = "^7"
-pytest = "^8"
-pytest-cov = "^6"
+pytest = "^9"
+pytest-cov = "^7"
 pytest-xdist = "^3"
 
 # code quality
-black = {extras = ["jupyter"], version = "^25"}
+black = {extras = ["jupyter"], version = ">25"}
 flake8 = "^7"
 pre-commit = "^4"
 radon = "^6"
