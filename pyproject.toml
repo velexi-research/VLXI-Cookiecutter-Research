@@ -9,7 +9,7 @@ authors = ["Kevin Chu <kevin@velexi.com>"]
 python = "^3.10"
 cookiecutter = "^2"
 pre-commit = "^4"
-black = "^25"
+black = ">=25,<27"
 flake8 = "^7"
 
 [build-system]
